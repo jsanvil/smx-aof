@@ -39,7 +39,7 @@ El nom dels camps pot estar format per **un màxim de 64 caràcters alfanumèric
 
 - **NO incloure espais en blanc** dins dels noms de camp. Si es desitja que un nom de camp estiga compost per més d'una paraula, es pot unir amb el caràcter de subratllat (_). *Exemple: `Notes_Mensuals`*
 
-- **NO utilitzar caràcters especials** com a `accents`, `$`, `&`, `@`, `#`, `%`, `Ç`, etc.
+- **NO utilitzar caràcters especials** com a accents o simbols; `é`, `à`, `ü` `$`, `&`, `@`, `#`, `%`, `Ç`, `ñ`, *etc*.
 
 >  ⚠️ Hem de prestar especial atenció al nom dels camps si volem assegurar-nos que funcionen bé les operacions sobre la base de dades.
 
@@ -109,7 +109,7 @@ Camp | Tipus | Longitud | Descripció
 **Genere** | Text [*VARCHAR*] | 20 | Gènere (aventures, ciència-ficció, etc.)
 **Suport** | Text [*VARCHAR*] | 20 | Tipus de suport en el qual es troba emmagatzemat (paper, llibre electrònic, MP3, etc.)
 **Idioma** | Text [*VARCHAR*] | 20 | Idioma de publicació
-Preu | Real [REAL] | Per defecte | Preu de venda
+**Preu** | Real [REAL] | Per defecte | Preu de venda
 **Web** | Text [*VARCHAR*] | 200 | Adreça web de l'autor/a
 **Portada** | Imatge [*LONGVARBINARY*] | Per defecte | Foto de la portada
 **Observacions** | Nota [*LONGVARCHAR*] | Per defecte | Observacions

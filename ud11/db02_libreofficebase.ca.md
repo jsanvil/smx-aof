@@ -34,7 +34,7 @@ Una vegada obert podem observar l'assistent per a bases de dades en el qual es m
 
   - ### Pas 1: Seleccioneu la base de dades
 
-Per a crear una nova, seleccionem la primera opció `Crear nova base de dades`.
+Per a crear una nova, seleccionem la primera opció `Crear nova base de dades`
 
 ![Creació d'una base de dades. Pas 1](img/base_crea_pas1.png)
 
