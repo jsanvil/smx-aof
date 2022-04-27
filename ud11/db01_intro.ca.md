@@ -1,5 +1,13 @@
 # 1. Introducció a les bases de dades
 
+## Objectius
+- Familiaritzar-nos amb el concepte de base de dades.
+- Familiaritzar-nos amb el concepte de sistema gestor de base de dades (SGBD).
+- Identificar els principals elements de les bases de dades.
+- Conéixer els principals usos que reben les bases de dades.
+
+---
+
 La gran quantitat d'informació que manegem en l'actualitat, requereix d'una certa organització que comporta la necessitat d'elements que:
 
 - **Emmagatzemen** la informació de forma organitzada
@@ -16,7 +24,7 @@ o, també:
 
 ---
 
-## 1.1. *Exemple: agenda organitzada*
+## *Exemple: agenda organitzada*
 
 Si ens fixem en el concepte d'organització podem trobar un exemple bastant clar en la diferència existent entre un munt de números de telèfon i adreces escrits en **trossos de paper** (el que coneixem com a post-it) o tindre'ls organitzats en una **agenda**.
  
@@ -26,7 +34,7 @@ La diferència es troba en la forma en què la informació està emmagatzemada i
 
 ---
 
-# 2. Aplicació pràctica de les bases de dades. Usos
+# 1.1. Aplicació pràctica de les bases de dades. Usos
 
 Les bases de dades són un element fonamental que ofereixen multitud d'avantatges a l'hora d'organitzar i emmagatzemar dades. Entre els **usos més habituals** que solen tindre es troben:
 
@@ -41,7 +49,7 @@ Les bases de dades són un element fonamental que ofereixen multitud d'avantatge
 
 ---
 
-# 3. Sistemes gestors de bases de dades (*SGBD*)
+# 1.2 Sistemes gestors de bases de dades (*SGBD*)
 
 Anteriorment explicàvem que les bases de dades permeten, entre altres coses, **organitzar els continguts de manera que siguen fàcilment localitzables**.
 Per a poder utilitzar les bases de dades necessitem d'un **suport** que permeta introduir, organitzar i recuperar la informació d'aquestes, en definitiva, **administrar-les**, anomenat **sistema gestor de base de dades (*SGBD*)**.
@@ -54,7 +62,7 @@ Existeixen molts tipus diferents de gestors de bases de dades, encara que quasi 
 
 ---
 
-# 4. Elements
+# 1.3 Elements
 
 Pràcticament, en qualsevol base de dades actual, existeixen quatre elements essencials: **taules**, **consultes**, **formularis** i **informes**. Tots són indispensables i necessaris. Aquesta és una definició molt bàsica de cadascun dels elements que formen part d'una base de dades però suficient per a començar a familiaritzar-nos amb aquests conceptes:
 
@@ -67,7 +75,7 @@ Element	       | Funció
 
 ---
 
-## 4.1. Taules
+## 1.3.1 Taules
 
 Dins d'una base de dades, la informació s'emmagatzema i s'organitza en taules, havent-hi en cadascuna d'elles una o diverses sèries de files i columnes. A les files se'ls denomina registres, a les columnes, camps, i a la intersecció d'un registre amb un camp se'n diu dada. L'estructura és similar a un full de càlcul, encara que el funcionament i la nomenclatura difereixen.
 
@@ -83,7 +91,7 @@ En la imatge es mostren exemples dels conceptes explicats:
 
 ---
 
-## 4.2. Consultes
+## 1.3.2 Consultes
 
 Les consultes tenen com a propòsit recuperar la informació emmagatzemada en les taules, és a dir, permeten veure un conjunt de dades d'una taula a partir d'una petició o pregunta que realitzem.
 
@@ -91,30 +99,30 @@ Les consultes tenen com a propòsit recuperar la informació emmagatzemada en le
 
 ---
 
-## 4.3. Formularis
+## 1.3.3 Formularis
 
 Els formularis ens ajudaran principalment en tasques d'introducció, modificació i esborrat d'informació, ja que mostren les dades de manera diferent al d'una taula, de manera més vistosa i agradable. Quan es tracta d'incloure poques dades podem fer-ho directament sobre les taules però quan el volum és important, aquest mètode es torna poc eficaç. Per a resoldre aquest problema tenim els formularis on la inclusió de dades es fa de forma molt més intuïtiva i senzilla.
 
-Exemple de formulari:
+*Exemple de formulari:*
 
 ![](https://ioc.xtec.cat/materials/FP/Recursos/fp_smx_m03_/web/fp_smx_m03_htmlindex/WebContent/u5/media/1.3.png)
 
 ---
 
-## 4.4. Informes
+## 1.3.4. Informes
 
 Els **informes** tenen com a objectiu proporcionar les eines necessàries per a **obtindre una còpia per pantalla o impresa de les dades existents en una base de dades**.
 
 Habitualment, els informes se solen construir a partir dels resultats obtinguts de l'execució de **consultes**, la qual cosa combina la possibilitat de seleccionar només les dades que volem que ens oferisquen les consultes amb l'avantatge d'imprimir-los, tant per pantalla com en paper.
 Aquests poden ser configurats amb diferents estils de manera que es puguen adaptar als diferents usuaris i circumstàncies en les quals siguen requerits.
 
-Exemple d'informe:
+*Exemple d'informe:*
 
 ![](https://ioc.xtec.cat/materials/FP/Recursos/fp_smx_m03_/web/fp_smx_m03_htmlindex/WebContent/u5/media/1.4.png)
 
 ---
 
-## *4.5. Exemple pràctic: centre educatiu*
+## *Exemple pràctic: centre educatiu*
 
 A continuació il·lustrarem amb un exemple els elements de les bases de dades amb la finalitat que queden clars tots els conceptes estudiats. Per a això utilitzarem la base de dades d'un centre educatiu:
 
