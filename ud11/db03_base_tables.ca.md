@@ -118,17 +118,24 @@ Preu | Real [REAL] | Per defecte | Preu de venda
 
   - El resultat serà similar al de la següent imatge:
 
-![](img/base_activitat_1_creacio_taula.png)
+  ![](img/base_activitat_1_creacio_taula.png)
 
 - **Guardar la taula**
   L'últim pas serà l'emmagatzematge de la taula en la base de dades. Per a això:
   - Fes clic en la icona `Guardar` de la barra d'eines.
   - Es mostrarà una finestra en la qual introduirem el nom `LLIBRE`:
+  
   ![](img/base_activitat_1_guarda_nom.png)
+
   - Fes clic a `OK` i respon `Sí` al següent missatge:
+  
   ![](img/base_activitat_1_guarda_pk.png)
-  El missatge anterior apareix perquè no hem definit cap clau principal. Més endavant tractarem aquesta qüestió, però és necessari que es cree per a poder introduir dades en la taula. Una vegada realitzats els passos anteriors quedarà l'estructura de la següent manera:
+
+  El missatge anterior apareix perquè no hem definit cap clau principal. Més endavant tractarem aquesta qüestió, però és necessari que es cree per a poder introduir dades en la taula.
+
 - Si hem seguit tots els passos correctament, la nostra taula `LLIBRE` ha d'aparéixer dins de l'apartat `Taules` en la part inferior de la finestra principal de *Base*:
+  
 ![](img/base_activitat_1_guarda_final.png)
+
 - Guarda els canvis. 
 - Tanca la base de dades "*biblioteca*".
