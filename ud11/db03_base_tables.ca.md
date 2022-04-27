@@ -87,7 +87,7 @@ Decimals | Serveix per a especificar quantes xifres de la grandària assignada s
 
 ---
 
-# 📝 *Activitat 1: Creació de taules*
+# *Activitat 1: Creació de taules* 📝
 
 A continuació explicarem els passos per a la creació de taules, més concretament per a la gestió de la nostra biblioteca personal de llibres.
 
