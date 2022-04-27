@@ -4,7 +4,7 @@
 
 Base proporciona diverses característiques interessants com ara: l'habilitat d'analitzar i editar relacions a partir de la vista d'un diagrama, la incorporació de *HSQLDB com el seu motor de bases de dades relacional per defecte, la possibilitat d'utilització d'altres bases de dades en formats com *dBASE*, *MYSQL*, etc., o qualsevol base de dades compatible amb *ODBC* o *JDBC*.
 
-A més de les característiques anteriors, *Base* inclou, igual que les altres aplicacions de la suite *LibreOffice*, multitud d'assistents i vistes per a fer el treball més fàcil als usuaris poc acostumats a aquesta mena de programes.
+A més de les característiques anteriors, ***Base*** inclou, igual que les altres aplicacions de la suite *LibreOffice*, multitud d'assistents i vistes per a fer el treball més fàcil als usuaris poc acostumats a aquesta mena de programes.
 
 ---
 
@@ -12,14 +12,14 @@ A més de les característiques anteriors, *Base* inclou, igual que les altres a
 
 Els sistemes gestors de bases de dades permeten realitzar un conjunt d'accions sobre les bases de dades:
 
-- Obrir una base de dades per a gestionar-la
-- Crear una nova base de dades per a emplenar-la
-- Tancar una base de dades ja oberta
+- **Obrir** una base de dades per a gestionar-la
+- **Crear** una nova base de dades per a emplenar-la
+- **Tancar** una base de dades ja oberta
 
 El SGBD Base ofereix les operacions esmentades, encara que prèviament hem d'obrir-lo. Existeixen diferents formes depenent de la configuració del sistema operatiu, si bé principalment es pot arrancar de dues diferents:
 
-- Fent doble clic sobre un accés directe situat en l'escriptori
-- Accedint al menú de LibreOffice i prement sobre LibreOffice Base
+- Fent doble clic sobre un **accés directe** situat en l'escriptori
+- Accedint al menú de *LibreOffice* i prement sobre *LibreOffice Base*
 
 Una vegada obert podem observar l'assistent per a bases de dades en el qual es mostren diferents opcions, tant per a crear una base de dades com per a obrir/connectar-se a una ja existent.
 
@@ -105,9 +105,7 @@ En la zona inferior apareixen els objectes creats del tipus seleccionat. En la f
 
 # 4. Ajuda de Base
 
-Dins de la barra de menús existeixen diferents possibilitats que ens brinden totes les funcionalitats del programa. L'últim de tots ells es diu Ajuda i en ell apareixen les diferents opcions d'ajuda de LibreOffice. Entre totes les opcions disponibles destaquen dues:
+Dins de la barra de menús existeixen diferents possibilitats que ens brinden totes les funcionalitats del programa. L'últim de tots ells es diu Ajuda i en ell apareixen les diferents opcions d'ajuda de *LibreOffice*. Entre totes les opcions disponibles destaquen dues:
 
-- **Ajuda de *LibreOffice*** que conté una ajuda bastant extensa de totes les eines de LibreOffice classificada per continguts i amb l'opció inclosa de buscar ajuda recorrent l'índex de continguts o en funció d'una paraula clau.
+- **Ajuda de *LibreOffice*** que conté una ajuda extensa de totes les eines de *LibreOffice* classificada per continguts i amb l'opció inclosa de buscar ajuda recorrent l'índex de continguts o en funció d'una paraula clau.
 - **Què és això?**, que permet que es mostre una xicoteta informació sobre l'objecte en el qual tinguem situat el cursor.
-
-Ens centrarem en la primera de les opcions: Ajuda de LibreOffice, la qual mostrarà, en ser premuda, una finestra com la de la figura:

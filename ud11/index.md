@@ -1,5 +1,5 @@
 SMX AOF
-# UD11 Bases de dades (I)
+# UD11: Bases de dades (I)
 
 ## [1. Introducció a les bases de dades](db01_intro.ca.md)
 ## [2. Introducció a *LibreOffice Base*](db02_libreofficebase.ca.md)
