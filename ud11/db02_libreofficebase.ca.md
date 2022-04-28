@@ -1,9 +1,11 @@
 # 2. Introducció a *LibreOffice Base*
 
-## Objectius
+## 🎯 Objectius
 - Familiaritzar-nos amb l'entorn de Base. Identificar els principals elements de la interfície gràfica d'usuari.
 - Localitzar el sistema d'ajuda del programa.
 - Conéixer les operacions bàsiques amb bases de dades: crear, obrir i tancar.
+
+---
 
 ***LibreOffice Base*** és un programa de bases de dades que gestiona la creació i maneig d'aquestes, a més de possibilitar l'elaboració de formularis i informes que proporcionen als usuaris un accés fàcil a les dades. La seua interfície és senzilla, la qual cosa permet gestionar les bases de dades d'igual manera que aplicacions de característiques similars.
 

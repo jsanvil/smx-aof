@@ -1,6 +1,6 @@
 # 3. Taules.
 
-## Objectius
+## 🎯 Objectius
 - Concepte de taula.
 - Concepte de camp.
 - Identificar l'estructura d'una taula.

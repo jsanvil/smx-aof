@@ -1,6 +1,6 @@
 # 4. *LibreOffice Base*: Format, edició, validació, ordenació i filtrat de dades
 
-## Objectius
+## 🎯 Objectius
 - Conéixer i utilitzar els formats per a mostrar els camps.
 - Concepte de camp. Identificar l'estructura d'una taula.
 - Concepte de fulla de dades.

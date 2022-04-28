@@ -1,6 +1,6 @@
 # 1. Introducció a les bases de dades
 
-## Objectius
+## 🎯 Objectius
 - Familiaritzar-nos amb el concepte de base de dades.
 - Familiaritzar-nos amb el concepte de sistema gestor de base de dades (SGBD).
 - Identificar els principals elements de les bases de dades.
