@@ -44,18 +44,17 @@ En la taula `Alumnes` tenim tota la informació que necessitem sobre els nostres
 - El seu nom i cognoms.
 - La seua data de naixement.
 - El grup al qual pertany l'alumne.
-- La ubicació del grup, és a dir, l'aula on estan els alumnes d'aqueix grup (Primera planta, edifici annex, etcètera).
-- Qualsevol tipus de comentari d'interés: grup de compensatòria, suport, etcètera.
+- La ubicació del grup, és a dir, l'aula on estan els alumnes d'aqueix grup *(Primera planta, edifici annex, etc)*.
+- Qualsevol tipus de comentari d'interés.
 
 Per a la taula `Grups` tenim:
 
-- Denominació del grup: 1A, 1B, 3A, etc.
+- Denominació del grup: *1SMX-D, 2SMX-D, 1ASIR-A, 1DAW-SEMI, etc.*
 - Nombre total d'alumnes que té el grup.
-- El lloc on està situat: Aula de música, Aula 205, Edifici principal, etc.
-- Qualsevol altra dada d'interés: Compensatòria, grup de suport, etc.
+- El lloc on està situat: Planta baixa*, Primera planta, Segona planta, etc.*
+- Qualsevol altra dada d'interés: *Reforç, Suport, etc.*
 
 Si ens fixem en les dades podem adonar-nos que, en comprovar les dades incloses en les taules d'Alumnes i Grups, existeix **informació que es repeteix** en ambdues:
-
 
 ### Alumnes:
 
@@ -66,7 +65,7 @@ Expedient | Nom    | Cognoms      | DataNaixement | Grup        | UbicacioGrup  
 3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | **Segona Planta** | **Taller**
 3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | **Semi**          | **Remot**
 
-### Grups
+### Grups:
 
 Denominacio | NombreAlumnes | Ubicacio             | Observacions
 ------------|---------------|----------------------|---------------
@@ -95,9 +94,9 @@ Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjanç
 
 Les condicions per a establir vincles entre dues taules no són sempre iguals, ja que la manera en què es relacionen les taules entre si dona lloc a comportaments diferents. En l'estructura de qualsevol base de dades trobem principalment tres tipus de relacions que es descriuen de la següent manera:
 
-- Un a molts (1:N)
-- Un a un (1:1)
-- Molts a molts (N:N)
+- Un a molts `(1:N)`
+- Un a un `(1:1)`
+- Molts a molts `(N:N)`
 
 ## 5.3.1 Relació `un a molts` `(1:N)`
 
@@ -128,6 +127,13 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
 - Cada `grup` només pot tindre `1 tutor`
 - Cada `tutor` només pot tindre `1 grup`
 
+```
+                       1                      1 
+        +------------+                          +-------------+
+        |    GRUP    | <----------------------> |    TUTOR    |
+        +------------+                          +-------------+
+```
+
 ### *Altres exemples*
 
 Altre exemple d'aquesta mena de relacions podria ser entre una taula amb països i una altra amb caps de govern:
@@ -147,6 +153,13 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
 
 - `1 professor` pot impartir classe a `molts grups`
 - `1 grup` pot tindre `molts professors`
+
+```
+                         N                           N 
+        +--------------+                               +--------------+
+        |   PROFESSOR  | <---------------------------> |     GRUP     |
+        +--------------+                               +--------------+
+```
 
 
 ### *Altres exemples*
@@ -191,7 +204,7 @@ Segons hem explicat prèviament, existeix clarament una relació entre les taule
 Les relacions entre taules és un concepte una miqueta abstracte. No obstant això, si representem gràficament el nostre disseny, el significat queda molt més clar.
 
 ```
-                        1                           N 
+                         1                           N 
         +--------------+                               +--------------+
         |    SUPORT    | <---------------------------> |    LLIBRE    |
         +--------------+                               +--------------+
