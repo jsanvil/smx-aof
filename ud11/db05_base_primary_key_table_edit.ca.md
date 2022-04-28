@@ -57,21 +57,23 @@ Per a la taula `Grups` tenim:
 Si ens fixem en les dades podem adonar-nos que, en comprovar les dades incloses en les taules d'Alumnes i Grups, existeix **informació que es repeteix** en ambdues:
 
 
-> ### Alumnes:
-> Expedient | Nom    | Cognoms      | DataNaixement | Grup        | UbicacioGrup      | ObservacionsGrup 
-> ----------|--------|--------------|---------------|-------------|-------------------|------------------
-> 3256      | José   | Pérez García | 27/07/04      | *1SMX-D*    | **Planta baixa**  | **Refroç**
-> 3259      | Juan   | Sánchez Pla  | 17/02/06      | *1SMX-D*    | **Planta Baixa**  | **Reforç**
-> 3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | **Segona Planta** | **Taller**
-> 3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | **Semi**          | **Remot**
+### Alumnes:
 
-> ### `Grups`
->  Denominacio | NombreAlumnes | Ubicacio       | Observacions
-> -------------|---------------|----------------|---------------
->  1SMX-D      | 24            | ***Planta baixa***   | ***Refroç***
->  2SMX-D      | 19            | Segona Planta  | Cap
->  2ASIR-A     | 20            | ***Segona Planta***  | ***Taller***
->  1DAW-SEMI   | 27            | ***Semi***           | ***Remot***
+Expedient | Nom    | Cognoms      | DataNaixement | Grup        | UbicacioGrup      | ObservacionsGrup 
+----------|--------|--------------|---------------|-------------|-------------------|------------------
+3256      | José   | Pérez García | 27/07/04      | *1SMX-D*    | **Planta baixa**  | **Refroç**
+3259      | Juan   | Sánchez Pla  | 17/02/06      | *1SMX-D*    | **Planta Baixa**  | **Reforç**
+3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | **Segona Planta** | **Taller**
+3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | **Semi**          | **Remot**
+
+### Grups
+
+Denominacio | NombreAlumnes | Ubicacio             | Observacions
+------------|---------------|----------------------|---------------
+1SMX-D      | 24            | ***Planta baixa***   | ***Refroç***
+2SMX-D      | 19            | Segona Planta        | Cap
+2ASIR-A     | 20            | ***Segona Planta***  | ***Taller***
+1DAW-SEMI   | 27            | ***Semi***           | ***Remot***
 
 Aquesta situació no és massa favorable quan treballem amb bases de dades on habitualment la quantitat d'informació que es maneja és important.** La solució passa per relacionar les taules amb informació coincident de manera que no existisca duplicitat d'informació**. Tot això, traduït a un llenguatge més natural seria: "Per a què escriure dues vegades el mateix, si puc fer-ho una sola i treballar de la mateixa manera".
 
