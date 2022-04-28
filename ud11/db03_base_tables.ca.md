@@ -41,7 +41,7 @@ El nom dels camps pot estar format per **un màxim de 64 caràcters alfanumèric
 
 - **NO utilitzar caràcters especials** com a accents o simbols; `é`, `à`, `ü` `$`, `&`, `@`, `#`, `%`, `Ç`, `ñ`, *etc*.
 
->  ⚠️ Hem de prestar especial atenció al nom dels camps si volem assegurar-nos que funcionen bé les operacions sobre la base de dades.
+> ⚠️ Hem de prestar especial atenció al nom dels camps si volem assegurar-nos que funcionen bé les operacions sobre la base de dades.
 
 ---
 
