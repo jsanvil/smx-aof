@@ -1,3 +1,5 @@
+UD11: Bases de dades (I)
+
 # 5. *LibreOffice Base*: Clau primària. Edició de taules
 
 ##  🎯 Objectius
@@ -18,15 +20,16 @@ La **clau principal o primària** proporciona un valor **únic** per a cada regi
 
 > LA **CLAU PRIMÀRIA** HA DE COMPLIR **3 CONDICIONS**:
 >
->- El camp o camps que formen la clau principal d'una taula **no pot contindre valors nuls**. És a dir, sempre ha de prendre un valor per a cada fila de la taula.
+> - El camp o camps que formen la clau principal d'una taula **no pot contindre valors nuls**. És a dir, sempre ha de prendre un valor per a cada fila de la taula.
 >
->- *No poden haver-hi dues files en la taula amb el mateix valor* en el camp o camps de la clau principal. És a dir, **aquest valor no pot repetir-se en cap fila**.
+> - No poden haver-hi dues files en la taula amb el mateix valor en el camp o camps de la clau principal. És a dir, **aquest valor no pot repetir-se en cap fila**.
 >
->- Només pot haver-hi **una clau principal per taula**.
+> - Només pot haver-hi **una clau principal per taula**.
 
 > ⚠️ Quan un camp compleix aquestes dues propietats (sense nuls i sense repetits) se'n diu Clau Primària o Clau Principal i tota taula ha de tindre una.
 
 > ⚠️ Quan intentem inserir una nova fila amb valors que infringisquen aquestes dues regles, el sistema no ens deixa crear la nova fila i ens retorna un error.
+
 ---
 
 ### *Exemple: Clau primària taula ESTUDIANT*
