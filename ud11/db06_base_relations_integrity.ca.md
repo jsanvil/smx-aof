@@ -1,4 +1,4 @@
-# 5. *LibreOffice Base*: Relacions entre taules. Integritat referencial
+# 6. *LibreOffice Base*: Relacions entre taules. Integritat referencial
 
 ##  🎯 Objectius
 - Conéixer el concepte de relació.
@@ -9,13 +9,13 @@
 
 ---
 
-# 5.1 Bases de dades relacionals
+# 6.1 Bases de dades relacionals
 
 Base, tal com es va comentar amb anterioritat, és un **gestor de base de dades relacional**, entre altres coses, perquè permet establir **vincles o relacions entre les taules** que el componen. L'objectiu d'aquestes relacions serà principalment **evitar la duplicitat d'informació** i en conseqüència, **optimitzar el rendiment** de la base de dades.
 
 ---
 
-# 5.2 Relacions entre taules
+# 6.2 Relacions entre taules
 
 Després de crear taules diferents en la base de dades, necessitem una manera d'indicar-li a *Base* com ha de tornar a combinar aqueixa informació.
 
@@ -90,7 +90,7 @@ Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjanç
 
 ---
 
-# 5.3 Tipus de relacions
+# 6.3 Tipus de relacions
 
 Les condicions per a establir vincles entre dues taules no són sempre iguals, ja que la manera en què es relacionen les taules entre si dona lloc a comportaments diferents. En l'estructura de qualsevol base de dades trobem principalment tres tipus de relacions que es descriuen de la següent manera:
 
@@ -98,7 +98,7 @@ Les condicions per a establir vincles entre dues taules no són sempre iguals, j
 - Un a un `(1:1)`
 - Molts a molts `(N:N)`
 
-## 5.3.1 Relació `un a molts` `(1:N)`
+## 6.3.1 Relació `un a molts` `(1:N)`
 
 Aquest tipus es dona quan una fila de la primera taula pot estar relacionada amb moltes files de la segona taula, però una fila de la segona només està relacionada amb una de la primera.
 
@@ -116,7 +116,7 @@ Altre exemple d'aquesta mena de relacions podria ser entre una taula amb àrbitr
 - Donat `1 àrbitre`, pot haver arbitrat `molts partits` de tennis.
 - Donat `1 partit` de tennis, només ha sigut arbitrat per `1 àrbitre`.
 
-## 3.2 Relació `un a un` `(1:1)`
+## 6.3.2 Relació `un a un` `(1:1)`
 
 Aquest tipus de relació apareix amb menys freqüència i succeeix quan una fila de la primera taula només pot estar relacionada amb una fila de la segona i una fila de la segona taula només pot estar relacionada amb una de la primera.
 
@@ -141,7 +141,7 @@ Altre exemple d'aquesta mena de relacions podria ser entre una taula amb països
 - Donat `1 país` només té `1 cap de govern` (normalment).
 - Donat `1 cap de govern`, ho és només de `1 país`.
 
-## 3.3. Relació `molts a molts` `(N:N)`
+## 6.3.3. Relació `molts a molts` `(N:N)`
 
 Aquesta classe de relació ocorre quan una fila de la primera taula pot estar relacionada amb moltes files de la segona taula i una fila de la segona taula pot estar-ho amb moltes files de la primera.
 
@@ -171,7 +171,7 @@ Altre exemple d'aquest tipus el tenim en la relació entre una taula amb pel·l�
 
 ---
 
-# 5.4 Relacions en la base de dades de "*Biblioteca*"
+# 6.4 Relacions en la base de dades de "*Biblioteca*"
 
 Si ens fixem en la base de dades `Biblioteca` podem veure que s'està repetint el mateix valor moltes vegades: per exemple, el valor de suport `Paper` apareix en diverses files. És a dir, en introduir el mateix valor de manera redundant s'està possibilitant que en algun moment l'escriguem malament, per exemple, `Papek`, i tinguem un nou suport que no correspon a cap llibre, ja que ni tan sols existeix.
 
@@ -181,7 +181,7 @@ La solució als problemes anteriors està a **separar la informació que apareix
 
 ---
 
-# 5.5 Establir una relació `un a molts` `(1:N)`
+# 6.5 Establir una relació `un a molts` `(1:N)`
 
 A l'hora d'establir una relació un a molts entre dues taules és indispensable que es complisquen **3 CONDICIONS**:
 
@@ -189,7 +189,7 @@ A l'hora d'establir una relació un a molts entre dues taules és indispensable 
 - Tots dos camps hauran de tindre el **mateix tipus** (*INTEGER*, *TEXT*, *SMALL* *INTEGER*, *etc*.) i la **mateixa grandària**.
 - Un dels camps haurà de ser **clau primària** en una de les dues taules.
 
-## 5.5.1. Clau aliena o externa
+## 6.5.1. Clau aliena o externa
 
 El camp relacionat de la taula `molts` es denomina **Clau `aliena` o `externa`**.
 
@@ -219,10 +219,16 @@ On tenim que:
   - `(1)` Donat un llibre, només està publicat en una mena de suport. Recorda que hem considerat, per a simplificar, que un llibre només pot estar publicat en un suport.
 
 ---
-## 5.5.3 Inconsistència de dades
+## 6.5.2 Inconsistència de dades
 
 Abans de definir una relació, hem d'assegurar-nos que les dades són coherents, és a dir, que els camps que estan relacionats contenen la mateixa informació.
 En el nostre cas, hem de comprovar que els valors continguts en el camp `Suport` de la taula `LLIBRE` es corresponen amb algun registre de la taula `SUPORT`. Per exemple, si tenim un llibre amb suport "Paper", aquest ha de ser present en la taula `SUPORT` i el text ha de coincidir tant en majúscules com minúscules.
+
+---
+
+# 6.6 Integritat referencial
+
+
 
 ---
 

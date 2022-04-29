@@ -137,5 +137,5 @@ Camp | Tipus | Longitud | Descripció
   
 ![](img/base_activitat_1_guarda_final.png)
 
-- Guarda els canvis. 
+- 💾 Guarda els canvis. 
 - Tanca la base de dades "*biblioteca*".
