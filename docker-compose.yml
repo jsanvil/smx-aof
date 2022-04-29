@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  jekyll:
+    image: jekyll/jekyll:3.8
+    build:
+      context: ./
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/usr/jekyll
+    stdin_open: true
+    tty: true
+    command: jekyll serve
