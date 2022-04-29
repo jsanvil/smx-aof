@@ -1,4 +1,4 @@
-# 5. *LibreOffice Base*: Relacions entre taules. Integritat referencial
+# 5. *LibreOffice Base*: Clau primària. Edició de taules
 
 ##  🎯 Objectius
 - Conéixer el concepte de clau primària.
