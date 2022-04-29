@@ -130,7 +130,7 @@ L'eliminació és senzilla i pot ser revocada utilitzant les opcions de `Desfer`
  	 
 > ⚠️ L'eliminació d'una columna es pot desfer només abans de guardar els canvis. En cas de guardar-los, la columna quedarà eliminada permanentment.
 
-# 📝 *Activitat 6: Relacions i integritat*
+# 📝 *Activitat 6: Clau primària i edició de taules*
 
 **Clau primària**
 
