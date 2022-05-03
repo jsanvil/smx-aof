@@ -1,0 +1,77 @@
+# Configurations
+title:            SMX - AOF
+longtitle:        SMX - Aplicacions Ofimàtiques
+author:           Jacinto Sánchez Villa
+email:            j.sanchezvilla@edu.gva.es
+description: >
+  Apunts del mòdul Aplicacions Ofimàtiques
+
+version:          1.0
+gitbook_version:  3.2.3
+
+url:              '' #'https://sighingnow.github.io'
+baseurl:          ''
+rss:              RSS
+
+optional_front_matter:
+  remove_originals: true
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+
+toc:
+  enabled: true
+  h_min: 1
+  h_max: 3
+
+# markdown render engine.
+markdown:         kramdown
+kramdown:
+  auto_ids:               true
+  input:                  GFM
+  math_engine:            mathjax
+  smart_quotes:           lsquo,rsquo,ldquo,rdquo
+  toc_levels:             1..6
+  syntax_highlighter:     rouge
+  syntax_highlighter_opts:
+    guess_lang:           true
+
+syntax_highlighter_style: colorful
+
+markdown_ext:     markdown,mkdown,mkdn,mkd,md
+
+# Permalinks
+permalink:        /:categories/:year-:month-:day-:title:output_ext
+
+exclude:
+  - _drafts
+
+include:
+  - ud11
+  - _pages
+
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:path/
+
+destination:      ./_site
+incremental:      false
+regenerate:       true
+
+plugins:
+  - jekyll-feed
+  - jemoji

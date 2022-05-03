@@ -1,2 +1,4 @@
-_site
-.jekyll-cache
+_site/
+_draft/
+.jekyll-cache/
+Gemfile.lock
