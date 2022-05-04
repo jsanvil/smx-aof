@@ -19,11 +19,11 @@ Base, tal com es va comentar amb anterioritat, és un **gestor de base de dades 
 
 # 6.2 Relacions entre taules
 
-Després de crear taules diferents en la base de dades, necessitem una manera d'indicar-li a *Base* com ha de tornar a combinar aqueixa informació.
+Després de crear taules diferents en la base de dades, necessitem una manera d'indicar-li a *Base* com ha de combinar aquesta informació.
 
 El primer pas d'aquest procés és definir relacions entre les taules. Una vegada realitzada aquesta operació, podem crear consultes, formularis i informes per a mostrar informació de diverses taules alhora.
 
-**Una relació fa coincidir les dades dels camps clau** (normalment un camp amb el mateix nom en totes dues taules). En la majoria dels casos, aquests camps coincidents són la **clau principal** d'una taula, que proporciona un identificador únic per a cada registre, i una **clau externa** de l'altra taula.
+**Una relació fa coincidir les dades dels camps clau** (normalment un camp amb el mateix nom en totes dues taules). En la majoria dels casos, aquests camps coincidents són la **clau principal** d'una taula, que proporciona un identificador únic per a cada registre, i una **clau aliena o externa** de l'altra taula.
 
 ---
 
@@ -92,7 +92,7 @@ Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjanç
 
 ### ALUMNES:
 
-Expedient | Nom    | Cognoms      | DataNaixement | *Grup*    | *~~UbicacioGrup~~*  | *~~ObservacionsGrup~~* 
+Expedient | Nom    | Cognoms      | DataNaixement | *Grup*      | *~~UbicacioGrup~~*  | *~~ObservacionsGrup~~* 
 ----------|--------|--------------|---------------|-------------|---------------------|------------------
 3256      | José   | Pérez García | 27/07/04      | *1SMX-D*    | *~~Planta baixa~~*  | *~~Refroç~~*
 3259      | Juan   | Sánchez Pla  | 17/02/06      | *1SMX-D*    | *~~Planta Baixa~~*  | *~~Reforç~~*
@@ -112,11 +112,11 @@ Denominacio | NombreAlumnes | Ubicacio             | Observacions
 
 # 6.3 Tipus de relacions
 
-Les condicions per a establir vincles entre dues taules no són sempre iguals, ja que la manera en què es relacionen les taules entre si dona lloc a comportaments diferents. En l'estructura de qualsevol base de dades trobem principalment tres tipus de relacions que es descriuen de la següent manera:
+Les condicions per a establir vincles entre dues taules no són sempre iguals, ja que la manera en què es relacionen les taules entre si dona lloc a comportaments diferents. En l'estructura de qualsevol base de dades trobem principalment **tres tipus de relacions** que es descriuen de la següent manera:
 
-- Un a molts `(1:N)`
-- Un a un `(1:1)`
-- Molts a molts `(N:N)`
+- **Un a molts** `(1:N)`
+- **Un a un** `(1:1)`
+- **Molts a molts** `(N:N)`
 
 ## 6.3.1 Relació `un a molts` `(1:N)`
 
@@ -126,7 +126,7 @@ Aquest tipus es dona quan una fila de la primera taula pot estar relacionada amb
 
 Si tornem a la base de dades d'un centre educatiu amb dues taules com són `Alumnes` i `Grups`, tenim que:
 
-- Dotan `1 alumne`, només pot pertànyer a `1 grup`.
+- Donat `1 alumne`, només pot pertànyer a `1 grup`.
 - Donat `1 grup`, pot tindre `molts alumnes`.
 
 ### *Altres exemples*
@@ -158,14 +158,14 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
 
 Altre exemple d'aquesta mena de relacions podria ser entre una taula amb països i una altra amb caps de govern:
 
-- Donat `1 país` només té `1 cap de govern` (normalment).
+- Donat `1 país` només té `1 cap de govern` *(normalment)*.
 - Donat `1 cap de govern`, ho és només de `1 país`.
 
 ## 6.3.3. Relació `molts a molts` `(N:N)`
 
 Aquesta classe de relació ocorre quan una fila de la primera taula pot estar relacionada amb moltes files de la segona taula i una fila de la segona taula pot estar-ho amb moltes files de la primera.
 
-Aquest tipus de relació només és possible si es defineix una tercera taula (denominada taula d'unió) la clau principal de la qual consta d'almenys dos camps: les claus externes de les Taules A i B. Posteriorment tractarem el concepte de clau aliena o externa.
+Aquest tipus de relació només és possible si **es defineix una tercera taula** (denominada taula d'unió) **la clau principal de la qual consta d'almenys dos camps**: ***les claus externes de les Taules `A` i `B`***. Posteriorment tractarem el concepte de clau aliena o externa.
 
 ### *Exemple. Base de dades d'un centre educatiu*
 
@@ -215,7 +215,7 @@ El camp relacionat de la taula `molts` es denomina **Clau `aliena` o `externa`**
 
 ### *Base de dades: Biblioteca*
 
-Segons hem explicat prèviament, existeix clarament una relació entre les taules `LLIBRE` i `SUPORT`. Si considerem (per a simplificar) que UN LLIBRE NOMÉS POT ESTAR PUBLICAT EN UN SUPORT, el tipus de relació que existeix entre la taula `SUPORT` i la taula `LLIBRE` seria del tipus `un a molts` `(1:N)`, ja que:
+Segons hem explicat prèviament, existeix clarament una relació entre les taules `LLIBRE` i `SUPORT`. Si considerem (per a simplificar) que *UN LLIBRE NOMÉS POT ESTAR PUBLICAT EN UN SUPORT*, el tipus de relació que existeix entre la taula `SUPORT` i la taula `LLIBRE` seria del tipus `un a molts` `(1:N)`, ja que:
 
 - Per exemple, el suport `Paper` tindrà diversos llibres relacionats que estan en aquest suport.
 - Donat un llibre, només està publicat en una mena de suport.
