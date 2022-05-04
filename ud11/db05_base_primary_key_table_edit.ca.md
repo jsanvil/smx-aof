@@ -16,19 +16,19 @@ En apartats anteriors hem vist que les taules estan formades per camps que poden
 
 La **clau principal o primària** proporciona un valor **únic** per a cada registre de la taula i ens serveix d'identificador de registres de manera que amb aquesta clau podem saber sense cap mena d'equivocació el registre al qual identifica. No podem definir més d'una clau principal, però podem tindre una clau principal composta per més d'un camp. A més, aquesta ens permetrà, en futures unitats, accedir a les dades d'altres taules.
 
-*Per exemple, si tenim una taula amb les dades de contactes dels nostres amics, podríem estar segurs que, usant el seu número del Document Nacional d'Identitat (DNI), cap d'ells tindria el mateix valor en aquest camp. En canvi, el camp nomene per als nostres amics podria repetir-se.*
+*Per exemple, si tenim una taula amb les dades de contactes dels nostres amics, podríem estar segurs que, usant el seu número del Document Nacional d'Identitat (DNI), cap d'ells tindria el mateix valor en aquest camp. En canvi, el camp nom per als nostres amics podria repetir-se.*
 
 > LA **CLAU PRIMÀRIA** HA DE COMPLIR **3 CONDICIONS**:
 >
-> - El camp o camps que formen la clau principal d'una taula **no pot contindre valors nuls**. És a dir, sempre ha de prendre un valor per a cada fila de la taula.
+> - El camp o camps que formen la clau principal d'una taula **no pot contindre valors nuls**. És a dir, sempre ha de prendre un valor per a cada registre de la taula.
 >
-> - No poden haver-hi dues files en la taula amb el mateix valor en el camp o camps de la clau principal. És a dir, **aquest valor no pot repetir-se en cap fila**.
+> - **No poden haver-hi dues registres en la taula amb el mateix valor en el camp o camps de la clau principal**. És a dir, **aquest valor no pot repetir-se en cap registre**.
 >
 > - Només pot haver-hi **una clau principal per taula**.
 
-> ⚠️ Quan un camp compleix aquestes dues propietats (sense nuls i sense repetits) se'n diu Clau Primària o Clau Principal i tota taula ha de tindre una.
+> ⚠️ Quan un camp compleix aquestes dues propietats (sense nuls i sense repetits) se'n diu **Clau Primària** o **Clau Principal** i **tota taula ha de tindre una**.
 
-> ⚠️ Quan intentem inserir una nova fila amb valors que infringisquen aquestes dues regles, el sistema no ens deixa crear la nova fila i ens retorna un error.
+> ⚠️ Quan intentem inserir un nou registre amb valors que infringisquen aquestes dues regles, el sistema no ens deixa crear el nou registre i ens retorna un error.
 
 ---
 
@@ -83,7 +83,7 @@ Per a assignar una clau principal a un camp, seguirem els següents passos:
 
 Lògicament, *Base* ens permetrà modificar taules, amb l'objectiu d'afegir o eliminar columnes (atributs), o bé, de modificar alguna propietat d'aquestes. Això és important de cara a possibles errors i/o modificacions que es requerisquen fer una vegada establits tots els camps de les taules.
 
-En aquest apartat estudiarem la modificació de les columnes i els tipus de dades, així com un tipus especial de dades molt útil anomenat Autonumèric.
+En aquest apartat estudiarem la modificació de les columnes i els tipus de dades, així com un tipus especial de dades molt útil anomenat `Autonumèric`.
 
 ---
 
@@ -91,8 +91,8 @@ En aquest apartat estudiarem la modificació de les columnes i els tipus de dade
 
 Les modificacions que es poden realitzar sobre les columnes existents poden ser de dos tipus:
 
-- Canvis de nom del camp o de la descripció d'aquest.
-- Canvi en les propietats del camp, des de ser o no clau primària, a canviar el tipus de camp i les propietats associades a aquest tipus de camp.
+- Canvis de **nom del camp** o de la **descripció** d'aquest.
+- Canvi en les **propietats del camp**, des de ser o no clau primària, a canviar el tipus de camp i les propietats associades a aquest tipus de camp.
 
 ### 5.4.1 Canvis en el nom o descripció
 
@@ -140,7 +140,7 @@ Abans d'eliminar una columna de la nostra taula hem de saber que en fer-ho s'esb
 
 L'eliminació és senzilla i pot ser revocada utilitzant les opcions de `Desfer` i `Refer`.
  	 
-> ⚠️ L'eliminació d'una columna es pot desfer només abans de guardar els canvis. En cas de guardar-los, la columna quedarà eliminada permanentment.
+> ⚠️ **L'eliminació d'una columna es pot desfer només abans de guardar els canvis**. En cas de guardar-los, la columna quedarà eliminada permanentment.
 
 # 📝 *Activitat 6: Clau primària i edició de taules*
 
@@ -148,7 +148,7 @@ L'eliminació és senzilla i pot ser revocada utilitzant les opcions de `Desfer`
 
 En el cas de la nostra taula `LLIBRE`, tenim el camp numèric `ID` per a diferenciar un llibre d'un altre ja que, per exemple, podem tindre dos exemplars del mateix llibre, o dos llibres amb el mateix títol o dos llibres amb el mateix autor o dos llibres de la mateixa editorial. El camp `ID` és el que identificarà cadascun dels llibres que s'introduïsquen en la base de dades; és a dir, ens servirà per a distingir un llibre d'un altre inequívocament.
 
-Podríem triar com a clau primària el codi `ISBN`, ja que és un codi únic que distingeix un llibre d'un altre?
+***Podríem triar com a clau primària el codi `ISBN`, ja que és un codi únic que distingeix un llibre d'un altre?***
 
 En aquest cas particular NO. En una biblioteca podem tindre més d'un exemplar del mateix llibre, per la qual cosa no ens serviria, ja que tots els exemplars tindrien el mateix `ISBN` i, per tant, seria un valor repetit. En aquesta situació, seleccionem el camp `ID` perquè és únic.
 
