@@ -34,28 +34,38 @@ La **clau principal o primària** proporciona un valor **únic** per a cada regi
 
 ### *Exemple: Clau primària taula ESTUDIANT*
 En una taula en la qual es vol emmagatzemar les dades d'un estudiant tenim:
-- Nom
-- Cognoms
-- Edat
-- Curs
-- Número d'expedient
-- Grup
+
+ESTUDIANT          |
+-------------------|
+Nom                |
+Cognoms            |
+Edat               |
+Curs               |
+Número d'expedient |
+Grup               |
 
 **Quin camp seleccionaríem com a clau primària?**
+
 - Seleccionaríem `Número d'expedient`, ja que aquest número és únic, no es pot repetir i no pot contindre valors nuls (tot estudiant té un número d'expedient associat).
 
 ---
 
 ### *Exemple: Clau primària taula LLIBRES*
 En una taula en la qual es vol emmagatzemar les dades d'una sèrie de llibres tenim:
-- Títol
-- Editorial
-- ISBN
-- Any
-- Autor
+
+LLIBRES   |
+----------|
+Títol     |
+Editorial |
+ISBN      |
+Any       |
+Autor     |
 
 **Quin camp seleccionaríem com a clau primària?**
+
 - Seleccionaríem `ISBN`, ja que aquest número és únic, no es pot repetir i no pot contindre valors nuls (tot llibre publicat té un codi ISBN).
+
+- Què passaria si tenim dos o més exemplars amb el mateix ISBN?
 
 ---
 
@@ -86,7 +96,7 @@ Les modificacions que es poden realitzar sobre les columnes existents poden ser 
 
 ### 5.4.1 Canvis en el nom o descripció
 
-Per a aquest canvi, n'hi ha prou amb situar-se en el valor que vulguem modificar i canviar el contingut de text. Aquest tipus de modificació no afecta a les relacions (elements que es veuran en posteriors unitats) amb el que podem realitzar-les amb tota tranquil·litat.
+Per a aquest canvi, n'hi ha prou amb situar-se en el valor que vulguem modificar i canviar el contingut de text. Aquest tipus de modificació **no afecta a les relacions** (elements que es veuran en posteriors unitats) amb el que podem realitzar-les amb tota tranquil·litat.
 
 ---
 
@@ -94,23 +104,25 @@ Per a aquest canvi, n'hi ha prou amb situar-se en el valor que vulguem modificar
 
 Més importants per a la integritat de la taula, i en algun cas més complexes de realitzar, són les operacions que contemplen el canvi de tipus de dades o el canvi de les propietats del camp.
 
-El canvi en la mena de dades ha de realitzar-se amb cautela, ja que s'haurà de seleccionar un tipus de dades compatible amb els valors ja introduïts (en cas que la taula continga dades).
+**El canvi en la mena de dades ha de realitzar-se amb cautela**, ja que s'haurà de seleccionar un **tipus de dades compatible** amb els valors ja introduïts (en cas que la taula continga dades).
 
 ---
 
 ### 5.4.2.1 Canvis en camps de text
 
-Quan canviem entre tipus de dades de text, per exemple, cal anar amb compte que la grandària del nou tipus siga prou gran per a contindre els valors prèviament emmagatzemats. Per exemple, si canviem de 40 a caràcters, no passa res, perquè la longitud augmenta. Ara bé, si canviem la longitud de 40 caràcters a 20 caràcters, s'esborraran els últims 20 caràcters de cada valor contingut en cada registre.
+Quan canviem entre tipus de dades de text, per exemple, **cal anar amb compte que la grandària** del nou tipus siga prou gran per a contindre els valors prèviament emmagatzemats. Per exemple, si canviem de 40 a caràcters, no passa res, perquè la longitud augmenta. Ara bé, ***si canviem la longitud de 40 caràcters a 20 caràcters, s'esborraran els últims 20 caràcters de cada valor contingut en cada registre.***
 
 ---
 
 ### 5.4.2.2 Canvis en camps numèrics
-Quan canviem entre tipus de dades numèriques, per exemple, entre un de tipus real i un altre de tipus sencer cal anar amb compte que la grandària del nou tipus siga prou gran i tindre en compte que només es respectarà la part sencera dels valors prèviament emmagatzemats.
+
+Quan canviem entre tipus de dades numèriques, per exemple, ***entre un de tipus real i un altre de tipus sencer cal anar amb compte que la grandària del nou tipus siga prou gran i tindre en compte que només es respectarà la part sencera*** dels valors prèviament emmagatzemats.
 
 ---
 
 ### 5.4.2.3 Incompatibilitats
-Aquest tipus de conversions no sempre es poden realitzar. Així, per exemple, encara que seria possible canviar el camp "Data_compra" de tipus Data a tipus Text, no ens deixarà convertir-ho a un de tipus *Integer, ja que encara que en el primer pas no és complicat per a Base transformar una data a una cadena de text, en el segon cas no és capaç de convertir una data a un número i ens mostra un avís.
+
+**Aquest tipus de conversions no sempre es poden realitzar**. Així, per exemple, encara que seria possible canviar el camp `Data_compra` de tipus `Data` a tipus `Text`, no ens deixarà convertir-ho a un de tipus `Integer`, ja que encara que en el primer pas no és complicat per a *Base* transformar una data a una cadena de text, en el segon cas no és capaç de convertir una data a un número i ens **mostra un avís**.
 
 És a dir, la solució que ens proposa és eliminar per complet aqueixa columna i crear una nova amb el nom que ja tenia i el nou tipus, però perdent els valors que ja teníem introduïts en aqueix camp.
 
@@ -118,7 +130,7 @@ Aquest tipus de conversions no sempre es poden realitzar. Així, per exemple, en
 
 # 5.5. Tipus de dades *Autonumèric*
 
-Un canvi molt útil que podem realitzar en la nostra taula és fer que la nostra clau primària prenga valors automàticament, per exemple per a posar un codi de referència a un producte o els codis de pel·lícula d'un videoclub. Això es pot fer amb la mena de dades Autonumèric, que permet numerar de manera correlativa i automàtica els registres que s'introdueixen en una taula.
+Un canvi molt útil que podem realitzar en la nostra taula és fer que la nostra **clau primària prenga valors automàticament**, per exemple per a posar un codi de referència a un producte o els codis de pel·lícula d'un videoclub. Això es pot fer amb la mena de dades `Autonumèric`, que permet numerar de manera correlativa i automàtica els registres que s'introdueixen en una taula.
 
 ---
 
@@ -148,10 +160,10 @@ En aquest cas particular NO. En una biblioteca podem tindre més d'un exemplar d
 - Fes doble clic sobre la taula o clic en la icona, per a entrar en manera edició de dades.
 - Inserta un registre duplicat en la taula `LLIBRE`, és a dir, un nou llibre amb el mateix `ID` que un altre. Per exemple:
 
-ID | Títol | Cognoms | Nom | Suport
--|-|-|-|-
-1 | El Quixot de la Manxa | De Cervantes Saavedra | Miguel| Paper
-1 | Els contes de l'Alhambra | Irving | Washington | Paper
+ID | Títol                    | Cognoms               | Nom        | Suport
+---|--------------------------|-----------------------|------------|-------
+1  | El Quixot de la Manxa    | De Cervantes Saavedra | Miguel     | Paper
+1  | Els contes de l'Alhambra | Irving                | Washington | Paper
 
 - En inserir-ho donaria error perquè ja existeix un llibre amb el mateix `ID`. Si es poguera repetir, crearíem una inconsistència de dades, ja que si ens referim al `ID=1`, no sabríem amb quin llibre es correspon.
 - Comprova si es compleixen les restriccions de la clau primària (ha de mostrar-se un missatge d'error de valor duplicat).
@@ -198,6 +210,7 @@ Crearem una rèplica de la taula `LLIBRE` amb nom `LLIBRE2`.
 
 - Obri la taula en manera introducció de dades. 
 - Introdueix un nou registre amb la informació que vulgues. Comprova que ara el camp `ID` no pot modificar-se, ja que l'assigna el programa automàticament. Per exemple:
+  
   - ***LLIBRE 9***
     - ID: NO es pot modificar
     - ISBN: 9788499999999
@@ -214,6 +227,7 @@ Crearem una rèplica de la taula `LLIBRE` amb nom `LLIBRE2`.
 - 💾 Guarda els canvis.
 
 **Eliminació de camps**
+
   - Obri la taula `LLIBRE2` per a edició.
   - Selecciona el camp `Portada`. Fes clic en la columna grisa de l'esquerra en el camp seleccionat.
   - Fes clic amb el botó dret del ratolí i selecciona l'opció `Suprimeix`.

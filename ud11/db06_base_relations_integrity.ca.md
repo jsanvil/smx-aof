@@ -30,15 +30,15 @@ El primer pas d'aquest procés és definir relacions entre les taules. Una vegad
 ## *Exemple pràctic: centre educatiu*
 Per a explicar-ho, mostrarem un exemple de base de dades d'un centre educatiu amb dues taules com són `Alumnes` i `Grups`. Inicialment estaran definides de la següent manera:
 
-> Alumnes       | Grups
-> --------------|-
-> Expedient     | Denominacio
-> Nom           | NombreAlumnes
-> Cognoms       | Ubicacio
-> DataNaixement | Observacions
-> Grup          | 
-> UbicacioGrup  | 
-> ObservacionsGrup | 
+ Alumnes       | Grups
+ --------------|--------------
+ Expedient     | Denominacio
+ Nom           | NombreAlumnes
+ Cognoms       | Ubicacio
+ DataNaixement | Observacions
+ Grup          | 
+ UbicacioGrup  | 
+ ObservacionsGrup | 
 
 En la taula `Alumnes` tenim tota la informació que necessitem sobre els nostres alumnes com:
 
@@ -58,7 +58,7 @@ Per a la taula `Grups` tenim:
 
 Si ens fixem en les dades podem adonar-nos que, en comprovar les dades incloses en les taules d'Alumnes i Grups, existeix **informació que es repeteix** en ambdues:
 
-### Alumnes:
+### ALUMNES:
 
 Expedient | Nom    | Cognoms      | DataNaixement | Grup        | UbicacioGrup      | ObservacionsGrup 
 ----------|--------|--------------|---------------|-------------|-------------------|------------------
@@ -67,7 +67,7 @@ Expedient | Nom    | Cognoms      | DataNaixement | Grup        | UbicacioGrup  
 3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | **Segona Planta** | **Taller**
 3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | **Semi**          | **Remot**
 
-### Grups:
+### GRUPS:
 
 Denominacio | NombreAlumnes | Ubicacio             | Observacions
 ------------|---------------|----------------------|---------------
@@ -78,17 +78,35 @@ Denominacio | NombreAlumnes | Ubicacio             | Observacions
 
 Aquesta situació no és massa favorable quan treballem amb bases de dades on habitualment la quantitat d'informació que es maneja és important.** La solució passa per relacionar les taules amb informació coincident de manera que no existisca duplicitat d'informació**. Tot això, traduït a un llenguatge més natural seria: "Per a què escriure dues vegades el mateix, si puc fer-ho una sola i treballar de la mateixa manera".
 
-> Alumnes       | Grups
-> --------------|-
-> Expedient     | Denominacio
-> Nom           | NombreAlumnes
-> Cognoms       | Ubicacio
-> DataNaixement | Observacions
-> Grup          | 
-> ***~~UbicacioGrup~~***  | 
-> ***~~ObservacionsGrup~~*** | 
+ Alumnes       | Grups
+ --------------|-
+ Expedient     | Denominacio
+ Nom           | NombreAlumnes
+ Cognoms       | Ubicacio
+ DataNaixement | Observacions
+ Grup          | 
+ *x* *~~UbicacioGrup~~*  | 
+ *x* *~~ObservacionsGrup~~* | 
 
-Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjançant el nom del grup seria suficient amb indicar en la taula Alumnes aquest valor per a obtindre el nombre d'alumnes del grup, la seua ubicació i les possibles observacions:
+Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjançant el nom del grup seria suficient amb indicar en la taula `Alumnes` aquest valor per a obtindre el nombre d'alumnes del grup, la seua ubicació i les possibles observacions:
+
+### ALUMNES:
+
+Expedient | Nom    | Cognoms      | DataNaixement | *Grup*    | *~~UbicacioGrup~~*  | *~~ObservacionsGrup~~* 
+----------|--------|--------------|---------------|-------------|---------------------|------------------
+3256      | José   | Pérez García | 27/07/04      | *1SMX-D*    | *~~Planta baixa~~*  | *~~Refroç~~*
+3259      | Juan   | Sánchez Pla  | 17/02/06      | *1SMX-D*    | *~~Planta Baixa~~*  | *~~Reforç~~*
+3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | *~~Segona Planta~~* | *~~Taller~~*
+3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | *~~Semi~~*          | *~~Remot~~*
+
+### GRUPS:
+
+Denominacio | NombreAlumnes | Ubicacio             | Observacions
+------------|---------------|----------------------|---------------
+1SMX-D      | 24            | ***Planta baixa***   | ***Refroç***
+2SMX-D      | 19            | Segona Planta        | Cap
+2ASIR-A     | 20            | ***Segona Planta***  | ***Taller***
+1DAW-SEMI   | 27            | ***Semi***           | ***Remot***
 
 ---
 
@@ -230,8 +248,110 @@ En el nostre cas, hem de comprovar que els valors continguts en el camp `Suport`
 
 # 6.6 Integritat referencial
 
+En la relació que hem definit en l'apartat anterior, s'**impedeix que qualsevol registre relacionat siga modificat o eliminat**. Aquesta propietat és el que es coneix com a **integritat referencial**.
 
+> ⚠️ Quan existeix una relació entre 2 taules, qualsevol operació amb les dades ha de respectar la relació. En cas contrari, no es realitzarà.
 
 ---
 
+# 📝 *Activitat 7: Relacions i integritat referencial*
 
+Crearem una nova taula per a emmagatzemar els diferents tipus de suport per als llibres.
+
+**Crear taula `SUPORT`**
+
+- Obri la base de dades **biblioteca**.
+- `Crea una taula en vista de disseny...`
+- Introdueix els camps que s'indiquen a continuació:
+
+Camp   | Tipus            | Longitud | Descripció
+-------|------------------|----------|------------
+Suport | Text [`VARCHAR`] | 20       | Tipus de suport en el qual es troba emmagatzemat (*paper, llibre electrònic, MP3, etc.*)
+
+- Una vegada creat el camp, marca'l com a clau primària. Per a això selecciona la fila i fes clic amb el botó dret del ratolí seleccionant l'opció `Clau primària`.
+- 💾 Guarda la taula amb el nom `SUPORT`.
+
+**Afegir dades en la taula `SUPORT`**
+
+- Fes doble clic amb el ratolí per a obrir la taula en vista de dades.
+- Inserta les següents files:
+
+Suport   |
+---------|
+*Paper*  |
+*EBook*  |
+*MP3*    |
+*PDF*    |
+*CD*     |
+*DVD*    |
+
+- 💾 Guarda els canvis.
+
+**Comprovar consistència de dades**
+
+- Verifica que les dades contingudes en el camp `Suport` de la taula `LLIBRE` són coherents amb les dades de la taula `SUPORT`. En cas necessari, **modifica les dades que corresponga**.
+
+**Relacions. Afegir taules**
+
+- Crearem una relació entre les taules `SUPORT` i `LLIBRE`.
+- Tanca totes les taules obertes.
+
+> ⚠️ No és possible establir relacions entre taules obertes, ja que en estar introduint dades o modificant el disseny, aquestes es troben bloquejades.
+ 	
+- Ve al menú `Eines` → `Relacions...` Fes clic en la icona Afeg taules.
+- Selecciona les taules `LLIBRE` i `SUPORT` amb el botó `Afeg`.
+
+- En el nostre cas, en la taula `LLIBRE` tenim un camp `Suport` que fa referència a la mena de suport en què està publicat el llibre. Per tant, la columna ha de ser de la mateixa mena de dades que la columna que siga clau primària en l'altra taula i els valors que podrà contindre serà qualsevol dels valors que prenga la clau primària en aquesta taula. En definitiva, en la taula `LLIBRE` el camp `Suport` ha de ser de la mateixa mena de dades que el camp de la taula `SUPORT`.
+
+> ⚠️ Els camps relacionats no tenen perquè tindre els mateixos noms, però han de tindre el mateix tipus de dades i la mateixa grandària. És a dir, han de contindre el mateix tipus d'informació.
+ 	
+**Crear relació**
+
+- Ara hem d'indicar-li a *Base* explícitament que les dues taules estan relacionades i que utilitzarem per a mantindre aquesta relació la columna `Suport` de la taula `LLIBRE`.
+
+- Arrossega del camp `Suport` de `LLIBRE` al camp `Suport` de `SUPORT`. Base ha creat una relació un a molts entre les 2 taules:
+
+![](img/base_activitat_7_relacio.png)
+
+- 💾 Guarda els canvis.
+- Tanca la finestra de relacions
+
+**Verificar integritat referencial**
+
+Una vegada establida una relació, comprovarem que és correcta. Per a això només hem d'intentar realitzar alguna operació no permesa i veure que es compleix la integritat referencial.
+
+- **Cas 1. Introduir un llibre amb un suport que no existeix en la taula `SUPORT`**
+
+  - Feix clic en el botó `Taules` de la Barra d'Objectes.
+  - Veu a la taula LLIBRE i fes doble clic sobre ella.
+  - Introdueix un nou registre amb un suport que no existisca en la taula `SUPORT`.
+  - 💾 Guarda els canvis.
+  - Com podem comprovar, *Base* ens mostra un missatge d'error perquè estem inserint un registre amb un suport que no existeix en la nostra base de dades.
+  - Prem `D'acord`.
+  - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`.
+  - Tanca la taula `LLIBRE`.
+
+- **Cas 2. Modificar un suport que té llibres relacionats**
+
+  - Ve a la taula `SUPORT` i fes doble clic sobre ella.
+  - Modifica dades en el registre `Paper` perquè ara siga `Paper1`.
+  - 💾 Guarda els canvis.
+  - Com podem comprovar, *Base* ens mostra un missatge d'error perquè estem modificant un registre de suport que conté llibres relacionats en la taula `LLIBRE`.
+  - Prem `D'acord`.
+  - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`.
+
+- **Cas 3. Eliminar un suport que té llibres relacionats**
+
+  - Ve a la taula `SUPORT` i fes doble clic sobre ella.
+  - Elimina el registre amb el tipus `Paper`. Fes clic a l'esquerra sobre el triangle amb el botó dret del ratolí i tria l'opció `Suprimir les files`.
+  - Prem `Sí`.
+  - Com podem comprovar, *Base* ens mostra un missatge d'error perquè estem eliminant un registre de suport que conté llibres relacionats en la taula `LLIBRE`.
+  - Prem `D'acord`.
+  - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`. 
+
+**Tanca la base de dades**
+
+- Tanca les taules obertes.
+- 💾 Guarda la base de dades.
+- Tanca la base de dades.
+- Lliura l'activitat.
