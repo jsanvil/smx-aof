@@ -173,17 +173,17 @@ Per a entendre'ns, diguem que un informe d'una base de dades es compon d'una sè
 
 ---
 
-# 7.6. Crear un informe amb l'assistent
+# 7.6. Crear un informe amb l'auxiliar
 
 L'Assistent per a crear informes és l'eina que ens facilita la creació de tota mena d'informes de la manera més senzilla possible. Això no significa que aquest assistent siga l'única forma que podem utilitzar per a crear-los, però sí la més còmoda i la que recomanem. Per a això, l'assistent formula preguntes detallades sobre els orígens de registres, camps, disseny i format que desitgem i crega un informe basat en les nostres respostes.
 
 # 📝 *Activitat 8: Consultes i informes*
 
-**Crear consulta amb l'assistent**
+**Crear consulta amb l'auxiliar**
 
 - Obri la base de dades `Biblioteca`.
-- Fes clic en el botó `Consultes` de la Barra d'Objectes.
-- En la zona superior de Tasques, fes clic en l'opció `Crea una consulta utilitzant l'auxiliar...`
+- Fes clic en el botó `Consultes` de la Barra de `Base de dades`.
+- En la zona superior de `Tasques`, fes clic en l'opció `Crea una consulta utilitzant l'auxiliar...`
 
 - A continuació es desplegarà un assistent que ens guiarà pas a pas per a crear la nostra consulta.
 
@@ -236,7 +236,6 @@ En la zona superior de Tasques, fes clic en l'opció `Crear una consulta en vist
 - La fila Taula conté les dues taules sobre les quals hem realitzat la consulta, és a dir, `LLIBRE` i `SUPORT`.
 - Ordena la consulta ascendentment pel camp `Titol`. Guarda els canvis.
 - 💾 Guarda la consulta com a `LLIBRE_RESUM`.
-
 
 **Crear una consulta anomenada `INFO_PREU_ORD` amb les següents característiques:**
   - Taula: `LLIBRE`
