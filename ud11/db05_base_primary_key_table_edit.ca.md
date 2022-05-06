@@ -142,7 +142,7 @@ Un canvi molt útil que podem realitzar en la nostra taula és fer que la nostra
 Abans d'eliminar una columna de la nostra taula hem de saber que en fer-ho s'esborraran tots els valors que tinguérem donats a aquesta columna en la nostra files pel que, sobretot en el cas de la columna que siga clau primària, cal pensar molt bé si de veritat és convenient eliminar aqueixa columna.
 
 L'eliminació és senzilla i pot ser revocada utilitzant les opcions de `Desfer` i `Refer`.
-   
+
 > ⚠️ **L'eliminació d'una columna es pot desfer només abans de guardar els canvis**. En cas de guardar-los, la columna quedarà eliminada permanentment.
 
 # 📝 *Activitat 6: Clau primària i edició de taules*
