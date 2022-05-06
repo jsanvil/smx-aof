@@ -2,7 +2,8 @@ UD11: Bases de dades (I)
 
 # 5. *LibreOffice Base*: Clau primària. Edició de taules
 
-##  🎯 Objectius
+## 🎯 Objectius
+
 - Conéixer el concepte de clau primària.
 - Establir una clau primària en una taula.
 - Modificar columnes i tipus de dades.
@@ -33,6 +34,7 @@ La **clau principal o primària** proporciona un valor **únic** per a cada regi
 ---
 
 ### *Exemple: Clau primària taula ESTUDIANT*
+
 En una taula en la qual es vol emmagatzemar les dades d'un estudiant tenim:
 
 ESTUDIANT          |
@@ -51,6 +53,7 @@ Grup               |
 ---
 
 ### *Exemple: Clau primària taula LLIBRES*
+
 En una taula en la qual es vol emmagatzemar les dades d'una sèrie de llibres tenim:
 
 LLIBRES   |
@@ -139,7 +142,7 @@ Un canvi molt útil que podem realitzar en la nostra taula és fer que la nostra
 Abans d'eliminar una columna de la nostra taula hem de saber que en fer-ho s'esborraran tots els valors que tinguérem donats a aquesta columna en la nostra files pel que, sobretot en el cas de la columna que siga clau primària, cal pensar molt bé si de veritat és convenient eliminar aqueixa columna.
 
 L'eliminació és senzilla i pot ser revocada utilitzant les opcions de `Desfer` i `Refer`.
- 	 
+   
 > ⚠️ **L'eliminació d'una columna es pot desfer només abans de guardar els canvis**. En cas de guardar-los, la columna quedarà eliminada permanentment.
 
 # 📝 *Activitat 6: Clau primària i edició de taules*
@@ -175,7 +178,7 @@ ID | Títol                    | Cognoms               | Nom        | Suport
 
 Realitzarem un exemple en el qual canviarem el nom d'alguns camps de la taula `LLIBRE`.
 
-- Obri la taula `LLIBRE` per a edició. 
+- Obri la taula `LLIBRE` per a edició.
 - Canviar nom de camps:
   - Canvia el nom de la columna `Prestable` per `PrestableSN`. Situa't en el camp corresponent i canvia el contingut del text.
   - A continuació modificarem la descripció d'un altre dels camps. Per a això, canviarem la del camp Observacions de `Observacions` a `Observacions (autor, edició, etc.)`.
@@ -192,7 +195,7 @@ Crearem una rèplica de la taula `LLIBRE` amb nom `LLIBRE2`.
 
 **Modificar propietats de camps**
 
-- Obri la taula `LLIBRE2` en mode edició. 
+- Obri la taula `LLIBRE2` en mode edició.
 - Canvia el tipus de camp `PrestableSN` de `Si/No` a `Text [VARCHAR]`.
 - Canvia el tipus de camp `Preu` de `Real` a `Enter [INTEGER]`.
 - Canvia la longitud del camp `Titol` de `100` a `50`.
@@ -208,7 +211,7 @@ Crearem una rèplica de la taula `LLIBRE` amb nom `LLIBRE2`.
 
 - A partir d'ara, cada vegada que introduïm una nova fila en la taula `LLIBRE2`, al camp `ID` se li assignarà el major valor assignat fins a aqueix moment incrementat en 1. És a dir, aquest camp es numerarà automàticament i sense repetir els números.
 
-- Obri la taula en manera introducció de dades. 
+- Obri la taula en manera introducció de dades.
 - Introdueix un nou registre amb la informació que vulgues. Comprova que ara el camp `ID` no pot modificar-se, ja que l'assigna el programa automàticament. Per exemple:
   
   - ***LLIBRE 9***
@@ -222,16 +225,16 @@ Crearem una rèplica de la taula `LLIBRE` amb nom `LLIBRE2`.
     - Suport: Paper
     - Idioma: Valencià
     - Preu: 200 €
-    - Web: http://www.regnedevalencia.es/fueros-furs-reino-regne-valencia/
+    - Web: <http://www.regnedevalencia.es/fueros-furs-reino-regne-valencia/>
     - Observacions: Facsímil de l'edició original
 - 💾 Guarda els canvis.
 
 **Eliminació de camps**
 
-  - Obri la taula `LLIBRE2` per a edició.
-  - Selecciona el camp `Portada`. Fes clic en la columna grisa de l'esquerra en el camp seleccionat.
-  - Fes clic amb el botó dret del ratolí i selecciona l'opció `Suprimeix`.
-  - 💾 Guarda els canvis.
+- Obri la taula `LLIBRE2` per a edició.
+- Selecciona el camp `Portada`. Fes clic en la columna grisa de l'esquerra en el camp seleccionat.
+- Fes clic amb el botó dret del ratolí i selecciona l'opció `Suprimeix`.
+- 💾 Guarda els canvis.
 
 - 💾 Guarda la base de dades.
 - Tanca la base de dades.

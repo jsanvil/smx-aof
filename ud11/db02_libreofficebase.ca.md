@@ -3,6 +3,7 @@ UD11: Bases de dades (I)
 # 2. Introducció a *LibreOffice Base*
 
 ## 🎯 Objectius
+
 - Familiaritzar-nos amb l'entorn de Base. Identificar els principals elements de la interfície gràfica d'usuari.
 - Localitzar el sistema d'ajuda del programa.
 - Conéixer les operacions bàsiques amb bases de dades: crear, obrir i tancar.
@@ -11,7 +12,7 @@ UD11: Bases de dades (I)
 
 ***LibreOffice Base*** és un programa de bases de dades que gestiona la creació i maneig d'aquestes, a més de possibilitar l'elaboració de formularis i informes que proporcionen als usuaris un accés fàcil a les dades. La seua interfície és senzilla, la qual cosa permet gestionar les bases de dades d'igual manera que aplicacions de característiques similars.
 
-Base proporciona diverses característiques interessants com ara: l'habilitat d'analitzar i editar relacions a partir de la vista d'un diagrama, la incorporació de *HSQLDB com el seu motor de bases de dades relacional per defecte, la possibilitat d'utilització d'altres bases de dades en formats com *dBASE*, *MYSQL*, etc., o qualsevol base de dades compatible amb *ODBC* o *JDBC*.
+Base proporciona diverses característiques interessants com ara: l'habilitat d'analitzar i editar relacions a partir de la vista d'un diagrama, la incorporació de *HSQLDB com el seu motor de bases de dades relacional per defecte, la possibilitat d'utilització d'altres bases de dades en formats com*dBASE*,*MYSQL*, etc., o qualsevol base de dades compatible amb*ODBC*o*JDBC*.
 
 A més de les característiques anteriors, ***Base*** inclou, igual que les altres aplicacions de la suite *LibreOffice*, multitud d'assistents i vistes per a fer el treball més fàcil als usuaris poc acostumats a aquesta mena de programes.
 
@@ -36,7 +37,7 @@ Una vegada obert podem observar l'assistent per a bases de dades en el qual es m
 
 ## 2.1.1. Creació d'una base de dades
 
-  - ### Pas 1: Seleccioneu la base de dades
+- ### Pas 1: Seleccioneu la base de dades
 
 Per a crear una nova, seleccionem la primera opció `Crear nova base de dades`
 
@@ -44,7 +45,8 @@ Per a crear una nova, seleccionem la primera opció `Crear nova base de dades`
 
 ---
 
-  - ### Pas 2: Guarda i continua
+- ### Pas 2: Guarda i continua
+
 Després, fem clic en el botó `Endavant >`, la qual cosa ens portarà a una altra pantalla amb dues opcions (que hem de deixar amb els valors per defecte).
 
 Les opcions són les següents:
@@ -78,6 +80,7 @@ Una vegada dins del programa, ens apareixerà una finestra amb l'aspecte de la f
 ---
 
 ## 2.2.1. Barra de títol
+
 És la barra superior de la finestra en la qual es mostra el nom de la base de dades activa. Fent doble clic en ella, la finestra canviarà de grandària maximitzant-se o de nou, amb un altre doble clic, recuperant la seua grandària original. Així podrem ampliar o disminuir ràpidament la grandària de la finestra del programa.
 
 ---

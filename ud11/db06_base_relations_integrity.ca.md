@@ -2,7 +2,8 @@ UD11: Bases de dades (I)
 
 # 6. *LibreOffice Base*: Relacions entre taules. Integritat referencial
 
-##  🎯 Objectius
+## 🎯 Objectius
+
 - Conéixer el concepte de relació.
 - Conéixer el concepte de clau aliena.
 - Crear i utilitzar relacions entre taules.
@@ -28,6 +29,7 @@ El primer pas d'aquest procés és definir relacions entre les taules. Una vegad
 ---
 
 ## *Exemple pràctic: centre educatiu*
+
 Per a explicar-ho, mostrarem un exemple de base de dades d'un centre educatiu amb dues taules com són `Alumnes` i `Grups`. Inicialment estaran definides de la següent manera:
 
  Alumnes       | Grups
@@ -36,9 +38,9 @@ Per a explicar-ho, mostrarem un exemple de base de dades d'un centre educatiu am
  Nom           | NombreAlumnes
  Cognoms       | Ubicacio
  DataNaixement | Observacions
- Grup          | 
- UbicacioGrup  | 
- ObservacionsGrup | 
+ Grup          |
+ UbicacioGrup  |
+ ObservacionsGrup |
 
 En la taula `Alumnes` tenim tota la informació que necessitem sobre els nostres alumnes com:
 
@@ -58,16 +60,16 @@ Per a la taula `Grups` tenim:
 
 Si ens fixem en les dades podem adonar-nos que, en comprovar les dades incloses en les taules d'Alumnes i Grups, existeix **informació que es repeteix** en ambdues:
 
-### ALUMNES:
+### ALUMNES
 
-Expedient | Nom    | Cognoms      | DataNaixement | Grup        | UbicacioGrup      | ObservacionsGrup 
+Expedient | Nom    | Cognoms      | DataNaixement | Grup        | UbicacioGrup      | ObservacionsGrup
 ----------|--------|--------------|---------------|-------------|-------------------|------------------
 3256      | José   | Pérez García | 27/07/04      | *1SMX-D*    | **Planta baixa**  | **Refroç**
 3259      | Juan   | Sánchez Pla  | 17/02/06      | *1SMX-D*    | **Planta Baixa**  | **Reforç**
 3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | **Segona Planta** | **Taller**
 3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | **Semi**          | **Remot**
 
-### GRUPS:
+### GRUPS
 
 Denominacio | NombreAlumnes | Ubicacio             | Observacions
 ------------|---------------|----------------------|---------------
@@ -76,7 +78,7 @@ Denominacio | NombreAlumnes | Ubicacio             | Observacions
 2ASIR-A     | 20            | ***Segona Planta***  | ***Taller***
 1DAW-SEMI   | 27            | ***Semi***           | ***Remot***
 
-Aquesta situació no és massa favorable quan treballem amb bases de dades on habitualment la quantitat d'informació que es maneja és important.** La solució passa per relacionar les taules amb informació coincident de manera que no existisca duplicitat d'informació**. Tot això, traduït a un llenguatge més natural seria: "Per a què escriure dues vegades el mateix, si puc fer-ho una sola i treballar de la mateixa manera".
+Aquesta situació no és massa favorable quan treballem amb bases de dades on habitualment la quantitat d'informació que es maneja és important.**La solució passa per relacionar les taules amb informació coincident de manera que no existisca duplicitat d'informació**. Tot això, traduït a un llenguatge més natural seria: "Per a què escriure dues vegades el mateix, si puc fer-ho una sola i treballar de la mateixa manera".
 
  Alumnes       | Grups
  --------------|-
@@ -84,22 +86,22 @@ Aquesta situació no és massa favorable quan treballem amb bases de dades on ha
  Nom           | NombreAlumnes
  Cognoms       | Ubicacio
  DataNaixement | Observacions
- Grup          | 
- *x* *~~UbicacioGrup~~*  | 
- *x* *~~ObservacionsGrup~~* | 
+ Grup          |
+ *x* *~~UbicacioGrup~~*  |
+ *x* *~~ObservacionsGrup~~* |
 
 Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjançant el nom del grup seria suficient amb indicar en la taula `Alumnes` aquest valor per a obtindre el nombre d'alumnes del grup, la seua ubicació i les possibles observacions:
 
-### ALUMNES:
+### ALUMNES
 
-Expedient | Nom    | Cognoms      | DataNaixement | *Grup*      | *~~UbicacioGrup~~*  | *~~ObservacionsGrup~~* 
+Expedient | Nom    | Cognoms      | DataNaixement | *Grup*      | *~~UbicacioGrup~~*  | *~~ObservacionsGrup~~*
 ----------|--------|--------------|---------------|-------------|---------------------|------------------
 3256      | José   | Pérez García | 27/07/04      | *1SMX-D*    | *~~Planta baixa~~*  | *~~Refroç~~*
 3259      | Juan   | Sánchez Pla  | 17/02/06      | *1SMX-D*    | *~~Planta Baixa~~*  | *~~Reforç~~*
 3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | *~~Segona Planta~~* | *~~Taller~~*
 3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | *~~Semi~~*          | *~~Remot~~*
 
-### GRUPS:
+### GRUPS
 
 Denominacio | NombreAlumnes | Ubicacio             | Observacions
 ------------|---------------|----------------------|---------------
@@ -181,7 +183,6 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
         +--------------+                               +--------------+
 ```
 
-
 ### *Altres exemples*
 
 Altre exemple d'aquest tipus el tenim en la relació entre una taula amb pel·lícules i una taula amb intèrprets (actors) perquè:
@@ -239,6 +240,7 @@ On tenim que:
   - `(1)` Donat un llibre, només està publicat en una mena de suport. Recorda que hem considerat, per a simplificar, que un llibre només pot estar publicat en un suport.
 
 ---
+
 ## 6.5.2 Inconsistència de dades
 
 Abans de definir una relació, hem d'assegurar-nos que les dades són coherents, és a dir, que els camps que estan relacionats contenen la mateixa informació.
@@ -297,14 +299,14 @@ Suport   |
 - Tanca totes les taules obertes.
 
 > ⚠️ No és possible establir relacions entre taules obertes, ja que en estar introduint dades o modificant el disseny, aquestes es troben bloquejades.
- 	
+  
 - Ve al menú `Eines` → `Relacions...` Fes clic en la icona Afeg taules.
 - Selecciona les taules `LLIBRE` i `SUPORT` amb el botó `Afeg`.
 
 - En el nostre cas, en la taula `LLIBRE` tenim un camp `Suport` que fa referència a la mena de suport en què està publicat el llibre. Per tant, la columna ha de ser de la mateixa mena de dades que la columna que siga clau primària en l'altra taula i els valors que podrà contindre serà qualsevol dels valors que prenga la clau primària en aquesta taula. En definitiva, en la taula `LLIBRE` el camp `Suport` ha de ser de la mateixa mena de dades que el camp de la taula `SUPORT`.
 
 > ⚠️ Els camps relacionats no tenen perquè tindre els mateixos noms, però han de tindre el mateix tipus de dades i la mateixa grandària. És a dir, han de contindre el mateix tipus d'informació.
- 	
+  
 **Crear relació**
 
 - Ara hem d'indicar-li a *Base* explícitament que les dues taules estan relacionades i que utilitzarem per a mantindre aquesta relació la columna `Suport` de la taula `LLIBRE`.
@@ -347,7 +349,7 @@ Una vegada establida una relació, comprovarem que és correcta. Per a això nom
   - Prem `Sí`.
   - Com podem comprovar, *Base* ens mostra un missatge d'error perquè estem eliminant un registre de suport que conté llibres relacionats en la taula `LLIBRE`.
   - Prem `D'acord`.
-  - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`. 
+  - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`.
 
 **Tanca la base de dades**
 

@@ -2,7 +2,7 @@ UD11: Bases de dades (I)
 
 # 7. *LibreOffice Base*: Consultes. Criteris d'ordenació i selecció. Informes
 
-##  🎯 Objectius
+## 🎯 Objectius
 
 - Conéixer el concepte de consulta de dades.
 - Utilitzar l'assistent per a crear consultes senzilles.
@@ -32,6 +32,7 @@ En *Base* les consultes es poden crear de tres maneres diferents: en mode Dissen
 ---
 
 # 7.2. Consultes amb l'assistent
+
 L'Assistent per a consultes crea consultes senzilles que recuperen dades dels camps especificats en una o més taules o consultes. Si es desitja, l'assistent també pot sumar, comptar i obtindre la mitjana dels valors de grups de registres o de tots els registres i pot calcular el valor mínim o màxim d'un camp.
 
 ---
@@ -71,7 +72,8 @@ Entre les propietats del camp trobem:
 - **Visible**: Indica quins camps, dels quals es troben en zona inferior, es mostraran en la fulla de dades.
 - **Funció**: Aquest característica s'explicarà més endavant.
 - **Criteri**: Permet establir la condició o condicions que ha de complir un camp perquè el registre corresponent aparega en la fulla de dades.
-- 
+
+-
 Una vegada vistos els elements de la finestra de disseny estem en disposició d'afegir els camps a la consulta. Per a això seleccionarem els camps d'una de les dues formes possibles:
 
 - Fent doble clic sobre el camp de la taula
@@ -190,7 +192,7 @@ L'Assistent per a crear informes és l'eina que ens facilita la creació de tota
 - **Pas 1. Selecció de camps**
   - Hem de triar quins camps volem que es mostren en la consulta.
   - En el camp `Taules`, tria la taula `LLIBRE`.
-  - En `Camps disponibles`, selecciona els camps `Titol`, `Cognoms_autor`, `Nom_autor`, `Suport` i `Idioma` utilitzant els botons per a passar un a un els camps. 
+  - En `Camps disponibles`, selecciona els camps `Titol`, `Cognoms_autor`, `Nom_autor`, `Suport` i `Idioma` utilitzant els botons per a passar un a un els camps.
   - Prem `Endavant >`.
 - **Pas 2. Ordre de classificació**
   - A continuació, podem triar si volem que es mostren ordenats en funció dels valors d'un o diversos camps.
@@ -212,18 +214,20 @@ L'Assistent per a crear informes és l'eina que ens facilita la creació de tota
 - Si tanquem la consulta veurem que, en l'apartat de consultes, s'ha creat amb el nom que li hem donat.
 
 **Crea una consulta anomenada `LLIBRE_CASTELLA` amb les següents característiques:**
-  - Taula: `LLIBRE`
-  - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`,`Idioma`, `Suport`, `Editorial` i `Any`
-  - Que estiga ordenada ascendentment per `Cognoms_autor`
-  - Que el camp `Idioma` siga igual a *`Espanyol`*
-  - Els àlies deixa'ls com estan
-  - 💾 Guarda els canvis.
+
+- Taula: `LLIBRE`
+- Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`,`Idioma`, `Suport`, `Editorial` i `Any`
+- Que estiga ordenada ascendentment per `Cognoms_autor`
+- Que el camp `Idioma` siga igual a *`Espanyol`*
+- Els àlies deixa'ls com estan
+- 💾 Guarda els canvis.
 
 **Crea una consulta anomenada `LLIBRE_BASICA` amb les següents característiques:**
-  - Taula: `LLIBRE`
-  - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`,`Idioma`, `Observacions`, `Any` i `Suport`
-  - Ordena la consulta ascendentment pel camp `Titol`.
-  - 💾 Guarda els canvis.
+
+- Taula: `LLIBRE`
+- Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`,`Idioma`, `Observacions`, `Any` i `Suport`
+- Ordena la consulta ascendentment pel camp `Titol`.
+- 💾 Guarda els canvis.
 
 **Crear consulta amb diverses taules**
 
@@ -238,29 +242,33 @@ En la zona superior de Tasques, fes clic en l'opció `Crear una consulta en vist
 - 💾 Guarda la consulta com a `LLIBRE_RESUM`.
 
 **Crear una consulta anomenada `INFO_PREU_ORD` amb les següents característiques:**
-  - Taula: `LLIBRE`
-  - Que continga els camps `Titol`, `Preu`, `Editorial`, `Any` i `Observacions`
-  - Que estiga ordenada ascendentment per `Preu`
-  - 💾 Guarda els canvis.
+
+- Taula: `LLIBRE`
+- Que continga els camps `Titol`, `Preu`, `Editorial`, `Any` i `Observacions`
+- Que estiga ordenada ascendentment per `Preu`
+- 💾 Guarda els canvis.
 
 **Crear una consulta anomenada `INFO_EDITORIAL_ORD` les següents característiques:**
-  - Taula: `LLIBRE`
-  - Que continga els camps `Titol`, `Editorial`, `Any` i `Suport`
-  - Que estiga ordenada ascendentment per `Editorial`
-  - 💾 Guarda els canvis.
+
+- Taula: `LLIBRE`
+- Que continga els camps `Titol`, `Editorial`, `Any` i `Suport`
+- Que estiga ordenada ascendentment per `Editorial`
+- 💾 Guarda els canvis.
 
 **Crea una consulta anomenada `LLIBRES_PAPER_MP3` amb les següents característiques:**
-  - Taula: `LLIBRE`
-  - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor` i `Suport`.
-  - Que el camp `Suport` siga igual a *`Paper`* o *`MP3`*.
-  - 💾 Guarda els canvis.
+
+- Taula: `LLIBRE`
+- Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor` i `Suport`.
+- Que el camp `Suport` siga igual a *`Paper`* o *`MP3`*.
+- 💾 Guarda els canvis.
 
 **Crea una consulta anomenada `LLIBRES_EDREINO` amb les següents característiques:**
-  - Taula: `LLIBRE`
-  - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`, `Idioma` i `Editorial`.
-  - Marca `Editorial` com **no visible**.
-  - Que el camp `Editorial` siga igual a *`Regne de València`* i l'`Idioma` del qual siga *`Valencià`*.
-  - 💾 Guarda els canvis.
+
+- Taula: `LLIBRE`
+- Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`, `Idioma` i `Editorial`.
+- Marca `Editorial` com **no visible**.
+- Que el camp `Editorial` siga igual a *`Regne de València`* i l'`Idioma` del qual siga *`Valencià`*.
+- 💾 Guarda els canvis.
 
 **Crear un informe amb l'auxiliar**
 

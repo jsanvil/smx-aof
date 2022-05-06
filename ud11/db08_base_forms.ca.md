@@ -2,7 +2,7 @@ UD11: Bases de dades (I)
 
 # 8. *LibreOffice Base*: Formularis simples. Manipulació de dades
 
-##  🎯 Objectius
+## 🎯 Objectius
 
 - Concepte de formulari.
 - Conéixer els elements principals d'un formulari.
@@ -31,6 +31,7 @@ L'Auxiliar per a crear formularis és l'eina que ens facilita la creació de tot
 Després de crear un formulari i obrir-lo en pantalla podem intuir el fàcil que resulta treballar amb ell. Doncs bé, aquesta senzillesa és una dels seus principals característiques, les quals ens facilitaran molt la labor a l'hora de gestionar les dades. De fet, per a utilitzar un formulari n'hi ha prou amb usar els diferents camps que el componen per a afegir, modificar o visualitzar les dades de les nostres taules. En aquesta unitat aprendrem a manipular les dades mitjançant formularis.
 
 ## 8.3.1 Elements del formulari
+
 Quan obrim un formulari per a modificar les dades es mostrarà una pantalla amb els següents elements:
 
 - **Barra de Menús**. Té els mateixos menús que mostra el processador de textos *Writer, si bé és cert que dins d'ells apareixen algunes opcions específiques dels formularis.
@@ -64,6 +65,7 @@ Botó | Funció
 - **Eliminar registre actual**: permet eliminar el contingut del registre que ens mostra el formulari. Aquesta acció elimina les dades de la taula que els conté i ja no podrem recuperar-los, per la qual cosa convé tindre molt clar que volem esborrar les dades.
 
 # 8.4 Modificació de dades en un formulari
+
 La modificació de les dades d'un formulari es realitzarà utilitzant la barra del punt anterior. Per a entendre-ho millor l'explicarem amb exemples.
 
 ## 8.4.1 Camp tipus Imatge
@@ -119,7 +121,7 @@ En la zona superior de **Tasques**, fes clic en l'opció `Crear un formulari uti
 - Obri el formulari `FLIBRO` fent doble clic.
 - Inserirem un nou llibre. Prem el botó d'afegir registre de la barra navegació de formularis, que està situat en la part inferior de la pantalla.
 - Ara els camps es fixaran a un valor buit i/o amb el seu valor per defecte.
- 	 
+
 > ⚠️ Les màscares de format aplicades als camps en les taules, no es transfereixen automàticament als camps del formulari (per exemple en el camp d'any i preu). Posteriorment veurem com se soluciona aquest problema.
 
 - Descàrrega la següent imatge:
@@ -137,9 +139,9 @@ En la zona superior de **Tasques**, fes clic en l'opció `Crear un formulari uti
   - `Suport`: Paper
   - `Idioma`: Espanyol
   - `Preu`: 9,45
-  - `Web`: https://es.wikipedia.org/wiki/La_última_legión
+  - `Web`: <https://es.wikipedia.org/wiki/La_última_legión>
   - `Portada`: [act_9_portada.jpg](img/act_9_portada.jpg)
-- Inserir la imatge descarregada en el camp de la portada. 
+- Inserir la imatge descarregada en el camp de la portada.
 - Per a acabar, prem el botó de guardar canvis perquè aquests queden fixats en la taula.
 
 ---
@@ -147,9 +149,11 @@ En la zona superior de **Tasques**, fes clic en l'opció `Crear un formulari uti
 **Més dades**
 
 - Per a cadascun dels registres de la taula `LLIBRE`, descàrrega d'Internet una imatge de la portada i afig aquesta imatge en el camp `Portada`. **Procura que les fotos no ocupen molt espai per a no superar el límit de grandària a l'hora de pujar al portal la base de dades**.
-- 💾 Guarda els canvis. 
+- 💾 Guarda els canvis.
 - Tanca el formulari.
+
 ---
+
 - 💾 Guarda la base de dades.
 - Tanca la base de dades.
 - Lliura l'activitat.

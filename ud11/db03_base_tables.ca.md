@@ -1,8 +1,9 @@
 UD11: Bases de dades (I)
 
-# 3. Taules.
+# 3. Taules
 
 ## 🎯 Objectius
+
 - Concepte de taula.
 - Concepte de camp.
 - Identificar l'estructura d'una taula.
@@ -35,6 +36,7 @@ En l'estructura d'una taula destaquen una sèrie d'elements com són:
 ---
 
 ### 3.2.1 Nom del camp
+
 El nom dels camps pot estar format per **un màxim de 64 caràcters alfanumèrics** (lletres i/o números). Encara que hui dia els SGBD permeten qualsevol caràcter, ÉS MOLT ACONSELLABLE (per no dir quasi obligatori) seguir les següents recomanacions en col·locar noms als camps:
 
 - Posar **noms significatius** (*Cognom*, *Nom*, *Telf*, etc.) perquè l'usuari puga deduir les dades emmagatzemades en el camp.
@@ -118,7 +120,7 @@ Camp | Tipus | Longitud | Descripció
 **Seccio** | Text [*VARCHAR*] | 20 | Secció de la biblioteca on està situat
 **Prestable** | Sí/No [*BOOLEAN*] | Per defecte | Si es pot prestar o no
 
-  - El resultat serà similar al de la següent imatge:
+- El resultat serà similar al de la següent imatge:
 
   ![](img/base_activitat_1_creacio_taula.png)
 
@@ -139,5 +141,5 @@ Camp | Tipus | Longitud | Descripció
   
 ![](img/base_activitat_1_guarda_final.png)
 
-- 💾 Guarda els canvis. 
+- 💾 Guarda els canvis.
 - Tanca la base de dades "*biblioteca*".

@@ -3,6 +3,7 @@ UD11: Bases de dades (I)
 # 4. *LibreOffice Base*: Format, edició, validació, ordenació i filtrat de dades
 
 ## 🎯 Objectius
+
 - Conéixer i utilitzar els formats per a mostrar els camps.
 - Concepte de camp. Identificar l'estructura d'una taula.
 - Concepte de fulla de dades.
@@ -23,7 +24,7 @@ Podem utilitzar l'Assistent per a formats o podem escriure directament la màsca
 
 Aquesta propietat és important en molts camps però, possiblement, on més cura cal tindre amb ella és en els camps de tipus "temps" per a no tindre problemes quan introduïm dates i hores.
 
---- 
+---
 
 # 4.2 Assistent per a formats
 
@@ -44,6 +45,7 @@ Existeixen diferents tipus entre els quals trobem:
 ---
 
 ## 4.2.1 Tipus Numèric
+
 Totes aquestes màscares estableixen el format amb el qual es visualitzarà el camp numèric. Disposem de les mateixes opcions que en el full de càlcul *Calc*.
 
 - **Decimals**. Indica el nombre de decimals a mostrar.
@@ -91,7 +93,7 @@ Zeros a l'esquerra. Nombre màxim de zeros davant de la coma decimal.
   - Obri la base de dades "**Biblioteca**".
   - Fes clic en el botó Taules del panell de Base de dades.
   - Selecciona la taula **LLIBRE**.
-  - Edita la taula fent clic en la icona Editar de la barra d'eines. 
+  - Edita la taula fent clic en la icona Editar de la barra d'eines.
 - Format del camp ***Any de publicació***
   - Selecciona el camp `Any` i en el panell de propietats inferior fes clic en el botó amb punts suspensius del camp `Exemple de format`.
   - Tria la categoria `Data`. Fins ara el nostre camp `Any` estava predefinit com `DD/MM/AA`; és a dir, dues xifres per al dia, dos per al mes i dos per a l'any.
@@ -135,10 +137,9 @@ Per a realitzar la inserció de dades hem de seguir els següents passos:
 - Situar-nos en l'últim registre, el qual està marcat amb la icona de `Nou registre`.
 - Escriure la primera dada del nou registre i prémer `Intro`.
 - Repetir el pas anterior fins a completar les dades del registre.
- 	 
+   
 > ⚠️ Quan inserim registres en una taula, el programa els guarda automàticament en activar qualsevol altre registre o quan tanquem el full de dades en la qual estem treballant.
 
- 	 
 > ⚠️ Per a introduir l'any escriurem el dia 1 de gener de l'any de publicació, és a dir, si és l'any `2000` teclejarem `1/01/2000` o `1/01/00`. El format definit per al camp s'encarregarà de mostrar automàticament només l'any amb 4 dígits.
 
 ---
@@ -156,12 +157,12 @@ Taula LLIBRE. Introducció de dades
     - Cognoms_autor: De Cervantes Saavedra
     - Nom_autor: Miguel
     - Editorial: Segle d'Or
-    - Any: 2016 
+    - Any: 2016
     - Genere: Novel·la humor
     - Suport: Paper
     - Idioma: Espanyol
     - Preu: 9,45 €
-    - Web: https://es.wikipedia.org/wiki/don_quijote_de_la_mancha
+    - Web: <https://es.wikipedia.org/wiki/don_quijote_de_la_mancha>
   - LLIBRE 2
     - ID: 2
     - ISBN: 9788422222222
@@ -173,7 +174,7 @@ Taula LLIBRE. Introducció de dades
     - Suport: Paper
     - Idioma: Valencià
     - Preu: 19,99 €
-    - Web: https://es.wikipedia.org/wiki/tirante_el_blanco
+    - Web: <https://es.wikipedia.org/wiki/tirante_el_blanco>
   - LLIBRE 3
     - ID: 3
     - ISBN: 9788433333333
@@ -185,7 +186,7 @@ Taula LLIBRE. Introducció de dades
     - Suport: Paper
     - Idioma: Espanyol
     - Preu: 9,02 €
-    - Web: https://muydeminaya.jimdofree.com/nuestra-historia/personajes-historicos/fray-bernardino-de-minaya/
+    - Web: <https://muydeminaya.jimdofree.com/nuestra-historia/personajes-historicos/fray-bernardino-de-minaya/>
   - LLIBRE 4
     - ID: 4
     - ISBN: 9788444444444
@@ -197,7 +198,7 @@ Taula LLIBRE. Introducció de dades
     - Suport: Paper
     - Idioma: Valencià
     - Preu: 16,99 €
-    - Web: https://es.wikipedia.org/wiki/veles_e_vents
+    - Web: <https://es.wikipedia.org/wiki/veles_e_vents>
   - LLIBRE 5
     - ID: 5
     - ISBN: 9788455555555
@@ -209,17 +210,19 @@ Taula LLIBRE. Introducció de dades
     - Suport: Paper
     - Idioma: Espanyol
     - Preu: 11,20 €
-    - Web: https://es.wikipedia.org/wiki/robinson_crusoe
+    - Web: <https://es.wikipedia.org/wiki/robinson_crusoe>
 - 💾 Guarda els canvis.
 
 ---
 
 # 4.5 Navegació entre registres
+
 En la part inferior de la finestra podem veure la Barra de navegació entre registres. Utilitzarem els botons de desplaçament per a desplaçar-nos amb rapidesa entre registres.
 
 En aquesta barra se'ns mostra la fila actual en la qual estem, així com els botons, per aquest ordre, per a anar a la primera fila, a l'anterior, a la següent, a l'última o crear una nova.
 
 A més de la barra, podem utilitzar el teclat amb les següents tecles o combinacions:
+
 - `Tab`: situa el cursor en el camp següent al registre actiu
 - `Majús + Tab`: situa el cursor en el camp anterior al registre actiu
 - `Fletxa a dalt` `⬆`: situa el cursor en el camp del registre anterior
@@ -302,14 +305,14 @@ Taula LLIBRE. Edició
       - **ID**: 6
       - **ISBN**: 9788466666666
       - **Títol**: Platero i jo
-      - **Autor**: 
+      - **Autor**:
       - **Editorial**: Nobel
       - **Any**: 2007
       - **Gènere**: Lírica
       - **Suport**: Paper
       - **Idioma**: Espanyol
       - **Preu**: 8,95 €
-      - **Web**: https://es.wikipedia.org/wiki/platero_y_yo
+      - **Web**: <https://es.wikipedia.org/wiki/platero_y_yo>
     - ***LLIBRE 7***
       - **ID**: 7
       - **ISBN**: 9788477777777
@@ -321,7 +324,7 @@ Taula LLIBRE. Edició
       - **Suport**: Paper
       - **Idioma**: Anglés
       - **Preu**:
-      - **Web**: https://es.wikipedia.org/wiki/sherlock_holmes
+      - **Web**: <https://es.wikipedia.org/wiki/sherlock_holmes>
 - 💾 Guarda els canvis.
 
 ---
@@ -363,6 +366,7 @@ Una altra de les opcions interessants que posseeix Base és la de permetre la ce
 Una vegada premem el botó es mostrarà una finestra amb diferents opcions per a la cerca.
 
 Entre les opcions trobem:
+
 - **Text**: caràcters a buscar en la taula
 - **Àmbit de busca**: permet indicar si la cerca es realitzarà en tots els camps o en camps individuals (que podem seleccionar)
 - **Configuració**: ofereix diferents possibilitats de cerca com:
@@ -377,10 +381,10 @@ Entre les opcions trobem:
 
 - **Ordenar dades per columnes**
   - Obri la taula `LLIBRE` per a introducció de dades (doble clic sobre la taula).
-  - Ves a la columna `Titol` i fes clic en la icona d'`Ordre descendent`. 
+  - Ves a la columna `Titol` i fes clic en la icona d'`Ordre descendent`.
   - Ara els llibres es mostraran ordenats per ordre alfabètic descendent del títol.
   - 📷 Captura la pantalla i guarda-la com a "***ordre***".
-  - Per a restaurar l'ordre inicial per `ID` bastarà amb anar a la columna `ID` i aplicar l'ordre ascendent. 
+  - Per a restaurar l'ordre inicial per `ID` bastarà amb anar a la columna `ID` i aplicar l'ordre ascendent.
   - Prova a utilitzar l'ordre descendent en una altra columna (la que tries).
   - Restableix l'ordre ascendent per `ID`.
 
@@ -394,7 +398,7 @@ Entre les opcions trobem:
 
 - **Filtre estàndard**
   - Ara aplicarem un filtre amb criteris. Per a això suposem que només volem que es mostren aquells `llibres` amb `preu` de `més de 10€`.
-  - Ves a la columna `Preu` i fes clic en el botó `Filtre estàndard`. 
+  - Ves a la columna `Preu` i fes clic en el botó `Filtre estàndard`.
   - Posa els criteris:
     - Nom de camp: `Preu`
     - Condició: `>`
@@ -405,7 +409,7 @@ Entre les opcions trobem:
   - Elimina el filtre fent clic a `Suprimeix el filtre/l'ordenació`.
 
 - **Aplicar filtres addicionals**
-  - Aplica el següent filtre estàndard: 
+  - Aplica el següent filtre estàndard:
     - Els llibres el preu dels quals siga major de 5 euros i l'idioma dels quals siga "Español" o "Valencià".
   - 📷 Captura la pantalla i guarda-la com "***filtreest2***".
   - Elimina el filtre fent clic a `Suprimeix el filtre/l'ordenació`.

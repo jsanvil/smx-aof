@@ -3,6 +3,7 @@ UD11: Bases de dades (I)
 # 1. Introducció a les bases de dades
 
 ## 🎯 Objectius
+
 - Familiaritzar-nos amb el concepte de base de dades.
 - Familiaritzar-nos amb el concepte de sistema gestor de base de dades (SGBD).
 - Identificar els principals elements de les bases de dades.
@@ -29,7 +30,7 @@ o, també:
 ## *Exemple: agenda organitzada*
 
 Si ens fixem en el concepte d'organització podem trobar un exemple bastant clar en la diferència existent entre un munt de números de telèfon i adreces escrits en **trossos de paper** (el que coneixem com a post-it) o tindre'ls organitzats en una **agenda**.
- 
+
 En tots dos casos tenim la mateixa informació, però mentre que en el primer trobar un número de telèfon pot portar-nos bastant temps, en el segon cas, el treball es pot reduir a uns pocs segons.
 
 La diferència es troba en la forma en què la informació està emmagatzemada i organitzada.
@@ -68,7 +69,7 @@ Existeixen molts tipus diferents de gestors de bases de dades, encara que quasi 
 
 Pràcticament, en qualsevol base de dades actual, existeixen quatre elements essencials: **taules**, **consultes**, **formularis** i **informes**. Tots són indispensables i necessaris. Aquesta és una definició molt bàsica de cadascun dels elements que formen part d'una base de dades però suficient per a començar a familiaritzar-nos amb aquests conceptes:
 
-Element	       | Funció
+Element        | Funció
 ---------------|------------------------------------
 **Taules**     | Permeten emmagatzemar les dades.
 **Consultes**  | Amb les consultes podem accedir a les dades emmagatzemades, ordenar-los i filtrar-los per diferents criteris.
