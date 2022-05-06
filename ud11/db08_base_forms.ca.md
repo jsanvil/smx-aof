@@ -77,7 +77,7 @@ En cas que el formulari continga camps de tipus imatge, per a poder editar-la te
 
 # 📝 *Activitat 9: Formularis*
 
-**Crear formulari `FLIBRO`**
+## Crear formulari `FLIBRO`
 
 - Obri la base de dades `Biblioteca`.
 - Fes clic en el botó **Formularis** de la Barra de **Base de dades**.
@@ -115,7 +115,7 @@ En la zona superior de **Tasques**, fes clic en l'opció `Crear un formulari uti
 
 ---
 
-**Formulari `FLIBRO`. Afegir, esborrar i modificar dades**
+## Formulari `FLIBRO`. Afegir, esborrar i modificar dades
 
 - Fes clic en el botó `Formularis` de la barra de `Base de dades`.
 - Obri el formulari `FLIBRO` fent doble clic.
@@ -125,7 +125,7 @@ En la zona superior de **Tasques**, fes clic en l'opció `Crear un formulari uti
 > ⚠️ Les màscares de format aplicades als camps en les taules, no es transfereixen automàticament als camps del formulari (per exemple en el camp d'any i preu). Posteriorment veurem com se soluciona aquest problema.
 
 - Descàrrega la següent imatge:
-![](img/act_9_portada.jpg)
+![Activitat 9: Imatge de portada](img/act_9_portada.jpg)
 - Introdueix els valors del nou registre (si l'identificador ID de llibre ja existeix, introdueix un valor numèric de 10 o superior).
 
   - `ID`: 10
@@ -146,7 +146,7 @@ En la zona superior de **Tasques**, fes clic en l'opció `Crear un formulari uti
 
 ---
 
-**Més dades**
+## Afegir més dades
 
 - Per a cadascun dels registres de la taula `LLIBRE`, descàrrega d'Internet una imatge de la portada i afig aquesta imatge en el camp `Portada`. **Procura que les fotos no ocupen molt espai per a no superar el límit de grandària a l'hora de pujar al portal la base de dades**.
 - 💾 Guarda els canvis.

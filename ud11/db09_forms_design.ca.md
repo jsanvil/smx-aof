@@ -2,7 +2,7 @@ UD11: Bases de dades (I)
 
 # 9. *LibreOffice Base*: Disseny de formularis
 
-##  🎯 Objectius
+## 🎯 Objectius
 
 - Modificar el disseny de formularis.
 - Modificar propietats senzilles de camps.
@@ -61,99 +61,88 @@ La galeria *Fontwork+ conté diferents dissenys de rètols artístics, que al se
 
 # 📝 *Activitat 10: Disseny de formularis*
 
-**Formulari FLIBRO: Disseny**
+## Formulari FLIBRO: Disseny
 
-- Obri la base de dades "biblioteca".
-- Fes clic en el botó Formularis de la barra de base de dades.
-- Selecciona el formulari *FLIBRO.
-- Selecciona la icona Editar de la barra d'eines. Ara entrem en manera Disseny de formularis.
-
-Modificarem les propietats d'alguns camps.
-
-- **Camp `Observacions`**
-  - Fes doble clic sobre el camp `Observacions`. En fer doble clic es mostrarà una finestra amb un conjunt de propietats que podrem modificar.
-  - Canvia la propietat `Alineació vert` al valor "Superior".
-
-  - Guarda els canvis del disseny del formulari fent clic en la icona `Guardar`. 
-  - Tanca el formulari.
-  - Fes doble clic sobre el formulari `FLIBRO` i comprova que les observacions es visualitzen correctament:
-
-
-- **Camp `ID`**
-
-  - Ara canviarem les propietats del camp `ID` perquè no es puga modificar ja que l'`ID` és clau primària.
-
-  - Selecciona el formulari `FLIBRO`.
-  - Obri el formulari en vista de disseny.
-  - Fes doble clic sobre el camp `ID`. Es mostrarà una finestra de propietats. Canvia la propietat `Activat` al valor *`No`* i la propietat `Alineació` al valor *`Dreta`*.
-
-  - Guarda els canvis del disseny del formulari fent clic en la icona `Guardar`. 
-  - Canvia a vista de edició de dades. Fes clic en la icona corresponent.
-  - Comprova que no podem editar el valor del camp `ID` (es veurà en un color gris clar) i que el text s'alinea a la dreta.
-
-**Aplicar format camp `Any`**
-
+- Obri la base de dades `Biblioteca`.
+- Fes clic en el botó `Formularis` de la barra de `Base de dades`.
 - Selecciona el formulari `FLIBRO`.
-- Obri el formulari en vista de dissen.
-- Prem sobre la icona de la barra esquerra anomenat Camp formatat. Dibuixa un nou camp en el formulari al costat del camp `Any`.
-- Fes doble clic sobre el nou camp. En la pestanya General, en la propietat Nom escriu *`Any formatat`*.
-- Tria la propietat Format. 
-- Fes clic en la icona amb punts suspensius. Tria la categoria Data. Fins ara el nostre camp `Any` estava predefinit com DD/MM/AA; és a dir, dues xifres per al dia, dos per al mes i dos per a l'any.
-- En el camp Format de codi tecleja AAAA. Després, prem la icona de la dreta Afegir.
+- Selecciona la icona `Editar` de la barra d'eines. Ara entrem en vista de disseny de formularis.
+- Modificarem les propietats d'alguns camps.
 
-- Comprova que s'ha afegit el nou format:
+## Camp `Observacions`
 
+- Fes doble clic sobre el camp `Observacions`. En fer doble clic es mostrarà una finestra amb un conjunt de propietats que podrem modificar.
+- Canvia la propietat `Alineació vert` al valor *`Superior`*.
+- Guarda els canvis del disseny del formulari fent clic en la icona `Guardar`.
 
-- En la propietat `Activat`, estableix el valor *`No`*.
-Ara enllacem el nou camp amb un camp de la nostra base de dades.
+## Camp `ID`
 
-- En la pestanya Dades, veu a la propietat Camp de dades i tria el camp `Any`.
+Ara canviarem les propietats del camp `ID` perquè no es puga modificar ja que l'`ID` és clau primària.
 
+- Fes doble clic sobre el camp `ID`. Es mostrarà una finestra de propietats. Canvia la propietat `Activat` al valor *`No`* i la propietat `Alineació` al valor *`Dreta`*.
+- Guarda els canvis del disseny del formulari fent clic en la icona `Guardar`.
+- Canvia a vista de edició de dades. Fes clic en la icona corresponent.
+- Comprova que no podem editar el valor del camp `ID` (es veurà en un color gris clar) i que el text s'alinea a la dreta.
 
+## Aplicar format camp `Any`
+
+- Prem sobre la icona de la barra esquerra anomenat `Camp formatat`. Dibuixa un nou camp en el formulari al costat del camp `Any`.
+- Fes doble clic sobre el nou camp. En la pestanya General, en la propietat `Nom` escriu *`Any formatat`*.
+- Tria la propietat `Formatació`.
+- Fes clic en la icona amb punts suspensius. Tria la categoria Data. Fins ara el nostre camp `Any` estava predefinit com *`DD/MM/AA`*; és a dir, dues xifres per al dia, dos per al mes i dos per a l'any.
+- En el camp Format de codi tecleja *`AAAA`*. Després, prem la icona de la dreta `Afeg`.
+- Comprova que s'ha afegit el nou format.
+- En la propietat `Habilitat`, estableix el valor *`No`*.
+
+- Ara enllacem el nou camp amb un camp de la nostra base de dades.
+- En la pestanya `Dades`, veu a la propietat Camp de dades i tria el camp `Any`.
+
+## Aplicar format camp `Preu`
+
+- Prem sobre la icona anomenada `Camp de moneda`. Dibuixa un nou camp en el formulari al costat del camp `Preu`.
+- Fes doble clic sobre el nou camp. En la pestanya `General`, en la propietat `Nom` escriu *`Preu formatat`*.
+- Tria la propietat `Valor per defecte`. Escriu el valor *`0`*.
+- En la pestanya `Dades`, veu a la propietat `Camp de dades` i tria el camp `Preu`.
+- Fes clic en el ***camp preu antic*** i esborra'l (tecla `Supr`).
+- Prem sobre la icona de la barra esquerra anomenat `Etiqueta`. Dibuixa una nova etiqueta en el formulari a l'esquerra del nou camp `Preu`.
+- En la propietat `Etiqueta`. Escriu el text *`Preu`*.
 - Guarda els canvis.
-- Tanca la vista dissenye i comprova el resultat en la vista de dades. Ara tenim un camp amb format que ens mostrarà l'any de publicació del llibre.
 
-
-
-**Aplicar format camp `Preu`**
-
-- Selecciona el formulari `FLIBRO`.
-- Obri el formulari en vista de disseny. 
-- Fes clic en la icona de Més controls .
-- En la nova finestra que es mostra, prem sobre la icona anomenada Camp moneda . Dibuixa un nou camp en el formulari al costat del camp “Preu”.
-- Fes doble clic sobre el nou camp. En la pestanya General, en la propietat Nom escriu "Preu formatat".
-- Tria la propietat Valor predeterminat. Escriu el valor 0.
-- En la pestanya Dades, veu a la propietat Camp de dades i tria el camp “Preu”.
-- Fes clic en el camp preu antic i esborra'l (tecla *Supr).
-- Prem sobre la icona de la barra esquerra anomenat Etiqueta . Dibuixa una nova etiqueta en el formulari a l'esquerra del nou camp “Preu”.
-- Tria la propietat Etiqueta. Escriu el text "Preu".
-- Guarda els canvis.
-- Tanca la vista dissenye i comprova el resultat en la vista de dades. Ara tenim un camp amb format que ens mostrarà l'any de publicació del llibre.
-
-
-
-
+## Canvis de interfície
 
 Canviarem l'aparença del disseny del formulari *FLIBRO perquè la interfície resulte agradable i intuïtiva.
 
-Fes clic en el botó Formularis de barra de Base de dades.
-Selecciona el formulari *FLIBRO.
-Obri el formulari en manera dissenye. 
+- Pot utilitzar-se els efectes i colors que es desitge.
+- Desplaçar elements de la pantalla
+
+- Redimensionar els elements de la pantalla per a deixar espai per als encapçalats (imatge i títol).
+
+- Fes clic en la icona `Selecciona`, situat en la part superior esquerra de la pantalla.
+
+- Selecciona tots els elements del formulari mitjançant el botó esquerre del ratolí.
+- Situa el ratolí en la vora de la selecció i, quan aparega una creu, arrossega tots els elements cap a la part inferior de la pantalla, per a desplaçar-los més a baix.
+
+## Inserir imatge i títol
+
+- Inserita un `rectangle, arredonit` 3D en la part superior del formulari i col·loca'l en la part central. Escriu dins el text *`BIBLIOTECA`*.
+- Descarrega la següent imatge:
+  ![Logo Biblioteca](img/base_activitat_10_img.png)
+- Inserita la imatge descarregada en la part superior del formulari. Menú `Insereix` → `Imatge...` Col·loca-la a l'esquerra del rectangle amb el títol.
+
+## Rètols artístics
+
+Afegirem un rètol artístic per a la portada del llibre.
 Pot utilitzar-se els efectes i colors que es desitge.
-Desplaçar elements de la pantalla
 
-Anem a redimensiona els elements de la pantalla per a deixar espai per als encapçalats (imatge i títol).
+- Inserita un rètol artístic amb el text *`Portada`*.
+- Col·loca'l just damunt del camp on es mostra la portada del llibre.
 
-Fes clic en la icona Selecció, situat en la part inferior esquerra de la pantalla.
+Guarda els canvis.
+Tanca el formulari.
+Tancar la base de dades
 
+Guarda els canvis.
+Tanca la base de dades "biblioteca".
+Pujar fitxer
 
-Selecciona tots els elements del formulari mitjançant el botó esquerre del ratolí.
-Situa el ratolí en la vora de la selecció i, quan aparega una creu, arrossega tots els elements cap a la part inferior de la pantalla, per a desplaçar-los més a baix.
-Inserir imatge i títol
-
-Inserida un rectangle arredonit 3D en la part superior del formulari i col·loca'l en la part central. Escriu dins el text “BIBLIOTECA”.
-Descàrrega del portal la imatge de la icona del llibre. DESCARREGAR
-Inserida la imatge descarregada en la part superior del formulari. Menú Inserir → Imatge o icona . Col·loca-la a l'esquerra del rectangle amb el títol.
-
-
-
+Puja la base de dades "biblioteca" a la plataforma.

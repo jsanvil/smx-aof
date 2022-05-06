@@ -81,13 +81,13 @@ Denominacio | NombreAlumnes | Ubicacio             | Observacions
 Aquesta situació no és massa favorable quan treballem amb bases de dades on habitualment la quantitat d'informació que es maneja és important.**La solució passa per relacionar les taules amb informació coincident de manera que no existisca duplicitat d'informació**. Tot això, traduït a un llenguatge més natural seria: "Per a què escriure dues vegades el mateix, si puc fer-ho una sola i treballar de la mateixa manera".
 
  Alumnes       | Grups
- --------------|-
+ --------------|------
  Expedient     | Denominacio
  Nom           | NombreAlumnes
  Cognoms       | Ubicacio
  DataNaixement | Observacions
  Grup          |
- *x* *~~UbicacioGrup~~*  |
+ *x* *~~UbicacioGrup~~*     |
  *x* *~~ObservacionsGrup~~* |
 
 Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjançant el nom del grup seria suficient amb indicar en la taula `Alumnes` aquest valor per a obtindre el nombre d'alumnes del grup, la seua ubicació i les possibles observacions:
@@ -149,7 +149,7 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
 - Cada `grup` només pot tindre `1 tutor`
 - Cada `tutor` només pot tindre `1 grup`
 
-```
+```text
                        1                      1 
         +------------+                          +-------------+
         |    GRUP    | <----------------------> |    TUTOR    |
@@ -176,7 +176,7 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
 - `1 professor` pot impartir classe a `molts grups`
 - `1 grup` pot tindre `molts professors`
 
-```
+```text
                          N                           N 
         +--------------+                               +--------------+
         |   PROFESSOR  | <---------------------------> |     GRUP     |
@@ -224,7 +224,7 @@ Segons hem explicat prèviament, existeix clarament una relació entre les taule
 
 Les relacions entre taules és un concepte una miqueta abstracte. No obstant això, si representem gràficament el nostre disseny, el significat queda molt més clar.
 
-```
+```text
                          1                           N 
         +--------------+                               +--------------+
         |    SUPORT    | <---------------------------> |    LLIBRE    |
@@ -260,7 +260,7 @@ En la relació que hem definit en l'apartat anterior, s'**impedeix que qualsevol
 
 Crearem una nova taula per a emmagatzemar els diferents tipus de suport per als llibres.
 
-**Crear taula `SUPORT`**
+## Crear taula `SUPORT`
 
 - Obri la base de dades **biblioteca**.
 - `Crea una taula en vista de disseny...`
@@ -273,7 +273,7 @@ Suport | Text [`VARCHAR`] | 20       | Tipus de suport en el qual es troba emmag
 - Una vegada creat el camp, marca'l com a clau primària. Per a això selecciona la fila i fes clic amb el botó dret del ratolí seleccionant l'opció `Clau primària`.
 - 💾 Guarda la taula amb el nom `SUPORT`.
 
-**Afegir dades en la taula `SUPORT`**
+## Afegir dades en la taula `SUPORT`
 
 - Fes doble clic amb el ratolí per a obrir la taula en vista de dades.
 - Inserta les següents files:
@@ -289,11 +289,11 @@ Suport   |
 
 - 💾 Guarda els canvis.
 
-**Comprovar consistència de dades**
+## Comprovar consistència de dades
 
 - Verifica que les dades contingudes en el camp `Suport` de la taula `LLIBRE` són coherents amb les dades de la taula `SUPORT`. En cas necessari, **modifica les dades que corresponga**.
 
-**Relacions. Afegir taules**
+## Relacions. Afegir taules
 
 - Crearem una relació entre les taules `SUPORT` i `LLIBRE`.
 - Tanca totes les taules obertes.
@@ -307,7 +307,7 @@ Suport   |
 
 > ⚠️ Els camps relacionats no tenen perquè tindre els mateixos noms, però han de tindre el mateix tipus de dades i la mateixa grandària. És a dir, han de contindre el mateix tipus d'informació.
   
-**Crear relació**
+## Crear relació
 
 - Ara hem d'indicar-li a *Base* explícitament que les dues taules estan relacionades i que utilitzarem per a mantindre aquesta relació la columna `Suport` de la taula `LLIBRE`.
 
@@ -318,7 +318,7 @@ Suport   |
 - 💾 Guarda els canvis.
 - Tanca la finestra de relacions
 
-**Verificar integritat referencial**
+## Verificar integritat referencial
 
 Una vegada establida una relació, comprovarem que és correcta. Per a això només hem d'intentar realitzar alguna operació no permesa i veure que es compleix la integritat referencial.
 
@@ -351,7 +351,7 @@ Una vegada establida una relació, comprovarem que és correcta. Per a això nom
   - Prem `D'acord`.
   - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`.
 
-**Tanca la base de dades**
+## Tanca la base de dades
 
 - Tanca les taules obertes.
 - 💾 Guarda la base de dades.

@@ -1,4 +1,4 @@
-UD11: Bases de dades (I)
+**UD11: Bases de dades (I)**
 
 # 7. *LibreOffice Base*: Consultes. Criteris d'ordenació i selecció. Informes
 
@@ -81,7 +81,7 @@ Una vegada vistos els elements de la finestra de disseny estem en disposició d'
 
 Selecciona els camps `Titol`, `Cognoms_autor`, `Nom_autor`, `Suport` i `Editorial`:
 
-![](img/base_query_design_simple.png)
+![Base: Diseny de consulta simple](img/base_query_design_simple.png)
 
 A continuació executa la consulta amb el botó `Executa la consulta (F5)`, la qual cosa farà que es mostren els resultats corresponents a aquesta.
 
@@ -113,7 +113,7 @@ Selecciona i afig la taula `LLIBRE` i `SUPORT`.
 Agrega els camps `Titol`, `Cognoms_autor` i `Nom_autor` de la taula `LLIBRE`, així com el camp `Suport` de la taula `SUPORT`.
 El següent pas serà fer clic sobre el desplegable `Ordenació` del camp que es vulga ordenar i seleccionar el tipus d'ordenació (ordenarem la consulta ascendentment per títol):
 
-![](img/base_query_design_order.png)
+![Base: Diseny de consulta. Ordenació](img/base_query_design_order.png)
 
 A continuació executa la consulta amb el botó `Executa la consulta (F5)`, la qual cosa farà que es mostren els resultats corresponents a aquesta.
 
@@ -131,7 +131,7 @@ Altra de les opcions que ens ofereix Base és la de poder seleccionar registres 
 
 Sobre la taula `LLIBRE` seleccionar els camps `Titol`, `Cognoms_autor` i `Nom_autor` el suport del qual siga *`Paper`*
 
-![](img/base_query_design_where.png)
+![Base: Diseny de consulta. Criteri](img/base_query_design_where.png)
 
 Si ens fixem, el camp `Suport` s'utilitza per a la consulta però no es mostra en executar la consulta (casella `Visible` desmarcada).
 
@@ -144,7 +144,7 @@ També podem utilitzar múltiples criteris o filtres de selecció amb la finalit
 ***Exemple pràctic: Biblioteca***
 Sobre la taula `LLIBRE` seleccionar els camps `Titol`, `Cognoms_autor` i `Nom_autor` el suport del qual siga '*Paper*' i editorial siga '*Regne de València*'
 
-![](img/base_query_design_where_and.png)
+![Base: Diseny de consulta. Criteri AND](img/base_query_design_where_and.png)
 
 ---
 
@@ -159,7 +159,7 @@ Per a això utilitzarem la fila de criteri i la fila immediatament inferior (la 
 
 Sobre la taula `LLIBRE` seleccionar els camps `Titol`, `Cognoms_autor` i `Nom_autor` el suport del qual siga *`Paper`* o *`EBook`*
 
-![](img/base_query_design_where_or.png)
+![Base: Diseny de consulta. Criteri OR](img/base_query_design_where_or.png)
 
 ---
 
@@ -181,7 +181,7 @@ L'Assistent per a crear informes és l'eina que ens facilita la creació de tota
 
 # 📝 *Activitat 8: Consultes i informes*
 
-**Crear consulta amb l'auxiliar**
+## Crear consulta amb l'auxiliar
 
 - Obri la base de dades `Biblioteca`.
 - Fes clic en el botó `Consultes` de la Barra de `Base de dades`.
@@ -213,7 +213,7 @@ L'Assistent per a crear informes és l'eina que ens facilita la creació de tota
 - Una vegada acabada, s'executarà la consulta oferint una sèrie de resultats ordenats alfabèticament per títol-
 - Si tanquem la consulta veurem que, en l'apartat de consultes, s'ha creat amb el nom que li hem donat.
 
-**Crea una consulta anomenada `LLIBRE_CASTELLA` amb les següents característiques:**
+## Crea una consulta anomenada `LLIBRE_CASTELLA`
 
 - Taula: `LLIBRE`
 - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`,`Idioma`, `Suport`, `Editorial` i `Any`
@@ -222,14 +222,14 @@ L'Assistent per a crear informes és l'eina que ens facilita la creació de tota
 - Els àlies deixa'ls com estan
 - 💾 Guarda els canvis.
 
-**Crea una consulta anomenada `LLIBRE_BASICA` amb les següents característiques:**
+## Crea una consulta anomenada `LLIBRE_BASICA`
 
 - Taula: `LLIBRE`
 - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`,`Idioma`, `Observacions`, `Any` i `Suport`
 - Ordena la consulta ascendentment pel camp `Titol`.
 - 💾 Guarda els canvis.
 
-**Crear consulta amb diverses taules**
+## Crear consulta amb diverses taules
 
 - Fes clic en el botó `Consultes` de la Barra de Base de dades.
 En la zona superior de Tasques, fes clic en l'opció `Crear una consulta en vista de disseny...`
@@ -241,28 +241,28 @@ En la zona superior de Tasques, fes clic en l'opció `Crear una consulta en vist
 - Ordena la consulta ascendentment pel camp `Titol`. Guarda els canvis.
 - 💾 Guarda la consulta com a `LLIBRE_RESUM`.
 
-**Crear una consulta anomenada `INFO_PREU_ORD` amb les següents característiques:**
+## Crear una consulta anomenada `INFO_PREU_ORD`
 
 - Taula: `LLIBRE`
 - Que continga els camps `Titol`, `Preu`, `Editorial`, `Any` i `Observacions`
 - Que estiga ordenada ascendentment per `Preu`
 - 💾 Guarda els canvis.
 
-**Crear una consulta anomenada `INFO_EDITORIAL_ORD` les següents característiques:**
+## Crear una consulta anomenada `INFO_EDITORIAL_ORD`
 
 - Taula: `LLIBRE`
 - Que continga els camps `Titol`, `Editorial`, `Any` i `Suport`
 - Que estiga ordenada ascendentment per `Editorial`
 - 💾 Guarda els canvis.
 
-**Crea una consulta anomenada `LLIBRES_PAPER_MP3` amb les següents característiques:**
+## Crea una consulta anomenada `LLIBRES_PAPER_MP3`
 
 - Taula: `LLIBRE`
 - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor` i `Suport`.
 - Que el camp `Suport` siga igual a *`Paper`* o *`MP3`*.
 - 💾 Guarda els canvis.
 
-**Crea una consulta anomenada `LLIBRES_EDREINO` amb les següents característiques:**
+## Crea una consulta anomenada `LLIBRES_EDREINO`
 
 - Taula: `LLIBRE`
 - Que continga els camps `Titol`, `Cognoms_autor`, `Nom_autor`, `Idioma` i `Editorial`.
@@ -270,22 +270,23 @@ En la zona superior de Tasques, fes clic en l'opció `Crear una consulta en vist
 - Que el camp `Editorial` siga igual a *`Regne de València`* i l'`Idioma` del qual siga *`Valencià`*.
 - 💾 Guarda els canvis.
 
-**Crear un informe amb l'auxiliar**
+## Crear un informe amb l'auxiliar
 
 - Fes clic en el botó `Informes` de la Barra de Base de dades.
-En la zona superior de `Tasques`, fes clic en l'opció `Crear un informe utilitzant l'auxiliar...`
+- En la zona superior de `Tasques`, fes clic en l'opció `Crear un informe utilitzant l'auxiliar...`
 - A continuació es desplegarà un assistent que ens guiarà pas a pas per a crear la nostra consulta.
-- **Pas 1. Selecció de camp**
+
+- **Pas 1. Selecció de camps**
 Hem de triar quins camps volem que es mostren en l'informe i de quines taules. Les taules apareixeran en la part superior mentre que els camps es mostraran en la part inferior.
   - Selecciona la taula LLIBRE.
   - Selecciona els camps `ISBN`, `Titol`, `Cognoms_autor`, `Nom_autor`, `Suport` i `Idioma`.
-  ![](img/base_report_wizard_1.png)
+  ![Base: Auxiliar d'informes Pas 1. Selecció de camps](img/base_report_wizard_1.png)
   - Prem `Endavant >`.
 
-- **Pas 2. Etiquetar camps**
+- **Pas 2. Etiquetatge dels camps**
   - A continuació, podem triar amb quin nom (àlies), es mostraran les capçaleres de les columnes dels camps que hem triat en mostrar el resultat de l'informe. Per defecte l'assistent utilitzarà el nom propi de cada camp en la taula o consulta.
   - Com els noms dels camps són bastant clars, deixem les opcions per defecte.
-  ![](img/base_report_wizard_2.png)
+  ![Base: Auxiliar d'informes Pas 2. Etiquetatge dels camps](img/base_report_wizard_2.png)
   - Prem `Endavant >`.
 
 - **Pas 3. Agrupació**
@@ -293,32 +294,33 @@ Hem de triar quins camps volem que es mostren en l'informe i de quines taules. L
   - Per a entendre-ho millor suposem que fem una llista de llibres de tres idiomes. Aquesta llista l'organitzem en primer nivell per l'idioma i en segon nivell per l'autor. En aquest cas, l'informe crearà un primer nivell d'agrupament per a cada idioma i dins d'ell crearà un grup per a cada autor dins del qual apareixeran els llibres que ha escrit.
   - Continuarem amb l'exercici.
   - Agrupa pel camp `Idioma`.
-  ![](img/base_report_wizard_3.png)
+  ![Base: Auxiliar d'informes Pas 3. Agrupació](img/base_report_wizard_3.png)
   - Prem `Endavant >`.
 
 - **Pas 4. Opcions d'ordenació**
   - En aquest pas seleccionarem el criteri d'ordenació de camps de l'informe en funció de l'agrupament que hàgem triat. Podem ordenar per un màxim de quatre camps i en ordre ascendent o descendent. Recorda que els camps agrupats només es poden ordenar dins de cada grup.
   - Ordena els camps ascendentment per Idioma i *descendentemente per Cognoms autor.
-  ![](img/base_report_wizard_4.png)
+  ![Base: Auxiliar d'informes Pas 4. Opcions d'ordenació](img/base_report_wizard_4.png)
   - Prem `Endavant >`.
 
-- **Pas 5. Triar disposició**
+- **Pas 5. Triar un format**
   - En aquest pas hem de triar l'aspecte extern de l'informe. Per a això comptem amb el quadre de llista Disseny de dades en el qual es mostra un bon nombre de plantilles predeterminades. A més, podem observar com en seleccionar qualsevol dels dissenys d'aquesta llista es reflecteix a l'instant en l'informe.
   - Una vegada decidit el disseny per a les dades, utilitzarem el quadre de llista Disseny d'encapçalats i peus de pàgina per a localitzar el model que més ens agrade per a la presentació dels peus i les capçaleres de l'informe. Igual que ocorre amb els dissenys de dades, amb els encapçalats i peus de pàgina també podem comprovar el resultat en la pàgina de l'informe.
   - L'última decisió que hem de prendre en aquest pas és l'orientació de l'informe: vertical o horitzontal. La utilització de l'una o l'altra dependrà fonamentalment de la quantitat de columnes que tinga el nostre informe.
   - Selecciona la distribució "Tabular" i orientació "Horitzontal".
-  ![](img/base_report_wizard_5.png)
+  ![Base: Auxiliar d'informes Pas 5. Triar un format](img/base_report_wizard_5.png)
   - Prem `Endavant >`.
 
 - **Pas 6. Crear informe**
   - Per a finalitzar, se'ns mostra un resum amb totes les opcions triades i és on hem d'indicar el nom amb el qual es guardarà l'informe. A més, podem triar si en finalitzar volem que es mostre el resultat de l'informe o s'òbriga en manera Disseny per a afinar i detallar millor l'informe.
   - Fixa el valor del camp Títol de l'informe a "INFORME_IDIOMA_AUTOR".
   - Deixa l'opció Crear informe ara perquè es mostre el resultat.
-  ![](img/base_report_wizard_6.png)
+  ![Base: Auxiliar d'informes Pas 6. Crear informe](img/base_report_wizard_6.ca.png)
   - Prem `Finalitza`.
 
 - A continuació s'executarà l'informe:
-![](img/base_report_wizard_7.png)
+![Base: Auxiliar d'informes final](img/base_report_wizard_7.ca.png)
+
 - 💾 Guarda la base de dades.
 - Tanca la base de dades.
 - Lliura l'activitat.
