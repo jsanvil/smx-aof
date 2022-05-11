@@ -59,7 +59,7 @@ Introduirem els camps que s'indiquen a continuació:
 
 Camp | Tipus | Longitud | Descripció
 -|-|-|-
-Id_pelicula | Enterr [`INTEGER`] | *Per defecte* | Identificador (clau primària)
+Id_pelicula | Enter [`INTEGER`] | *Per defecte* | Identificador (clau primària)
 Titol | Text [`VARCHAR`] | 50 | Títol
 Director | Text [`VARCHAR`] | 35 | Director
 Any | Data [`DATE`] | *Per defecte* | Any de producció
