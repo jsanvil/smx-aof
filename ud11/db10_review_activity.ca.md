@@ -170,7 +170,7 @@ Dimarts | Sí/No [`BOOLEAN`] | *Per defecte* | Dia dimarts
 Dimecres | Sí/No [`BOOLEAN`] | *Per defecte* | Dia dimecres
 Dijous | Sí/No [`BOOLEAN`] | *Per defecte* | Dia dijous
 Divendres | Sí/No [`BOOLEAN`] | *Per defecte* | Dia divendres
-Disabte | Sí/No [`BOOLEAN`] | *Per defecte* | Dia disabte
+Dissabte | Sí/No [`BOOLEAN`] | *Per defecte* | Dia disabte
 Diumenge | Sí/No [`BOOLEAN`] | *Per defecte* | Dia diumenge
 
 - 🔑 Fixa com a clau primària el camp `Id_activitat`.
@@ -180,10 +180,10 @@ Diumenge | Sí/No [`BOOLEAN`] | *Per defecte* | Dia diumenge
 
 Introdueix diversos registres amb les diferents activitats del gimnàs.
 
-Id_activitat | Descripcio | Dilluns | Dimarts | Dimecres | Dijous | Divendres | Disabte | Diumenge
+Id_activitat | Descripcio | Dilluns | Dimarts | Dimecres | Dijous | Divendres | Dissabte | Diumenge
 -|-|-|-|-|-|-|-|-
 Aerobic2D | Aeròbic dos dies a la setmana  | Sí | No | No | Sí | No | No | No
-Boxing3D | Boxa tres dies a la setmana     | No | No | No | No | Sí | Sí | Sí
+Boxing3D  | Boxa tres dies a la setmana     | No | No | No | No | Sí | Sí | Sí
 Fitness2D | Fitnes dos dies a la setmana   | No | Sí | No | Sí | No | No | No
 Fitness3D | Fitnes tres dies a la setmana  | Sí | No | Sí | No | Sí | No | No
 Natacio2D | Natació dos dies a la setmana  | No | Sí | No | Sí | No | No | No
