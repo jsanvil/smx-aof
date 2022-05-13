@@ -13,11 +13,11 @@ UD12: Bases de dades (II)
 
 # 1.1 Llistes de dades
 
-Si ens fixem en la base de dades del videoclub, podem veure que s'està repetint el mateix valor moltes vegades: per exemple, *`Històric`* apareix en diverses files. És a dir, en introduir el mateix valor de manera redundant s'està possibilitant que en algun moment l'escriguem malament, per exemple, *`Històric`*, i tinguem un nou gènere que no correspon a cap pel·lícula, ja que ni tan sols existeix.
+En una base de dades de pel·licules, podem repetir el mateix valor moltes vegades: per exemple, *`Comèdia`* apareix en diverses files del camp `Genere`. És a dir, en introduir el mateix valor de manera redundant s'està possibilitant que en algun moment l'escriguem malament, per exemple, *`comedia`*, i tinguem un nou gènere que no correspon a cap pel·lícula, ja que ni tan sols existeix.
 
-Pot ocórrer també que tots els crítics de cinema es posen d'acord i decidisquen que el gènere *`Històric`* no té un nom adequat i que és més adequat anomenar-lo *`Històries`*. Llavors, en la taula `PELICULA`, s'ha d'anar una a una canviant el nom i amb cura de no equivocar-se en teclejar. Potser si tenim quatre pel·lícules d'aquest gènere no ens semble un gran problema fer aquest canvi quatre vegades però si resulta que es té en la col·lecció tres-centes pel·lícules d'aquest gènere pot ser que el problema semble més important.
+Pot ocórrer també que tots els crítics de cinema es posen d'acord i decidisquen que el gènere *`Comèdia`* no té un nom adequat i que és més adequat anomenar-lo *`Humor`*. Llavors, en la taula `PELICULA`, s'ha d'anar una a una canviant el nom i amb cura de no equivocar-se en teclejar. Potser si tenim quatre pel·lícules d'aquest gènere no ens semble un gran problema fer aquest canvi quatre vegades però si resulta que es té en la col·lecció tres-centes pel·lícules d'aquest gènere pot ser que el problema semble més important.
 
-La solució als problemes anteriors està a separar la informació que apareix repetida contínuament en una nova taula GENERE i indicar d'alguna forma en la nostra base de dades que hi ha files de la taula `PELICULA` i de la taula `GENERE` que estan relacionades.
+La solució als problemes anteriors està a `separar la informació` que apareix repetida contínuament en una nova taula `GENERE` i indicar d'alguna forma en la nostra base de dades que hi ha files de la taula `PELICULA` i de la taula `GENERE` que estan relacionades.
 
 ---
 
@@ -143,18 +143,18 @@ Genere | Text [`VARCHAR`] | 20 | Gènere de cinema (clau primària)
 
 - Introdueix diversos registres amb els diferents tipus de gènere:
 
-| Genere  |
-|--- |
-| Acció  |
-| Aventures  |
-| Bèl·lic  |
-| Ciència-ficció  |
-| Comèdia  |
-| Documental  |
-| Drama  |
-| Històric  |
-| Terror  |
-| Thriller  |
+| Genere         |
+|----------------|
+| Acció          |
+| Aventures      |
+| Bèl·lic        |
+| Ciència-ficció |
+| Comèdia        |
+| Documental     |
+| Drama          |
+| Històric       |
+| Terror         |
+| Thriller       |
 
 ### Formulari `FPELICULA`. Crear llista de gèneres
 
@@ -163,8 +163,8 @@ Ara modificarem el formulari perquè el camp gènere siga una llista desplegable
 - Obri el formulari en vista disseny.
 - Prem sobre la icona de la barra lateral esquerra anomenada `Quadre de llista`.
 - Dibuixa el nou control a la dreta del camp gènere.
-- Apareixerà l'assistent per a guiar-nos en el procés. Seguim els passos corresponents:
-  - Tria la taula GENERE.
+- Si tenim activat els auxiliars de control de formularis, apareixerà l'assistent per a guiar-nos en el procés. Seguim els passos corresponents:
+  - Tria la taula `GENERE`.
   - `Endavant >`
   - Selecciona el camp `Genere`.
   - `Endavant >`
@@ -177,9 +177,9 @@ Ara modificarem el formulari perquè el camp gènere siga una llista desplegable
 - Crearem una nova taula `SUPORT`.
 - Introdueix els camps que s'indiquen a continuació:
 
-Camp | Tipus | Longitud | Descripció
--|-|-|-
-Suport | Text [`VARCHAR`] | 20 | Tipus de suport en el qual es graven les pel·lícules (clau primària)
+Camp   | Tipus            | Longitud | Descripció
+-------|------------------|----------|------------
+Suport | Text [`VARCHAR`] | 20       | Tipus de suport en el qual es graven les pel·lícules (clau primària)
 
 - Marca el camp `Suport` com a *`Clau primària`*
 
@@ -188,12 +188,12 @@ Suport | Text [`VARCHAR`] | 20 | Tipus de suport en el qual es graven les pel·l
 - Introdueix diversos registres amb els diferents tipus de gènere:
 
 | Suport  |
-|--- |
-| BLU-RAY  |
-| DVD  |
-| SD  |
-| USB  |
-| VHS  |
+|---------|
+| BLU-RAY |
+| DVD     |
+| SD      |
+| USB     |
+| VHS     |
 
 ### Formulari `FPELICULA`. Crear llista de suports
 
@@ -230,12 +230,12 @@ Suport | Text [`VARCHAR`] | 20 | Tipus de suport en el qual es graven les pel·l
 - En la barra d'eines inferior, fes clic en la icona `Ordre d'activació`.
 - Mou els diferents camps perquè quede l'ordre correcte:
 
-![](img/ud11_act1_ordre_tabulacio.png)
+![Ordre de tabulació del formulari](img/ud11_act1_ordre_tabulacio.png)
 
 - 💾 Guarda els canvis i tanca el formulari.
 - Fes doble clic en el formulari. Comprova que ara està correcte l'ordre de tabulació. Per a això, passa amb la tecla tabulador d'un camp a un altre.
 
-![](img/ud11_act1_final.png)
+![Resultat final](img/ud11_act1_final.png)
 
 - Tanca el formulari.
 - 💾 Guarda els canvis en la base de dades.

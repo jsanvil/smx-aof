@@ -92,7 +92,7 @@ Aquesta situació no és massa favorable quan treballem amb bases de dades on ha
 
 Tornant al nostre exemple, si relacionem les taules `Alumnes` i `Grups` mitjançant el nom del grup seria suficient amb indicar en la taula `Alumnes` aquest valor per a obtindre el nombre d'alumnes del grup, la seua ubicació i les possibles observacions:
 
-### ALUMNES
+### `ALUMNES`
 
 Expedient | Nom    | Cognoms      | DataNaixement | *Grup*      | *~~UbicacioGrup~~*  | *~~ObservacionsGrup~~*
 ----------|--------|--------------|---------------|-------------|---------------------|------------------
@@ -101,7 +101,7 @@ Expedient | Nom    | Cognoms      | DataNaixement | *Grup*      | *~~UbicacioGru
 3272      | Felipe | Sainz Paso   | 21/09/05      | *2ASIR-A*   | *~~Segona Planta~~* | *~~Taller~~*
 3261      | María  | Delgado Vila | 01/10/03      | *1DAW-SEMI* | *~~Semi~~*          | *~~Remot~~*
 
-### GRUPS
+### `GRUPS`
 
 Denominacio | NombreAlumnes | Ubicacio             | Observacions
 ------------|---------------|----------------------|---------------
@@ -124,14 +124,14 @@ Les condicions per a establir vincles entre dues taules no són sempre iguals, j
 
 Aquest tipus es dona quan una fila de la primera taula pot estar relacionada amb moltes files de la segona taula, però una fila de la segona només està relacionada amb una de la primera.
 
-### *Exemple. Base de dades d'un centre educatiu*
+### *Exemple. Base de dades d'un centre educatiu `(1:N)`*
 
 Si tornem a la base de dades d'un centre educatiu amb dues taules com són `Alumnes` i `Grups`, tenim que:
 
 - Donat `1 alumne`, només pot pertànyer a `1 grup`.
 - Donat `1 grup`, pot tindre `molts alumnes`.
 
-### *Altres exemples*
+### *Altres exemples `(1:N)`*
 
 Altre exemple d'aquesta mena de relacions podria ser entre una taula amb àrbitres i una altra amb partits de tennis, ja que:
 
@@ -142,7 +142,7 @@ Altre exemple d'aquesta mena de relacions podria ser entre una taula amb àrbitr
 
 Aquest tipus de relació apareix amb menys freqüència i succeeix quan una fila de la primera taula només pot estar relacionada amb una fila de la segona i una fila de la segona taula només pot estar relacionada amb una de la primera.
 
-### *Exemple. Base de dades d'un centre educatiu*
+### *Exemple. Base de dades d'un centre educatiu `(1:1)`*
 
 Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple seria el d'un tutor amb un grup:
 
@@ -156,7 +156,7 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
         +------------+                          +-------------+
 ```
 
-### *Altres exemples*
+### *Altres exemples `(1:1)`*
 
 Altre exemple d'aquesta mena de relacions podria ser entre una taula amb països i una altra amb caps de govern:
 
@@ -169,7 +169,7 @@ Aquesta classe de relació ocorre quan una fila de la primera taula pot estar re
 
 Aquest tipus de relació només és possible si **es defineix una tercera taula** (denominada taula d'unió) **la clau principal de la qual consta d'almenys dos camps**: ***les claus externes de les Taules `A` i `B`***. Posteriorment tractarem el concepte de clau aliena o externa.
 
-### *Exemple. Base de dades d'un centre educatiu*
+### *Exemple. Base de dades d'un centre educatiu `(N:N)`*
 
 Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple seria el d'un institut on les taules `PROFESSORS` i `GRUPS` estan relacionades:
 
@@ -183,7 +183,7 @@ Si tornem a la base de dades d'un centre educatiu, tenim que un altre exemple se
         +--------------+                               +--------------+
 ```
 
-### *Altres exemples*
+### *Altres exemples `(N:N)`*
 
 Altre exemple d'aquest tipus el tenim en la relació entre una taula amb pel·lícules i una taula amb intèrprets (actors) perquè:
 
@@ -270,7 +270,7 @@ Camp   | Tipus            | Longitud | Descripció
 -------|------------------|----------|------------
 Suport | Text [`VARCHAR`] | 20       | Tipus de suport en el qual es troba emmagatzemat (*paper, llibre electrònic, MP3, etc.*)
 
-- Una vegada creat el camp, marca'l com a clau primària. Per a això selecciona la fila i fes clic amb el botó dret del ratolí seleccionant l'opció `Clau primària`.
+- Una vegada creat el camp, marca'l com a **clau primària**. Per a això selecciona la fila i fes clic amb el botó dret del ratolí seleccionant l'opció `Clau primària`.
 - 💾 Guarda la taula amb el nom `SUPORT`.
 
 ## Afegir dades en la taula `SUPORT`
@@ -324,11 +324,11 @@ Una vegada establida una relació, comprovarem que és correcta. Per a això nom
 
 - **Cas 1. Introduir un llibre amb un suport que no existeix en la taula `SUPORT`**
 
-  - Feix clic en el botó `Taules` de la Barra d'Objectes.
-  - Veu a la taula LLIBRE i fes doble clic sobre ella.
+  - Fes clic en el botó `Taules` de la Barra de dades.
+  - Ve a la taula `LLIBRE` i fes doble clic sobre ella.
   - Introdueix un nou registre amb un suport que no existisca en la taula `SUPORT`.
   - 💾 Guarda els canvis.
-  - Com podem comprovar, *Base* ens mostra un missatge d'error perquè estem inserint un registre amb un suport que no existeix en la nostra base de dades.
+  - Com podem comprovar, *Base* ens **mostra un missatge d'error** perquè estem inserint un registre amb un suport que no existeix en la nostra base de dades.
   - Prem `D'acord`.
   - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`.
   - Tanca la taula `LLIBRE`.
@@ -338,7 +338,7 @@ Una vegada establida una relació, comprovarem que és correcta. Per a això nom
   - Ve a la taula `SUPORT` i fes doble clic sobre ella.
   - Modifica dades en el registre `Paper` perquè ara siga `Paper1`.
   - 💾 Guarda els canvis.
-  - Com podem comprovar, *Base* ens mostra un missatge d'error perquè estem modificant un registre de suport que conté llibres relacionats en la taula `LLIBRE`.
+  - Com podem comprovar, *Base* ens **mostra un missatge d'error** perquè estem modificant un registre de suport que conté llibres relacionats en la taula `LLIBRE`.
   - Prem `D'acord`.
   - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`.
 
@@ -347,7 +347,7 @@ Una vegada establida una relació, comprovarem que és correcta. Per a això nom
   - Ve a la taula `SUPORT` i fes doble clic sobre ella.
   - Elimina el registre amb el tipus `Paper`. Fes clic a l'esquerra sobre el triangle amb el botó dret del ratolí i tria l'opció `Suprimir les files`.
   - Prem `Sí`.
-  - Com podem comprovar, *Base* ens mostra un missatge d'error perquè estem eliminant un registre de suport que conté llibres relacionats en la taula `LLIBRE`.
+  - Com podem comprovar, *Base* ens **mostra un missatge d'error** perquè estem eliminant un registre de suport que conté llibres relacionats en la taula `LLIBRE`.
   - Prem `D'acord`.
   - Fes clic a l'esquerra sobre el llapis amb el botó dret del ratolí i tria l'opció `Desfès: entrada de dades`.
 
