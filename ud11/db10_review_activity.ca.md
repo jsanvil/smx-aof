@@ -7,7 +7,7 @@ UD11: Bases de dades (I)
 - Crear la base de dades d'un gimnàs.
 - Repassar tots els conceptes vistos anteriorment.
 
-# Base de dades: Gimnàs
+# Base de dades: `Gimnàs`
 
 El gimnàs *TotGym S.L.* pretén crear una base de dades automatitzada de tots els seus clients, així com de les activitats que es realitzen. Per a això contracta els serveis d'una empresa de serveis informàtics.
 
@@ -134,7 +134,7 @@ Canviarem aspectes estètics del disseny del formulari `FSOCIO` perquè es mostr
 
 ## Camp `Id_soci`
 
-- Canvia la propietat `Habilitat` a *`No`*
+- Canvia la propietat `Activat` a *`No`*
 
 ## Camp `Foto`
 
@@ -170,7 +170,7 @@ Dimarts | Sí/No [`BOOLEAN`] | *Per defecte* | Dia dimarts
 Dimecres | Sí/No [`BOOLEAN`] | *Per defecte* | Dia dimecres
 Dijous | Sí/No [`BOOLEAN`] | *Per defecte* | Dia dijous
 Divendres | Sí/No [`BOOLEAN`] | *Per defecte* | Dia divendres
-Dissabte | Sí/No [`BOOLEAN`] | *Per defecte* | Dia disabte
+Dissabte | Sí/No [`BOOLEAN`] | *Per defecte* | Dia dissabte
 Diumenge | Sí/No [`BOOLEAN`] | *Per defecte* | Dia diumenge
 
 - 🔑 Fixa com a clau primària el camp `Id_activitat`.
@@ -184,8 +184,8 @@ Id_activitat | Descripcio | Dilluns | Dimarts | Dimecres | Dijous | Divendres | 
 -|-|-|-|-|-|-|-|-
 Aerobic2D | Aeròbic dos dies a la setmana  | Sí | No | No | Sí | No | No | No
 Boxing3D  | Boxa tres dies a la setmana     | No | No | No | No | Sí | Sí | Sí
-Fitness2D | Fitnes dos dies a la setmana   | No | Sí | No | Sí | No | No | No
-Fitness3D | Fitnes tres dies a la setmana  | Sí | No | Sí | No | Sí | No | No
+Fitness2D | Fitness dos dies a la setmana   | No | Sí | No | Sí | No | No | No
+Fitness3D | Fitness tres dies a la setmana  | Sí | No | Sí | No | Sí | No | No
 Natacio2D | Natació dos dies a la setmana  | No | Sí | No | Sí | No | No | No
 Natacio3D | Natació tres dies a la setmana | Sí | No | Sí | No | Sí | No | No
 Recupera1D| Exercicis de recuperació       | Sí | No | No | No | No | No | No
