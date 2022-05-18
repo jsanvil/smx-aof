@@ -17,261 +17,152 @@ En l'actualitat existeixen multitud de sistemes gestors de bases de dades que pe
 
 # 6.2. Importació de bases de dades
 
-*LibreOffice Base*, a més de treballar amb el seu propi format, és capaç d'importar i obrir bases de dades d'altres programes. Això ens permet accedir i operar amb totes les dades, evitant la pèrdua d'informació per incompatibilitat.
+*LibreOffice Base*, a més de treballar amb el seu propi format, **és capaç d'importar i obrir bases de dades d'altres programes**. Això ens permet accedir i operar amb totes les dades, evitant la pèrdua d'informació per incompatibilitat.
 
 Per a importar una base de dades seguirem els següents passos:
 
-Anar al menú Arxiu → Nou → Base de dades.
-Seleccionar l'opció Connectar amb una base de dades existent.
+- Anar al menú `Arxiu` → `Nou` → `Base de dades`.
+- Seleccionar l'opció `Connectar amb una base de dades existent`.
 
 
 Triar el tipus de connexió que volem d'entre les existents. Depenent de la mena de connexió, les pantalles següents canviaran.
 
 
-2.1. Formats de bases de dades
-Java *DataBase *Connectivity (*JDBC), és una *API que permet l'execució d'operacions sobre bases de dades des del llenguatge de programació Java.
-*Oracle *JDBC. Es tracta d'una variant de *JDBC per a *Oracle.
-*ActiveX Data *Objects (*ADO) és un dels mecanismes que usen els programes de computadores per a comunicar-se amb les bases de dades, donar-los ordres i obtindre resultats d'elles.
-Full de càlcul. Permet importar dades d'un full de càlcul.
-*dBASE va ser el primer sistema de gestió de base de dades usat àmpliament per a microcomputadores. Hui dia s'utilitza en aplicacions que necessiten un format simple per a emmagatzemar dades estructurades.
-Text. Permet importar dades d'un fitxer de text. La informació ha d'estar en un format determinat, amb dades dividides en columnes i separats per tabuladors o signes de puntuació.
-*MySQL. *MySQL és un sistema de gestió de bases de dades relacional desenvolupat sota llicència dual *GPL/Llicència comercial. per *Oracle *Corporation i és considerada com la base dades de codi obert més popular del món.
-*Open *DataBase *Connectivity (*ODBC) és un estàndard d'accés a les bases de dades desenvolupat per SQL *Access *Group (*SAG) en 1992.
-*PostgreSQL és un sistema de gestió de bases de dades relacional orientat a objectes i lliure, publicat sota la llicència *PostgreSQL, similar a la *BSD o la MIT.
-Document de *Writer. Permet importar dades d'un document de text.
+## 6.2.1. Formats de bases de dades
+
+- *`Java DataBase Connectivity` (**`JDBC`**)*, és una *API* que permet l'execució d'operacions sobre bases de dades des del llenguatge de programació Java.
+- *`Oracle JDBC`*. Es tracta d'una variant de *JDBC* per a *Oracle*.
+- *`ActiveX Data Objects` (`ADO`)* és un dels mecanismes que usen els programes de computadores per a comunicar-se amb les bases de dades, donar-los ordres i obtindre resultats d'elles.
+- `Full de càlcul`. Permet importar dades d'un full de càlcul.
+- *`dBASE`* va ser el primer sistema de gestió de base de dades usat àmpliament per a microcomputadores. Hui dia s'utilitza en aplicacions que necessiten un format simple per a emmagatzemar dades estructurades.
+- `Text`. Permet importar dades d'un fitxer de text. La informació ha d'estar en un format determinat, amb dades dividides en columnes i separats per tabuladors o signes de puntuació.
+- *`MySQL`*. *MySQL* és un sistema de gestió de bases de dades relacional desenvolupat sota llicència dual *GPL*/Llicència comercial per *Oracle Corporation* i és considerada com la base dades de codi obert més popular del món.
+- *`Open DataBase Connectivity` (`ODBC`)* és un estàndard d'accés a les bases de dades desenvolupat per *SQL Access Group (SAG)* en 1992.
+- *`PostgreSQL`* és un sistema de gestió de bases de dades relacional orientat a objectes i lliure, publicat sota la llicència *PostgreSQL*, similar a la *BSD* o la *MIT*.
+- `Document de Writer`. Permet importar dades d'un document de text.
 
 
 ---
 
-# 📝 *Activitat 5: Subformularis*
+# 📝 *Activitat 6: Importar fitxer de text*
 
-## Base de dades `Videoclub`
+Importarem automàticament les dades contingudes en un fitxer de text pla.
+ 	
+## Descarregar fitxer de text
 
-Crearem un formulari fent que, cada vegada que ens movem entre els diferents registres, ens mostre la informació de totes les pel·lícules pertanyents a aqueix gènere. Per a això, utilitzarem subformularis.
+- Descàrrega el fitxer de text d'empleats. Fes clic amb el botó dret del ratolí en el vincle i tria l'opció Guardar enllaç com. DESCARREGAR
+- Crea una nova carpeta `EMPLEATS` dins de la teua carpeta personal `BASE`.
+- Còpia el fitxer descarregat a la nova carpeta que has creat.
+- Obri el programa `LibreOffice Base`.
+- Ve al menú `Arxiu` → `Nou` → `Base de dades`. S'obri l'assistent per a importar dades.
 
-### Crear subformulario
+### Pas 1. Seleccionar la base de dades
 
-- Obri la base de dades `Videoclub`.
-- Fes clic en el botó `Formularis` de la Barra de dades.
-- En la zona superior de `Tasques`, fes clic en l'opció `Crear un formulari utilitzant l'auxiliar...`
+- Selecciona l'opció `Connectar amb una base de dades existent`.
+- Desplega la llista i tria el tipus `Text`.
+- Fes clic en el botó `Endavant >`.
 
-#### Pas 1. Selecció de camps
+### Pas 2. Configurar la connexió
 
-Hem de triar quins camps volem que es mostren en el formulari.
-
-- Tria la taula `GENERE`.
-- Selecciona tots els camps.
-- Prem `Endavant >`.
-
-#### Pas 2. Configurar un subformulari
-
-Crearem un subformulari basant-nos en la relació existent entre la taula `GENERE` i `PELICULA`, un gènere té moltes pel·lícules i una pel·lícula pertany a un només gènere.
-
-- Marca la casella `Afig un subformulari`.
-- Marca l'opció `Subformulari basat en relació existent`.
-- En l'opció `Quina relació voleu afegir?` fes clic sobre la taula `PELICULA`.
-- Prem `Endavant >`.
-
-#### Pas 3. Afegir camps de subformulari
-
-Hem d'afegir els camps a mostrar en el subformulari.
-
-- Selecciona els camps `Titol`, `Director`, `Any`, `Duracio`, `Suport`, `Argument` i `Genere`.
-- Prem `Endavant >`.
-
-#### Pas 5. Organitzeu els controls
-
-En el següent pas podem triar la distribució dels camps en el formulari.
-
-- En `Disposició del formulari principal` fes clic en la icona de l'esquerra `En columnes - Etiquetes a l'esquerra`.
-- Prem `Endavant >`.
-
-#### Pas 6. Especifiqueu l'entrada de dades
-
-- Deixem les opcions per defecte.
-- Prem `Endavant >`.
-
-#### Pas 7. Aplica els estils
-
-Ací triarem un dels estils proposats per *Base*.
-
-- Tria el color i efectes 2D o 3D que vulgues.
-- Prem `Endavant >`.
-
-#### Pas 8. Especifiqueu el nom
-
-Finalment guardem el formulari.
-
-- En el camp `Nom del formulari` escriu *`SFGENERE`*. Resta d'opcions per defecte.
+- Fes clic en el botó `Navega` *(Examinar)* i selecciona el fitxer de text (la ruta del lloc on es troba).
 - Fes clic a `Finalitza`.
 
-Una vegada finalitzat l'assistent, se'ns obri el formulari per a manipular dades. Si ens fixem, cada vegada que canviem de gènere, les dades del subformulari canvien automàticament, mostrant informació detallada de les pel·lícules que pertanyen a aquest gènere.
+A més, has de seleccionar els caràcters que s'estan utilitzant per a distingir un camp d'un altre en cada fila. En el nostre cas, els camps estan separats per tabuladors. Per això seleccionem, en l'apartat `Separador de camps`, l'opció **`{Tabulació}`**.
 
-### Personalitzar formulari
+![](img/act6_import1.png)
 
-- Ve al formulari `SFGENERE`.
-- Obri el formulari en mavista de disseny (edita).
-- Pot utilitzar-se els efectes i colors que es desitge.
-- Canvia el color de fons.
-- Redimensiona els elements de la pantalla.
-- Inserta un rectangle arredonit 3D. Escriu dins el text *`GÈNERES-DETALL`*.
-Per exemple:
+- Fes clic en `Endavant >`.
 
-![](img/act5_subform1.png)
+### Pas 3. Guardar la base de dades
 
-- 💾 Guarda els canvis.
-- Tanca el formulari.
-
-## Base de dades: `Gimnàs`
-
-Farem encara més intuïtiu el formulari FSOCI fent que, cada vegada que ens movem entre els diferents registres, ens mostre la descripció de l'activitat que realitza cada soci. Per a això, utilitzarem subformularis.
-
-### Crear consulta
-
-En primer lloc, necessitem crear una consulta que posteriorment usarem en el nostre subformulari.
-
-- Obri la base de dades `Gimnàs`.
-- Crea una consulta en vista de disseny amb nom *`CSF_activitat`*.
-- Tria la taula `ACTIVITAT` i selecciona els camps `Id_activitat` i `Descripcio`.
-- 💾 Guarda els canvis.
-- Tanca la consulta.
-
-### Crear subformulari
-
-- Fes clic en el botó `Formularis` de la `Barra de dades`.
-- En la zona superior de `Tasques`, fes clic en l'opció `Crear un formulari utilitzant l'auxiliar...`
-
-#### Pas 1. Selecció de camps
-
-Hem de triar quins camps volem que es mostren en el formulari.
-
-- Tria la taula `SOCI`.
-- Selecciona tots els camps.
-- Prem `Endavant >`.
-
-#### Pas 2. Configurar un subformulari
-
-Crearem un subformulari basant-nos en la relació existent entre la taula `SOCI` i `ACTIVITAT`.
-
-- Marca la casella `Afig un subformulari`.
-- Marca l'opció `Subformulari basat en selecció manual dels camps`.
-- Prem `Endavant >`.
-
-#### Pas 3. Afegiu camps de subformulari
-
-Hem d'afegir els camps a mostrar en el subformulari.
-
-- Tria la consulta `CSF_ACTIVITAT` i selecciona els 2 camps d'aquesta consulta.
-- Prem `Endavant >`.
-
-#### Pas 4. Recupereu els camps units
-
-En aquest pas es defineix la relació existent entre el subformulari i el formulari principal.
-
-- En `Primer camp de subformulari`, selecciona el camp `Id_activitat`.
-- En `Primer camp unit de formulari principal`, selecciona el camp `Activitat`.
-- Prem `Endavant >`.
-
-#### Pas 5. Organitzeu els controls
-
-En el següent pas podem triar la distribució dels camps en el formulari.
-
-- Fes clic en la icona de l'esquerra `En columnes - Etiquetes a l'esquerra`.
-- Prem `Endavant >`.
-
-#### Pas 6. Especifiqueu l'entrada de dades
-
-- Deixem les opcions per defecte.
-- Prem `Endavant >`.
-
-#### Pas 7. Aplicar els estils
-
-Ací triarem un dels estils proposats per Base.
-
-- Tria el color i efectes 2D o 3D que vulgues.
-- Prem `Endavant >`.
-
-#### Pas 8. Especifique el nom
-
-Finalment guardem el formulari.
-
-- En el camp `Nom del formulari` escriu `SFSOCI`. Resta d'opcions per defecte.
-- Fes clic a `Finalitza`.
-
-Una vegada finalitzat l'assistent, se'ns obri el formulari per a manipular dades. Si ens fixem, cada vegada que canviem de soci, les dades del subformulari canvien automàticament, mostrant la descripció de l'activitat que realitza el soci actual.
-
-- 💾 Guarda els canvis.
-- Tanca el formulari.
-
-> ⚠ Com podem observar, s'han perdut tots els canvis que havíem fet en el nostre formulari `FSOCI`, ja que ens faltaria incloure la llista desplegable d'activitats i el camp DNI amb màscara d'edició de dades. A més, també s'han perdut els canvis en el disseny com el color, etc.
-
-## Subformularis en vista de diseny
-
-L'assistent és una forma ràpida de crear subformularis però té l'inconvenient que perdem tots els canvis efectuats en el formulari principal.
-
-Existeix un **mètode alternatiu** per a incloure subformularis sense necessitat de perdre les modificacions realitzades sobre un formulari.
-
-### Formulari `FSOCI`. Disseny
-
-- Fes clic en el botó `Formularis` de la `Barra de dades`.
-- Ve al formulari `FSOCI`.
-- Obri el formulari en vista de disseny (edita).
-
-#### Crear subformulari
-
-- En la barra d'eines inferior, prem la icona **`Navegador de formularis`**.
-- Selecciona el formulari principal *`MainForm`* i amb el botó dret del ratolí tria l'opció `Nou` → `Formulari`.
-- Posa com a nom `SFACTIVITAT`.
-
-#### Vincular subformulari
-
-Ara hem d'indicar el vincle que existeix entre el formulari principal i el subformulari creat.
-
-- Fes clic en el subformulari `SFACTIVITAT`.
-- Amb el botó dret del ratolí tria l'opció `Propietats`, pestanya `Dades`.
-- `Tipus de contingut`. Tria `Consulta`.
-`Contingut`. Tria la consulta `CSF_activitat`.
-- `Enllaç als camps mestres`. Fes clic en el botó amb punts suspensius.
-- Selecciona el camp `Id_activitat` en la consulta `CSF_activitat` i el camp `Activitat` en la taula `SOCI`.
-- Se'ns desplega una finestra on hem d'indicar per quins camps relacionarem tots dos formularis. Nosaltres volem aconseguir que, donat un soci seleccionat en el formulari principal, es mostre la descripció de l'activitat realitzada en un subformulari. En conseqüència, triem el camp en comú que comparteixen totes dues taules de `SOCI` i `ACTIVITAT`, és a dir, el codi d'activitat.
-- Fes clic a `OK`.
-- Tanca les propietats del subformulari.
-
-#### Inserir subformulari en formulari `FSOCI`
-
-Ara només ens falta triar un camp de control que permeta mostrar en el subformulari la descripció de l'activitat.
-
-- Ve al `Navegador de formularis`.
-- Selecciona el subformulari `SFACTIVITAT`.
-- Prem sobre la icona de la barra esquerra anomenat `Més controls`. 
-- *Base* ens mostra un quadre amb controls addicionals. Fem clic en la icona `Control de taula`.
-- Dibuixa el nou control en el formulari, per exemple al costat del camp `Activitat`. Ens apareix un assistent on triem els camps de `Activitat` i `Descripcio` de la consulta `CSF_ACTIVITAT`.
+- Deixa les opcions per defecte.
 - Fes clic en el botó `Finalitza`.
+- Guarda la base de dades en la teua carpeta personal amb el nom `Empleats`.
+- A continuació, s'obri la nova base de dades creada a partir de la importació del fitxer de text.
 
-Com podem veure, s'ha creat un nou control dins del subformulari.
+Observa que s'ha creat una taula amb les dades dels empleats d'una empresa. Accedeix a la taula `EMPLEAT` i comprova que conté dades.
 
-![](img/act5_subform2.png)
+- Tanca la taula.
+- Guarda els canvis.
+ 	
+## Taules i relacions
 
-#### Modificar subformulari
+Si ens fixem, hi ha una columna `Categoria` que defineix les diferents categories de cada empleat. El més lògic seria crear una nova taula i relacionar-la amb la d'empleats.
+ 	
+## Taula EMPLEAT. Definir clau primària
 
-Modifiquem les propietats del nou control perquè només es puga visualitzar el seu contingut.
+- Defineix el camp `DNI` com a clau primària. 
+- Guarda els canvis.
+- Tanca la taula.
 
-- Fes doble clic sobre el nou camp de subformulari.
-- Selecciona la pestanya `General`. Modifica les següents propietats:
-  - Activat: No.
-  - Barra de navegació: No.
-  - Marcador de registre: No.
-- Tanca la finestra Propietats.
-- Tanca el navegador de formularis.
-- Tanca el formulari.
+## Crear taula `CATEGORIA`
 
-#### Formulari FSOCI. Entrada de dades
+- Crea una nova taula `CATEGORIA` i estableix la seua clau primària. Tingues en compte la grandària del camp en la taula `EMPLEAT`.
+- Introdueix les diferents categories.
+- Guarda els canvis.
 
-Fes doble clic sobre el formulari `FSOCI`. Comprova que es mostra la descripció de l'activitat que realitza cada soci.
+## Crear relació
 
-![](img/act5_subform3.png)
+Entre les taules d'EMPLEAT i *CATEGORIA existeix clarament una relació del tipus un a molts (1:N). Donat un empleat, només pot pertànyer a una categoria professional. Donada una categoria, pot tindre molts empleats que pertanyen a ella.
 
-- Tanca el formulari.
+Crea una relació entre les taules EMPRAT i *CATEGORIA. 
+Guarda els canvis.
+Verificar integritat referencial
+
+Ara comprovem que la relació manté la consistència de les dades.
+
+Veu a la taula *CATEGORIA. Intenta esborrar una categoria a la qual pertanyen diversos empleats.
+Veu a la taula *CATEGORIA. Intenta modificar una categoria a la qual pertanyen diversos empleats.
+Veu a la taula EMPRAT. Intenta inserir un nou empleat amb una categoria que no existisca en la taula *CATEGORIA.
+ 	 
+Continguts	
+Continguts
+ 	
+1. Formularis
+Crearem un formulari per a poder manipular dades d'empleats de manera senzilla i intuïtiva.
+
+ 	 
+Exercicis	
+Exercici
+ 	
+Crear formulari
+
+Crea un nou formulari *FEMPLEADO.
+Estableix un format de moneda per als camps dels salaris.
+Crea una llista desplegable per al camp "*Categoria". 
+Crea un camp amb màscara per al DNI, que haurà de contindre 8 dígits. 
+Guarda els canvis.
+ 	 
+Continguts	
+Continguts
+ 	
+5. Consultes
+Crearem consultes sobre la base de dades per a comprovar que tot s'ha importat correctament.
+
+ 	 
+Exercicis	
+Exercici
+ 	
+Crear consulta amb paràmetres
+
+Crea una nova consulta amb nom "CP_*categoria_*emp"
+Taula: EMPLEAT
+Campos: "Cognom_1", "Cognom_2", "Nom", "Grup_professional" i "Total_nomina"
+Ordena ascendentment per "Cognom_1", "Cognom_2" i "Nom"
+Que demane com a paràmetre la categoria professional 
+Executa la consulta i comprova que funciona correctament.
+Guarda els canvis.
+Tanca la consulta.
+Crear consulta agrupada
+
+Crearem una consulta que mostre el nom de cada categoria emmagatzemada i el total d'empleats que pertanyen a cada categoria.
+Crea una nova consulta amb nom "*CG_total_*categoria"
+Taula: EMPLEAT
+Campos: "*Categoria" i "DNI"
+Agrupa per categoria i compte per DNI 
+Executa la consulta i comprova que funciona correctament.
+Guarda els canvis.
+Tanca la consulta.
 
 ---
 
