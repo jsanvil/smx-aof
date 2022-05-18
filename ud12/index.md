@@ -9,3 +9,5 @@
 ## [3. *LibreOffice Base*: Consultes compostes. Paràmetres i condicions](db03_query_arguments.ca)
 
 ## [4. *LibreOffice Base*: Consultes agrupades](db04_query_functions.ca)
+
+## [5. *LibreOffice Base*: Formularis mestre-detall/subformularis](db05_subforms)
