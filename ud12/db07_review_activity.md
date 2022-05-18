@@ -11,7 +11,7 @@ UD12: Bases de dades (II)
 
 Una vegada creada la base de dades, crearem les taules necessàries.
 
-## Taula: `CONTACTE` 
+## Taula: `CONTACTE`
 
 Crea la taula de contactes de l'agenda electrònica amb els següents camps i propietats:
 
@@ -26,13 +26,13 @@ Email | Text [`VARCHAR`] | 50 | Correu electrònic
 Data_aniv | Data [`DATE`] | *Per defecte* | Data d'aniversari
 Adreca | Text [`VARCHAR`] | 50 | Adreça
 Poblacio | Text [`VARCHAR`] | 50 | Població
-Província | Text [`VARCHAR`] | 20 | Província
+Provincia | Text [`VARCHAR`] | 20 | Província
 CP | Text [`VARCHAR`] | 5 | Codi postal
 Categoria | Text [`VARCHAR`] | 20 | Codi de categoria (classificació)
 Foto | Imatge [`LONGVARBINARY`] | *Per defecte* | Foto del contacte
 Observacions | Nota [`LONGVARCHAR`] | *Per defecte* | Observacions diverses
 
-- Fixa com a clau primària el camp `Id_contacte`. 
+- Fixa com a clau primària el camp `Id_contacte`.
 - Guarda la taula amb el nom `CONTACTE`.
 
 ## Taula: `CATEGORIA`
@@ -64,7 +64,7 @@ Provincia | Text [`VARCHAR`] | 20 | Província
 
 - Camp `Data_aniv`. Estableix un nou format: tria la categoria Data, format *`DD/MM/AAAA`*.
 
-## Taula `CONTACTE`. Valor requerit 
+## Taula `CONTACTE`. Valor requerit
 
 - Camp `Nom`. Estableix el camp com requerit.
 - Camp `Cognoms`. Estableix el camp com requerit.
@@ -74,7 +74,7 @@ D'aquesta manera, per a cada registre serà obligatori introduir el nom, cognoms
 
 # Edició de taules
 
-## Taula `CONTACTE`. Tipus de dades *Autonumèric* 
+## Taula `CONTACTE`. Tipus de dades *Autonumèric*
 
 - Camp `Id_contacte`. Estableix la propietat `Valor Automàtic` a *`Sí`*.
 
@@ -102,18 +102,19 @@ En el nostre cas, en la taula `CONTACTE` tenim un camp `Categoria` que fa refer�
 
 De la mateixa manera, en la taula `CONTACTE` tenim un camp `Provincia` que fa referència a la província en què viu el nostre contacte.
 
-> Els camps relacionats no han de tindre els mateixos noms, però han de tindre el mateix tipus de dades i la mateixa grandària. És a dir, han de contindre el mateix tipus d'informació. En la taula `CONTACTE` el camp `Categoria` ha de ser de la mateixa mena de dades que el camp de la taula `CATEGORIA`. El mateix succeeix amb el camp `Provincia` i la taula `PROVINCIA`.
+> ⚠ Els camps relacionats no han de tindre els mateixos noms, però han de tindre el mateix tipus de dades i la mateixa grandària. És a dir, han de contindre el mateix tipus d'informació. En la taula `CONTACTE` el camp `Categoria` ha de ser de la mateixa mena de dades que el camp de la taula `CATEGORIA`. El mateix succeeix amb el camp `Provincia` i la taula `PROVINCIA`.
 
 Relaciona les taules `CONTACTE`, `CATEGORIA` i `PROVINCIA` mitjançant els camps corresponents.
 
-- Guarda els canvis.
+- 💾 Guarda els canvis.
 
-# Crear formularis 
+# Crear formularis
 
 ## Formulari: `FCONTACTE`
 
 Crea un formulari anomenat `FCONTACTE` amb l'auxiliar:
-- Taula: CONTACTE
+
+- Taula: `CONTACTE`
 - Que continga tots els camps de la taula
 - L'organització serà `En columnes - Etiquetes a l'esquerra`
 - L'estil el que més t'agrade
@@ -121,6 +122,7 @@ Crea un formulari anomenat `FCONTACTE` amb l'auxiliar:
 ## Formulari: `FCATEGORIA`
 
 Crea un formulari anomenat `FCATEGORIA` amb l'auxiliar:
+
 - Taula: `CATEGORIA`
 - Que continga tots els camps de la taula
 - L'organització serà `Full de dades`
@@ -129,6 +131,7 @@ Crea un formulari anomenat `FCATEGORIA` amb l'auxiliar:
 ## Formulari: `FPROVINCIA`
 
 Crea un formulari anomenat `FPROVINCIA` amb l'auxiliar:
+
 - Taula: `PROVINCIA`
 - Que continga tots els camps de la taula
 - L'organització serà `Full de dades`
@@ -152,7 +155,7 @@ NEGOCIS   | Contactes comercials
 TREBALL   | Companys de treball
 VIP       | Contacte important
 
-- Guarda els canvis i tanca el formulari.
+- 💾 Guarda els canvis i tanca el formulari.
 
 ## Províncies
 
@@ -160,28 +163,29 @@ VIP       | Contacte important
 - Introdueix les següents dades:
 
 Provincia |
--|
-ALBACETE
-ALICANTE
-BARCELONA
-CASTELLO
-CONCA
-MADRID
-MURCIA
-TEROL
-VALENCIA
+----------|
+ALBACETE  |
+ALACANT   |
+BARCELONA |
+CASTELLO  |
+CONCA     |
+MADRID    |
+MURCIA    |
+TEROL     |
+VALENCIA  |
 
-- Guarda els canvis i tanca el formulari.
+- 💾 Guarda els canvis i tanca el formulari.
 
-# Disseny de formularis 
+# Disseny de formularis
 
 Canviarem aspectes estètics del disseny del formulari `FCONTACTE` perquè es mostre millor la fotografia i les observacions de cada contacte.
 
-## Edita el formulari `FCONTACTE`.
+## Edita el formulari `FCONTACTE`
 
 ### Camp `Foto`
 
 La foto dels contactes es mostra xicoteta i no es pot apreciar bé.
+
 - Mou-ho a la dreta del formulari. Fes-lo més gran.
 
 ### Camp `Observacions`
@@ -197,23 +201,23 @@ Ens assegurarem que les observacions de cada contacte es puguen llegir bé.
 
 Anem canviar el color de fons del formulari de contactes.
 
-- Ve al menú `Format` → `Pàgina`, pestanya `Àrea`. Canvia el color pel qual vulgues.
-- Guarda els canvis en el disseny del formulari.
+- Ve al menú `Format` → `Pàgina`, pestanya `Àrea`. Canvia el color per el que vulgues.
+- 💾 Guarda els canvis en el disseny del formulari.
 - Comprova que ara es visualitza el color seleccionat.
 
-# Campos amb format 
+# Camps amb format
 
 ## Camp `Data_aniv`
 
 Ha d'aparéixer en format dia, mes i any `DD/MM/AAAA`: dia, mes i any (4 xifres) en format numèric.
 
 Edita el formulari `FCONTACTE`.
-- Prem sobre la icona de la barra esquerra anomenat `Més controls`. 
-- Fes clic en la icona `Camp de data`. 
+
+- Prem sobre la icona de la barra esquerra anomenat `Més controls`.
+- Fes clic en la icona `Camp de data`.
 - Dibuixa el camp en el formulari i fes doble clic sobre ell.
 - En la pestanya `General`, tria la propietat `Vora`, posa el valor `Vista en 3D`.
 - En la propietat Format de data, selecciona la màscara `DD/MM/YYYY`.
-- En la propietat Control de format, posa el valor Sí. Ara només deixarà introduir la data amb aquest format.
 - Selecciona la pestanya `Dades`. Desplega la llista i tria el camp `Data_aniv`.
 - Tanca la finestra de Propietats.
 
@@ -221,140 +225,106 @@ Ara enllacem el nou camp amb un camp de la nostra base de dades.
 
 - Fes clic en el camp antic i prem la tecla `Supr`.
 - Col·loca el nou camp en el seu lloc.
-- Prem sobre la icona de la barra esquerra anomenat `Etiqueta`. 
+- Prem sobre la icona de la barra esquerra anomenat `Etiqueta`.
 - En el formulari, dibuixa una etiqueta a l'esquerra del nou camp. Fes doble clic sobre l'etiqueta.
-- En la propietat `Títol` escriu el text `Data aniversari`.
+- En la propietat `Etiqueta` escriu el text `Data aniversari`.
 - Tanca el formulari.
-- Guarda els canvis.
+- 💾 Guarda els canvis.
 
-# Llistes de dades 
+# Llistes de dades
 
 Modificarem el formulari perquè els camps de categoria i província siguen llestes desplegables amb els valors que hem introduït anteriorment en les taules.
 
-Camp “Categoria”
+## Camp `Categoria`
 
-Edita el formulari *FCONTACTO.
-Prem sobre la icona de la barra esquerra anomenat Llistat. 
-Dibuixa el nou control a la dreta del camp categoria.
-Apareixerà l'assistent per a guiar-nos en el procés. Seguim els passos corresponents.
+- Edita el formulari `FCONTACTE`.
+- Prem sobre la icona de la barra esquerra anomenat `Llistat`.
+- Dibuixa el nou control a la dreta del camp categoria.
+- Apareixerà l'assistent per a guiar-nos en el procés. Seguim els passos corresponents.
+- Eliminarem el camp “*Categoria” antic.
 
-Tria la taula *CATEGORIA. Fes clic en Següent.
-Selecciona el camp “*Categoria”. Fes clic en Següent.
-Tria el camp “*Categoria” tant a l'esquerra com a la dreta. Fes clic a Finalitzar.
-Acabem de crear una llista que mostrarà totes les categories de contactes de l'agenda. Ara eliminarem el camp “*Categoria” antic.
+## Camp `Provincia`
 
-Fes clic en el camp “*categoria” i prem la tecla *Supr.
-Situa la llista en el mateix lloc que estava el camp antic. Fes més ampla la llista.
-Prem sobre la icona de la barra esquerra anomenat Etiqueta . En el formulari, dibuixa una etiqueta a l'esquerra de la llista de categories.
-Fes doble clic sobre l'etiqueta. En la propietat Títol escriu el text “Categoria”.
-Camp “Província”
+- Crea la llista desplegable, però en aquest cas amb la taula `PROVINCIA`.
+- Esborra el camp antic.
+- Tanca el formulari.
 
-Crea la llista desplegable, però en aquest cas amb la taula PROVÍNCIA.
-Esborra el camp antic.
-Afig l'etiqueta amb el text “Província”.
-Tanca el formulari.
-1.12. Introducció de dades
-Obri el formulari *FCONTACTO mitjançant doble clic.
-Introdueix dades de diferents contactes en l'agenda. Pot introduir-se les dades que es desitge.
-Tanca el formulari.
-Veu a la taula CONTACTE. Obri-la i comprova que s'han guardat totes les dades. Per exemple:
+# Introducció de contactes
 
+- Obri el formulari `FCONTACTE` mitjançant doble clic.
+- Introdueix dades de 5 contactes en l'agenda. Pots introduir les dades que desitges.
+- Introduix les fotos dels contactes en l'agenda.
+- Tanca el formulari.
 
-Introduirem les fotos dels nostres contactes en l'agenda.
+# Ordre de tabulació
 
-Descàrrega 5 fotos d'Internet que vulgues. Procura que les fotos no ocupen molt espai per a no superar el límit de grandària a l'hora de pujar al portal la base de dades.
-Obri el formulari *FCONTACTO mitjançant doble clic.
-Mitjançant el formulari, introdueix una foto per a cada contacte de l'agenda.
-1.13. Ordre de tabulació 
 Canviarem l'ordre de tabulació perquè siga consecutiu.
 
-Edita el formulari *FCONTACTO.
+- Edita el formulari `FCONTACTE`.
+
 Primer canviarem de nom tots els camps perquè sapiem quin és quin.
 
-Veu al camp “Aneu_contacte”. Fes doble clic sobre ell. En la propietat Nom, escriu el text “Aneu_contacte”. Tanca les propietats.
-Repeteix el mateix procés amb cadascuna de les etiquetes, posant el nom del camp corresponent.
-Després establim l'ordre de tabulació correcte.
+- Ve al camp `Id_contacte`. Fes doble clic sobre ell.
+- En la propietat `Nom`, escriu el text `Id_contacte`.
+- Tanca les propietats.
 
-En la barra d'eines inferior, fes clic en la icona Ordre d'activació. 
-Mou els diferents camps perquè quede l'ordre correcte. Utilitza els botons per a desplaçar cap amunt o cap avall. Per exemple:
+- Repeteix el mateix procés amb cadascuna de les etiquetes, posant el nom del camp corresponent.
 
+Establirem l'ordre de tabulació correcte.
 
-Guarda els canvis i tanca el formulari.
-Fes doble clic en el formulari. Comprova que ara està correcte l'ordre de tabulació. Per a això, passa amb la tecla tabulador d'un camp a un altre.
-Tanca el formulari.
-1.14. Integritat referencial 
-En la relació que hem definit s'impedeix que qualsevol registre relacionat siga modificat o eliminat. Aquesta propietat és el que es coneix com a integritat referencial.
+- En la barra d'eines inferior, fes clic en la icona `Ordre d'activació`.
+- Mou els diferents camps perquè quede l'ordre correcte. Utilitza els botons per a desplaçar cap amunt o cap avall.
+- 💾 Guarda els canvis i tanca el formulari.
+- Fes doble clic en el formulari. Comprova que ara està correcte l'ordre de tabulació. Per a això, passa amb la tecla tabulador d'un camp a un altre.
+- Tanca el formulari.
 
-Una vegada establida una relació, comprovarem que és correcta. Per a això només hem d'intentar realitzar alguna operació no permesa i veure que es compleix la integritat referencial.
+# Consultes
 
-Cas 1. Esborrar una categoria a la qual pertanyen contactes
+## Crea una consulta anomenada `C_contactes_resum`:
 
-Veu a la taula *CATEGORIA.
-Elimina una categoria que tinga contactes associats, per exemple “Família”.
-Guarda els canvis.
-Comprova que Base ens mostra un missatge d'error perquè estem esborrant una categoria a la qual pertanyen contactes relacionats en la taula CONTACTE.
-Prem Acceptar. Desfés els canvis.
-Tanca la taula *CATEGORIA.
-També podem provar des del formulari.
+- Taula: `CONTACTE`
+- Que continga els camps `Cognoms`, `Nom`, `Telefon`, Email i `Categoria`
+- En l'apartat `Àlies` de cada camp escriu *`Cognoms`*, *`Nom`*, *`Telèfon`*, *`Correu electrònic`* i *`Categoria`*
+- Que estiga ordenada ascendentment pel camp `Cognoms` i `Nom`
 
-Veu al formulari *FCATEGORIA i fes doble clic sobre ell.
-Elimina una categoria que tinga contactes associats, per exemple “Família”. Respon Sí a la pregunta que es formula. Guarda els canvis.
-Per exemple:
+## Crea una consulta anomenada `CP_contacte_prov`, que ens retorne les dades dels contactes d'una província determinada
 
+- Taula: `CONTACTE`
+- Que continga els camps `Cognoms`, `Nom`, `Telefon`, `Email`, `Categoria` i `Provincia`
+- En l'apartat `Àlies` de cada camp escriu *`Cognoms`*, *`Nom`*, *`Telèfon`*, *`Correu electrònic`*, *`Categoria`* i *`Província`*
+- Que estiga ordenada ascendentment pel camp `Cognoms` i `Nom`
+- Que demane la província mitjançant paràmetre
 
-Tanca el formulari.
-Cas 2. Esborrar una província en la qual viuen contactes
+## Crea una consulta anomenada `CP_data_categ`, que ens retorne les dades dels contactes que hagen nascut després d'una data determinada i que siguen d'una categoria determinada
 
-Veu a la taula PROVÍNCIA.
-Elimina una província que tinga contactes associats, per exemple Madrid o València.
-Guarda els canvis.
-Comprova que Base ens mostra un missatge d'error perquè estem esborrant una província en la qual viuen contactes relacionats en la taula CONTACTE.
-Prem Acceptar. Desfés els canvis.
-Tanca la taula PROVÍNCIA.
-També podem provar des del formulari.
+- Taula: `CONTACTE`
+- Que continga els camps `Cognoms`, `Nom`, `Telefon`, `Email`, `Categoria` i `Provincia`
+- En l'apartat `Àlies` de cada camp escriu *`Cognoms`*, *`Nom`*, *`Telèfon`*, *`Correu electrònic`*, *`Categoria`* i *`Província`*
+- Que estiga ordenada ascendentment pel camp `Cognoms` i `Nom`
+- Que demane la data i utilitze un operador de comparació
+- Que demane la categoria mitjançant paràmetre
 
-Veu al formulari *FPROVINCIA i fes doble clic sobre ell.
-Elimina una província que tinga contactes associats, per exemple Madrid o València. Respon Sí a la pregunta que es formula. Guarda els canvis.
-Per exemple:
+## Crea una consulta anomenada `CG_PROVINCIA`, que mostre el nom de cada província emmagatzemada i el total de contactes que tenim de cada província
 
+- Taula: `CONTACTE`
+- Que continga els camps `Provincia` i `Id_contacte`
+- En l'apartat `Àlies` de cada camp escriu *`Província`* i *`Total contactes`*
+- Que estiga ordenada ascendentment pel camp `Provincia`
+- Que agrupe per província i compte per `Id_contacte`
 
-Tanca el formulari.
-1.15. Consultes
-Crea una consulta anomenada "C_contactes_resumeixen": 
-Taula: CONTACTE
-Que continga els camps "Cognoms", "Nom", "*Telefono", "*Ecorreo" i "*Categoria"
-En l'apartat Alias de cada camp escriu "Cognoms", "Nom", "Telèfon", "Correu electrònic" i "Categoria"
-Que estiga ordenada ascendentment pel camp "Cognoms" i "Nom"
-Crega una consulta anomenada "CP_contacte_*prov", que ens retorne les dades dels contactes d'una província determinada: 
-Taula: CONTACTE
-Que continga els camps "Cognoms", "Nom", "*Telefono", "*Ecorreo", "*Categoria" i "Província"
-En l'apartat Alias de cada camp escriu "Cognoms", "Nom", "Telèfon", "Correu electrònic", "Categoria" i "Província"
-Que estiga ordenada ascendentment pel camp "Cognoms" i "Nom"
-Que demane la província mitjançant paràmetre
-Crega una consulta anomenada "CP_data_*categ", que ens retorne les dades dels contactes que hagen nascut després d'una data determinada i que siguen d'una categoria determinada: 
-Taula: CONTACTE
-Que continga els camps "Cognoms", "Nom", "*Telefono", "*Ecorreo", "*Categoria" i "Província"
-En l'apartat Alias de cada camp escriu "Cognoms", "Nom", "Telèfon", "Correu electrònic", "Categoria" i "Província"
-Que estiga ordenada ascendentment pel camp "Cognoms" i "Nom"
-Que utilitze un operador de comparació per a la data
-Que demane la categoria mitjançant paràmetre
-Crega una consulta anomenada *CG_PROVÍNCIA, que mostre el nom de cada província emmagatzemada i el total de contactes que tenim de cada província: 
-Taula: CONTACTE
-Que continga els camps "Província" i "Aneu_contacte"
-En l'apartat Alias de cada camp escriu "Província" i "Total contactes"
-Que estiga ordenada ascendentment pel camp "Província"
-Que agrupe per província i compte per "Aneu_contacte"
-1.16. *Subformularios 
-Crear *subformulario *SFPROVINCIA
+# Subformularis
 
-Crea un *subformulario de nom *SFPROVINCIA fent que, cada vegada que ens movem entre els diferents registres, ens mostre la informació de tots els contactes pertanyents a aqueixa província.
-Guarda els canvis.
-Tanca el formulari.
-Formulari *FCONTACTO. Afegir *subformulario
+## Crear subformulari `SFPROVINCIA`
 
-Modifica el formulari *FCONTACTO per a fer-ho més intuïtiu, de manera que cada vegada que ens movem entre els diferents registres, ens mostre la descripció de la categoria a la qual pertany un contacte.
-Guarda els canvis.
-Tanca el formulari.
+- Crea un subformulari de nom `SFPROVINCIA` fent que, cada vegada que ens movem entre els diferents registres, ens mostre la informació de tots els contactes pertanyents a aqueixa província.
+- 💾 Guarda els canvis.
+- Tanca el formulari.
+
+## Formulari `FCONTACTE`. Afegir subformulari
+
+- Modifica el formulari `FCONTACTE` per a fer-ho més intuïtiu, de manera que cada vegada que ens movem entre els diferents registres, ens mostre la descripció de la categoria a la qual pertany un contacte.
+- 💾 Guarda els canvis.
+- Tanca el formulari.
 
 ---
 
