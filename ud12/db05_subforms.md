@@ -23,7 +23,7 @@ En pràctiques anteriors, ens havíem saltat el pas d'afegir subformularis. Ara 
 
 Crearem un formulari fent que, cada vegada que ens movem entre els diferents registres, ens mostre la informació de totes les pel·lícules pertanyents a aqueix gènere. Per a això, utilitzarem subformularis.
 
-### Crear subformulario
+### Crear subformulari
 
 - Obri la base de dades `Videoclub`.
 - Fes clic en el botó `Formularis` de la Barra de dades.
@@ -96,7 +96,13 @@ Per exemple:
 - 💾 Guarda els canvis.
 - Tanca el formulari.
 
-## Base de dades: `Gimnàs`
+---
+
+- 💾 Guarda els canvis en la base de dades.
+- Tanca la base de dades.
+
+# 📝 *Activitat 6: Edició de subformularis*
+# Base de dades: `Gimnàs`
 
 Farem encara més intuïtiu el formulari FSOCI fent que, cada vegada que ens movem entre els diferents registres, ens mostre la descripció de l'activitat que realitza cada soci. Per a això, utilitzarem subformularis.
 

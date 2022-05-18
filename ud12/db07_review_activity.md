@@ -253,7 +253,7 @@ Modificarem el formulari perquè els camps de categoria i província siguen lles
 
 - Obri el formulari `FCONTACTE` mitjançant doble clic.
 - Introdueix dades de 5 contactes en l'agenda. Pots introduir les dades que desitges.
-- Introduix les fotos dels contactes en l'agenda.
+- Introdueix les fotos dels contactes en l'agenda.
 - Tanca el formulari.
 
 # Ordre de tabulació
