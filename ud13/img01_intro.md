@@ -1,6 +1,6 @@
 UD13: Imatge digital
 
-# 1 Formats i resolució d'imatges
+# 1. Formats i resolució d'imatges
 
 ## 🎯 Objectius
 
@@ -293,14 +293,17 @@ Ara transformarem la imatge voltejant-la horitzontalment.
 - `Image` > `Transform` > `Flip Horizontally`
 
 Guarda els canvis.
+
 - `File` > `Save As...` i posa-li el nom `ud13_act1.xcf`
 
 Exporta la imatge al format `jpg`
+
 - `File` > `Export As...` posa-li el nom `ud13_act1.jpg`
 - En `Quality` posa `55`
 - En `Comment` posa el teu nom i cognoms
 
 Exporta la imatge al format `png`
+
 - `File` > `Export As...` posa-li el nom `ud13_act1.png`
 - Deixa les opcions per defecte.
 

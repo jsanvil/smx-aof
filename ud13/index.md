@@ -4,6 +4,8 @@
 
 ## [1. Formats i resolució d'imatges](img01_intro)
 
+## [2. Manipulació de seleccions, màscares i capes](img02_layers_masks)
+
 ---
 
 - `RA5`. Manipula imatges digitals analitzant les possibilitats de diferents programes i aplicant tècniques de captura i edició bàsiques.
