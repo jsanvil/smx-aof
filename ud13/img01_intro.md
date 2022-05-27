@@ -367,19 +367,19 @@ Les eines de selecció estan dissenyades per a seleccionar regions de les imatge
 
 El comportament de les eines de selecció es modifica si es pressiona tecles especials com `Ctrl`, `Shift`, i/o Alt` mentre s'utilitzen:
 
-Tecla premuda | Funcionalitat de la selecció
--|-
-`Ctrl` | En crear una selecció, mantindre pressionada la tecla `Ctrl` pot tindre dos efectes diferents en funció de quan es prema:
+| Tecla | Funcionalitat de la selecció
+|-|-
+|`Ctrl` | En crear una selecció, mantindre pressionada la tecla `Ctrl` pot tindre dos efectes diferents en funció de quan es prema:
 | | - Si es manté pressionada la tecla abans de fer clic per a començar a seleccionar, aquesta selecció es realitzarà en la manera d'extracció.
 | | - Si es manté pressionada la tecla després de fer clic per a començar a seleccionar, l'efecte dependrà de l'eina que estiga en ús.
-`Alt` | Mantindre pressionada `Alt` permet moure el marc de la selecció sense el seu contingut. Si es mou tota la imatge en comptes de moure's només la selecció, intenta `Shift`+`Alt`.
-`Shift` | En crear una selecció, mantindre pressionada la tecla `Shift` pot tindre dos efectes diferents en funció de quan es prema:
+|`Alt` | Mantindre pressionada `Alt` permet moure el marc de la selecció sense el seu contingut. Si es mou tota la imatge en comptes de moure's només la selecció, intenta `Shift`+`Alt`.
+|`Shift` | En crear una selecció, mantindre pressionada la tecla `Shift` pot tindre dos efectes diferents en funció de quan es prema:
 | | Si es manté pressionada la tecla abans de fer clic per a començar a seleccionar, aquesta selecció es realitzarà en la manera d'addició.
 | | Si es manté pressionada la tecla després de fer clic per a començar a seleccionar, l'efecte dependrà de l'eina que estiga en ús: per exemple, la forma de la selecció es restringeix a un quadrat per a l'eina de selecció rectangular.
-`Ctrl`+`Shift` | La combinació `Ctrl`+`Shift` pot fer una varietat de coses depenent de l'eina que estiga en ús. És comú a totes les eines que la manera de selecció es canvie a intersecció, i fa que quan la selecció finalitze, aquesta consistisca en la intersecció de la regió traçada amb la selecció que existia amb anterioritat.
-`Barra espaiadora` | Si es pressiona la barra d'espais mentre s'utilitza qualsevol eina de selecció, es canvia momentàniament a l'eina per a moure fins que la tecla s'allibere.
+|`Ctrl`+`Shift` | La combinació `Ctrl`+`Shift` pot fer una varietat de coses depenent de l'eina que estiga en ús. És comú a totes les eines que la manera de selecció es canvie a intersecció, i fa que quan la selecció finalitze, aquesta consistisca en la intersecció de la regió traçada amb la selecció que existia amb anterioritat.
+|`Barra espaiadora` | Si es pressiona la barra d'espais mentre s'utilitza qualsevol eina de selecció, es canvia momentàniament a l'eina per a moure fins que la tecla s'allibere.
 
-### Eina selecció rectangular Eina selecció rectangular
+### Eina selecció rectangular
 
 Com el seu propi nom indica, permet realitzar seleccions amb forma rectangular.
 
@@ -418,7 +418,7 @@ Quan es realitza una selecció, apareixen les “formigues en marxa” emmarcant
 - Arrossegar el ratolí per a canviar la selecció en altura i amplària al mateix temps.
 - Si vols canviar la selecció en amplària o altura de manera independent, desplaça el punter del ratolí al lateral de la selecció (entre els quadrats). Apareixerà una zona rectangular que permetrà modificar la selecció en amplària o altura.
 
-### Eina selecció el·líptica Eina selecció el·líptica
+### Eina selecció el·líptica
 
 Aquesta eina funciona de manera similar a l'anterior, però en el seu lloc, crea una el·lipse o un cercle prement la tecla `Shift`. Les opcions són pràcticament idèntiques.
 
