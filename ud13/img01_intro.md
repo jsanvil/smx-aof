@@ -219,7 +219,25 @@ En general, els programes de retoc fotogràfic treballen en mode *RGB*, perquè 
 
 ---
 
-# 1.6 Programa de retoc d'imatges de GNU - *GIMP*
+# 1.6 Principals formats d'imatge
+
+*GIMP* no treballa amb formats vectorials, però com hem dit abans, és capaç d'obrir quasi tots els tipus d'arxius d'imatge no vectorials. A continuació, repassarem els més importants:
+
+Format | Característiques | Colors | Transparència
+-|-|-|-
+***JPG/JPEG*** | Va ser desenvolupat per *The Joint Photographers Experts Group*. | És un format de compressió amb pèrdua de qualitat, però es pot ajustar el grau de compressió, la qual cosa permet seleccionar el compromís que existeix entre la grandària d'emmagatzematge i la qualitat de la imatge. És el format del qual s'extrauen les imatges d'una càmera de fotos. Aquesta pèrdua de qualitat s'acumula, cosa que significa que si comprimeix una imatge i la descomprimeix obtindrà una qualitat d'imatge, però si torna a comprimir-la i descomprimir-la una altra vegada obtindrà una pèrdua major. Cada vegada que comprimisca i descomprimisca la imatge perdrà una mica de qualitat. La compressió amb pèrdua no és convenient en imatges o gràfics que tinguen textos o línies i, sobretot, per a arxius que continguen grans àrees de colors sòlids. | Més de 256 | No
+***GIF*** | Són les sigles de *Graphics Intercharge Format File*, format desenvolupat per *Compuserve*. | Permet la compressió d'imatges sense pèrdua sempre que tinguen menys de 256 colors. Permet animació i està indicat per a imatges amb grans àrees del mateix color. | Fins a 256 | Sí
+***PNG*** | Combina les possibilitats dels dos formats anteriors, per la qual cosa comença a ser bastant utilitzat. Es tracta d'un format basat en un algorisme de compressió sense pèrdua i no subjecte a patents. | Ha sigut triat com a estàndard gràfic per a la Web pel W3C. | Més de 256 | Sí
+***TIFF*** | Aquestes són les sigles de *Tag Image File Format* i és el format d'imatge d'ús més estés. Va ser desenvolupat per l'empresa *Aldus*, la creadora de *PageMaker*. L'objectiu era crear un format àmpliament compatible amb totes les plataformes. | Més de 256 | No
+***BMP*** | És el format propi del programa *Microsoft Paint*, que ve amb el sistema operatiu *Windows*. Pot guardar imatges de 24 bits (milions de colors), 8 bits (256 colors) i menys. L'ús més comú d'aquest format és generar imatges de poc pes per a crear fons per a l'escriptori de *Windows*. | Més de 256 | No
+
+## 1.1.6 Format *XCF*
+
+Un cas especial és l'arxiu de tipus *XCF*. Aquest és el format propi de *GIMP*. El que fem, sobretot si té capes (espècie de fulles que se sobreposen en una imatge i en la qual cada fulla aporta una part del dibuix), o simplement perquè no hem acabat de treballar amb l'arxiu, és convenient que es guarde en aquest format. Després ja es guardarà en un altre més adequat per als nostres fins. Sempre podrem recuperar l'arxiu *xcf, modificar-lo i exportar el nostre treball a arxius en un altre format.
+
+---
+
+# 1.7 Programa de retoc d'imatges de GNU - *GIMP*
 
 ![Wilber](https://docs.gimp.org/2.10/en/images/using/wilber.png)
 
@@ -231,19 +249,184 @@ El *GIMP* és ampliable i extensible. Està dissenyat per ampliar-se amb connect
 
 Un dels punts forts del *GIMP* és la seva lliure disponibilitat des de diverses fonts per a molts sistemes operatius. Gairebé totes les distribucions de GNU/Linux inclouen el *GIMP* com una aplicació estàndard. El *GIMP* també està disponible per a altres sistemes operatius com *Microsoft Windows™* o *Mac OS X™(Darwin)* d'*Apple*. El *GIMP* és una aplicació de programari lliure coberta per la Llicència Pública General [GPL](https://www.gnu.org/licenses/gpl-3.0.html). La GPL ofereix als usuaris la llibertat d'accedir i modificar el codi font amb què es construeixen els programes.
 
-📄 [Documentació oficial GIMP](https://docs.gimp.org/2.10/ca/)
+📄 [**Documentació oficial GIMP**](https://docs.gimp.org/2.10/ca/)
+
+▶ [*Exemple d'edició amb GIMP i Blender*](https://youtu.be/2w002xat6SY)
 
 ---
 
-## 1.6.1 [Finestres principals](https://docs.gimp.org/2.10/ca/gimp-concepts-main-windows.html)
+## 1.7.1 [Finestres principals](https://docs.gimp.org/2.10/ca/gimp-concepts-main-windows.html)
 
 ![Finestres principals](https://docs.gimp.org/2.10/ca/images/using/single-window.png)
 
 ---
 
-## 1.6.2 El sistema d'ajuda del *GIMP*
+## 1.7.2 El sistema d'ajuda del *GIMP*
 
 L'Equip de Documentació del *GIMP* i altres usuaris us proporcionen la informació necessària per entendre com usar el *GIMP*. El manual d'usuari és una part important d'aquest document. La versió actual es troba en el lloc web de l'Equip de Documentació [GIMP-DOCS](https://www.gimp.org/docs/) en format *HTML*. La versió *HTML* també està disponible com a ajuda contextual mentre es fa servir el *GIMP* prement la tecla `F1`. Es pot accedir a l'ajuda d'elements específics del menú prement `F1` mentre el punter del ratolí enfoca en aquest element.
+
+---
+
+# 1.8 Eines de *GIMP*
+
+## 1.8.1 Propietats d'una imatge
+
+En `Image` > `Image properties` podem examinar les propietats d'una imatge:
+
+![Image properties](img/gimp_image_properties.png)
+
+Podem observar la diferència entre la grandària de l'arxiu `File Size` i la grandària que ocupa la imatge en memòria principal `Size in memory`. També és interessant la resolució i la grandària física d'impressió `Print size`.
+
+---
+
+## 1.8.2 Redimensionar imatges
+
+Una de les operacions més comunes és la de canviar la grandària d'una imatge. Hem de tindre en compte diversos factors:
+
+![](img/gimp-logo.png)
+
+- Si fem la imatge més gran, perdrem qualitat.
+
+![](img/gimp-logo-scale-high.png)
+
+- Si canviem la relació d'aspecte, la imatge es veurà deformada. En general haurem de redimensionar les imatges de manera proporcional.
+
+![](img/gimp-logo-scale-no-proportional.png)
+
+Per a redimensionar una imatge anirem a `Image` > `Scale image...`, apareixerà un diàleg per a posar els paràmetres.
+
+![](img/gimp-scale-image.png)
+
+---
+
+## 1.8.3 Canviar grandària del llenç (*Canvas*)
+
+Una altra manera de canviar la grandària d'una imatge és canviar la grandària del "full" en la qual està "dibuixada", és a dir, del llenç (o *canvas* en anglés). Aquesta tècnica realment no modifica el contingut de la imatge sinó que fa que la superfície que podem usar en ella siga més gran o més xicoteta.
+
+Si reduïm el llenç perdrem part de la imatge, però si l'ampliem guanyarem espai per a treballar.
+
+Per a canviar la grandària del llenç anirem a `Image` > `Canvas Size...`
+
+![](img/gimp-canvas-size.png)
+
+---
+
+## 1.8.4 Eines de transformació
+
+En `Image` > `Transform` tenim les opcions més comuns:
+
+- `Flip Horizontally` Capgira horitzontalment (efecte espill)
+- `Flip Vertically` Capgira vertigalment
+- `Rotate 90º clockwise` Gira 90º en sentit horari
+- `Rotate 90º counter-clockwise` Gira 90º en sentit antihorari
+- `Rotate 180º` Gira 180º
+
+![](img/gimp-transform.png)
+
+En `Tools` > `Transform Tools` tenim opcions avançades de transformació.
+
+- `Move` Mou la imatge
+- `Crop` Retallar
+- `Rotate` Girar lliurement
+- `Scale` Escalar
+- `Shear` Inclina
+- `3D Transform` Transformació 3D
+- `Cage transform` Transformar regió
+
+![](img/gimp-transform-tools.png)
+
+---
+
+## 1.8.5 Eines de selecció geomètrica
+
+Una selecció és un contorn tancat amb el qual podem realitzar operacions (moure-la, copiar-la, etc.). *GIMP* ens ofereix moltes eines de selecció, però en aquest apartat ens centrarem en les eines de selecció geomètriques. Aquestes eines permeten seleccionar amb formes rectangulars i ovalades. Quan se selecciona alguna cosa, apareix la selecció “emmarcada” amb una línia que es mou (a aquest efecte se'l coneix com a “formigues en marxa”).
+
+Les eines de selecció les tenim en la Caixa d'eines o amb el menú `Tools` → `Selection Tools`. Les dues eines que utilitzarem seran la selecció rectangular `Rectangle Select` i la Selecció el·líptica `Ellipse Select`.
+
+![](img/gimp-geometric-selection.png)
+
+### Operacions de copiar i pegar
+
+Per a comprovar algunes de les accions d'aquesta mena d'eines i el seu potencial, hem de saber com copiar i pegar en un altre document una selecció. Aquesta operació és molt senzilla i tenim 2 opcions possibles.
+
+#### Copiar i pegar en una altra capa o en una altra imatge
+
+Seleccionar una zona amb una eina de selecció.
+Copiar-la al portapapers. Tenim diversos procediments: *Ctrl+C*, botó dret sobre la selecció i en el menú emergent `Edit` → `Copy`
+Pegar-la en una altra capa o imatge amb el *Ctrl+V*.
+
+#### Crear un document nou amb una selecció
+
+Seleccionar una zona amb una eina de selecció.
+Copiar-la al portapapers.
+Anar al menú `Edit` → `Paste as` → `New Image`.
+
+### Procediments comuns
+
+Les eines de selecció estan dissenyades per a seleccionar regions de les imatges i així poder treballar en elles sense que les àrees no seleccionades es vegen afectades. Cada eina té les seues propietats particulars, però les eines de selecció comparteixen, a més, algunes característiques, com les tecles modificadores.
+
+El comportament de les eines de selecció es modifica si es pressiona tecles especials com `Ctrl`, `Shift`, i/o Alt` mentre s'utilitzen:
+
+Tecla premuda | Funcionalitat de la selecció
+-|-
+`Ctrl` | En crear una selecció, mantindre pressionada la tecla `Ctrl` pot tindre dos efectes diferents en funció de quan es prema:
+| | - Si es manté pressionada la tecla abans de fer clic per a començar a seleccionar, aquesta selecció es realitzarà en la manera d'extracció.
+| | - Si es manté pressionada la tecla després de fer clic per a començar a seleccionar, l'efecte dependrà de l'eina que estiga en ús.
+`Alt` | Mantindre pressionada `Alt` permet moure el marc de la selecció sense el seu contingut. Si es mou tota la imatge en comptes de moure's només la selecció, intenta `Shift`+`Alt`.
+`Shift` | En crear una selecció, mantindre pressionada la tecla `Shift` pot tindre dos efectes diferents en funció de quan es prema:
+| | Si es manté pressionada la tecla abans de fer clic per a començar a seleccionar, aquesta selecció es realitzarà en la manera d'addició.
+| | Si es manté pressionada la tecla després de fer clic per a començar a seleccionar, l'efecte dependrà de l'eina que estiga en ús: per exemple, la forma de la selecció es restringeix a un quadrat per a l'eina de selecció rectangular.
+`Ctrl`+`Shift` | La combinació `Ctrl`+`Shift` pot fer una varietat de coses depenent de l'eina que estiga en ús. És comú a totes les eines que la manera de selecció es canvie a intersecció, i fa que quan la selecció finalitze, aquesta consistisca en la intersecció de la regió traçada amb la selecció que existia amb anterioritat.
+`Barra espaiadora` | Si es pressiona la barra d'espais mentre s'utilitza qualsevol eina de selecció, es canvia momentàniament a l'eina per a moure fins que la tecla s'allibere.
+
+### Eina selecció rectangular Eina selecció rectangular
+
+Com el seu propi nom indica, permet realitzar seleccions amb forma rectangular.
+
+#### Opcions
+
+Les opcions que ens ofereix aquesta eina, **perquè tinguen efecte, han de configurar-se ABANS de fer la selecció**.
+
+![](img/gimp-rect-select-options.png)
+
+- **Mode**. Determina la forma en què la selecció que es crea es combina amb qualsevol selecció existent amb anterioritat.
+
+  - ***Replace***: Mode reemplaçar fa que qualsevol selecció existent siga reemplaçada quan una es realitze una nova selecció.
+  - **Add**: Mode afegir fa que la selecció que es faça s'afija a qualsevol selecció existent.
+  - **Subtract**: Mode extracció esborra la selecció que es faça dins d'una selecció existent.
+  - **Intersect**: Mode intersecció fa una selecció nova de l'àrea en què se solapen una nova selecció creada amb una existent.
+
+- **Antialiasing**: Allisat. Aquesta opció, que només afecta a unes poques eines de selecció, fa que els contorns de la selecció es dibuixen més suaument.
+- **Feather edges**: Difuminar les vores. Aquesta opció permet difuminar el contorn de la selecció, de manera que els punts pròxims al contorn es vegen parcialment *difunimados. D'aquesta manera s'obtenen transicions uniformes i agradables, evitant que les vores apareguen dentats a l'hora de tallar aquella selecció creada i pegar-la en un altre document. Si seleccionem aquesta opció, hem de definir el Radi amb el qual actuarà. A més radi, més zona difuminada.
+- **Rounded corners**: Esquinas arredonides. Literalment, arredoneix les cantonades de la selecció. També cal configurar el paràmetre Ràdio. A més radi, més arrodoniment es produeix. En la imatge hem donat un valor de 68 al Radi. Una vegada hem creat la selecció amb l'eina Selecció rectangular, ens fixem que les cantonades s'arredoneixen.
+- **Expand from centre**: Expandir des del centre. Permet que el punt en el qual es faça clic es convertisca en el centre de la selecció (equival a pressionar la tecla *Ctrl després de fer clic).
+- **Fixed**. Fix. Aquest menú permet limitar la forma de la selecció de diferents formes:
+  - Proporció d'aspecte. Aquesta opció li permet dissenyar i modificar la grandària de la selecció mentre es manté fixa la relació d'aspecte que apareix en la casella. Per defecte, la relació és de 1:1 (pel que tenim un quadrat). Si introduïm, per exemple 2:1 la selecció que fem tindrà el doble d'amplària que d'altura.
+  - Amplària. Podem triar l'amplària que desitgem per a la selecció.
+  - Altura. Podem triar l'altura que desitgem per a la selecció.
+  - Grandària. Amb aquesta opció podem especificar una altura i amplària determinada per a la selecció.
+- **Highlight**: Ressaltat. Si s'habilita aquesta opció l'àrea seleccionada es destaca en emmarcar-se amb una màscara que envolta a la selecció.
+- **Guides**: Guies. Per a facilitar la creació de la selecció, mitjançant aquest menú es pot seleccionar diferents tipus de guies.
+- **Auto Shrink**: Encongir automàticament. Aquesta opció li permet realitzar un “encongit automàtic” a la figura més pròxima que hàgem emmarcat dins de la selecció (que es trobe en la mateixa capa).
+- **Shrink merged**: Encongir combinat. Permet utilitzar la informació dels píxels visibles de la imatge (no sols de la capa activa).
+
+#### Modificar selecció
+
+Quan es realitza una selecció, apareixen les “formigues en marxa” emmarcant la zona seleccionada. Aqueixa selecció pot ser modificada. Passos:Selecció
+
+- Desplaçar el ratolí damunt dels quadrats de les cantonades de la selecció fins a comprovar que el punter canvia.
+- Arrossegar el ratolí per a canviar la selecció en altura i amplària al mateix temps.
+- Si vols canviar la selecció en amplària o altura de manera independent, desplaça el punter del ratolí al lateral de la selecció (entre els quadrats). Apareixerà una zona rectangular que permetrà modificar la selecció en amplària o altura.
+
+### Eina selecció el·líptica Eina selecció el·líptica
+
+Aquesta eina funciona de manera similar a l'anterior, però en el seu lloc, crea una el·lipse o un cercle prement la tecla `Shift`. Les opcions són pràcticament idèntiques.
+
+### Àrea seleccionada. Accions possibles
+
+Quan una part de la imatge està seleccionada, només podrem modificar aquesta part de la imatge.
+
+---
 
 # Activitat 1: Introducció a GIMP
 
